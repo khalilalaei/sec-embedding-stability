@@ -13,6 +13,28 @@ spec.loader.exec_module(audit)
 
 
 class PilotAuditTests(unittest.TestCase):
+    def test_chunk_contrast_allows_budget_change_but_rejects_extra_changes(self):
+        meta={
+            'pilot_e5_192':{'settings':{'total_token_budget':192,'device':'cpu','dtype':'torch.float32'},'batch_size':8},
+            'pilot_e5_320':{'settings':{'total_token_budget':320,'device':'cpu','dtype':'torch.float32'},'batch_size':8}}
+        signatures={key:('Python fixture',{'torch':'fixture-version'}) for key in meta}
+        audit.validate_chunk_contrasts(meta,signatures)
+        metadata_only=deepcopy(signatures)
+        metadata_only['pilot_e5_192'][1]['sec-embedding-stability']='0.1.0'
+        metadata_only['pilot_e5_320'][1]['sec-embedding-stability']='0.2.0'
+        logged=audit.validate_chunk_contrasts(meta,metadata_only)
+        self.assertEqual(logged[0]['project_version_a'],'0.1.0')
+        self.assertEqual(logged[0]['project_version_b'],'0.2.0')
+        for key,value in [('device','cuda'),('dtype','torch.float16')]:
+            changed=deepcopy(meta)
+            changed['pilot_e5_320']['settings'][key]=value
+            with self.assertRaisesRegex(ValueError,'additional configuration'):
+                audit.validate_chunk_contrasts(changed,signatures)
+        changed=deepcopy(signatures)
+        changed['pilot_e5_320']=('Other Python fixture',{'torch':'fixture-version'})
+        with self.assertRaisesRegex(ValueError,'additional configuration'):
+            audit.validate_chunk_contrasts(meta,changed)
+
     def test_archive_traversal_rejected(self):
         with tempfile.TemporaryDirectory() as temporary:
             root=Path(temporary)

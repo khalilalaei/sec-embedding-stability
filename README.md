@@ -4,9 +4,9 @@ Independent research starter by Khalil Alaei. Built from an empty project: no ex
 
 **Research question:** How much do SEC-filing company similarities and financial conclusions change across embedding models and processing choices, and does text add value beyond price and industry information?
 
-**Current status (2026-11-03):** the 12-company Risk Factors pilot has completed TF-IDF and pinned E5/BGE/Qwen inference, E5 chunk-budget sensitivity and an E5 CPU/GPU-environment check. Saved evidence was audited offline. See the [first empirical report](reports/pilot_stability_2026-11-03.md), [comparison CSV](results/pilot_2026-11-03/comparison_summary.csv), and [extraction report](reports/extraction_2026-11-03.md). Financial experiments remain unrun; no financial superiority or historical forecast claim is made. Software fixtures are synthetic and are never research evidence.
+**Current status (2026-11-03):** the 12-company Risk Factors pilot has completed TF-IDF, pinned E5/BGE/Qwen inference at both 192 and 320 total-token budgets, and an E5 CPU/GPU-environment check. Saved evidence was audited offline. See the [completed pilot report](reports/pilot_stability_2026-11-03.md), [comparison CSV](results/pilot_2026-11-03_complete/comparison_summary.csv), and [extraction report](reports/extraction_2026-11-03.md). Financial experiments remain unrun; no financial superiority or historical forecast claim is made. Software fixtures are synthetic and are never research evidence.
 
-The three neural-family comparisons retain 19–21 of 24 directed peer memberships despite rank correlations of 0.968–0.984. E5's 192-vs-320 contrast changes three companies' peer sets. These are descriptive findings for this deliberately selected sample; the BGE and Qwen chunk contrasts remain to run.
+The three neural-family comparisons retain 19–21 of 24 directed peer memberships despite rank correlations of 0.968–0.984. The 192-vs-320 contrasts change three companies' peer sets for E5, two for BGE and one for Qwen. These are descriptive findings for this deliberately selected sample. All three initial chunk contrasts are complete; financial outcomes remain untested.
 
 
 ## Chosen starting design

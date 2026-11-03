@@ -91,6 +91,27 @@ def check_comparison(saved,actual):
             if not np.isclose(a[key],b[key],rtol=0,atol=1e-12):raise ValueError('Peer metric mismatch: '+key)
 
 
+def validate_chunk_contrasts(runmeta,runtime_signatures):
+    project_metadata_changes=[]
+    for baseline,changed in [('pilot_e5_192','pilot_e5_320'),('pilot_bge_192','pilot_bge_320'),('pilot_qwen_192_gpu','pilot_qwen_320_gpu')]:
+        if changed not in runmeta:continue
+        a=runmeta[baseline];b=runmeta[changed]
+        config_a={k:v for k,v in a['settings'].items() if k!='total_token_budget'}
+        config_b={k:v for k,v in b['settings'].items() if k!='total_token_budget'}
+        python_a,packages_a=runtime_signatures[baseline]
+        python_b,packages_b=runtime_signatures[changed]
+        third_party_a={k:v for k,v in packages_a.items() if k.lower()!='sec-embedding-stability'}
+        third_party_b={k:v for k,v in packages_b.items() if k.lower()!='sec-embedding-stability'}
+        if packages_a.get('sec-embedding-stability')!=packages_b.get('sec-embedding-stability'):
+            project_metadata_changes.append({'run_a':baseline,'run_b':changed,
+                'project_version_a':packages_a.get('sec-embedding-stability'),
+                'project_version_b':packages_b.get('sec-embedding-stability'),
+                'requirement':'Check inference source equality across recorded commits before interpreting as budget-only.'})
+        if config_a!=config_b or a['batch_size']!=b['batch_size'] or python_a!=python_b or third_party_a!=third_party_b:
+            raise ValueError('Chunk contrast has an additional configuration/environment change: '+changed)
+    return project_metadata_changes
+
+
 def lexical_matrix(texts,saved):
     # Recompute TF, DF, IDF and normalization from source text; no saved vectors used.
     from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS
@@ -123,7 +144,7 @@ def audit(input_root,archive_hash,source_root=None):
     if len(ids)!=12 or len(set(ids))!=12:raise ValueError('Expected 12 unique filings')
     names={r['document_id']:r['ticker'] for r in corpus}
     lock=read(root/'models.lock.json')
-    matrices={};runmeta={};hash_checks=0;source_checks=set();texts=None;chunk_sets={}
+    matrices={};runmeta={};runtime_signatures={};hash_checks=0;source_checks=set();texts=None;chunk_sets={}
     if source_root is not None:
         source_root=Path(source_root)
         texts=[]
@@ -156,7 +177,7 @@ def audit(input_root,archive_hash,source_root=None):
             np.testing.assert_allclose(row['boundary_margin'],margins[i],rtol=0,atol=1e-12)
         meta={'run_id':directory.name,'git_commit':m['git_commit'],'manifest_sha256':sha(directory/'manifest.json'),
               'outputs':m['outputs'],'started_at':m['started_at'],'completed_at':m['completed_at'],
-              'packages':{k:v for k,v in m['packages'].items() if k.lower() in {'numpy','scipy','scikit-learn','torch','transformers','sentence-transformers'}},
+              'packages':{k:v for k,v in m['packages'].items() if k.lower() in {'numpy','scipy','scikit-learn','torch','transformers','sentence-transformers','sec-embedding-stability'}},
               'git_tracked_changes':False,'untracked_gpu_environment_recorded':bool(m['git_status']),
               'document_count':12,'pair_count':66,
               'similarity_min_off_diagonal':float(s[np.triu_indices(12,1)].min()),
@@ -189,8 +210,12 @@ def audit(input_root,archive_hash,source_root=None):
             np.testing.assert_allclose(rebuilt,s,rtol=0,atol=2e-12)
             meta.update(tfidf_recomputed_from_text=True,vocabulary_size=vocab,tfidf_max_absolute_error=float(np.max(np.abs(rebuilt-s))))
         matrices[directory.name]=s;runmeta[directory.name]=meta
+        runtime_signatures[directory.name]=(m['python'],m['packages'])
     shared=[name for name,m in runmeta.items() if m.get('settings',{}).get('total_token_budget')==192]
     if any(chunk_sets[name]!=chunk_sets[shared[0]] for name in shared):raise ValueError('192-token source spans differ')
+    shared320=[name for name,m in runmeta.items() if m.get('settings',{}).get('total_token_budget')==320]
+    if any(chunk_sets[name]!=chunk_sets[shared320[0]] for name in shared320):raise ValueError('320-token source spans differ')
+    project_metadata_changes=validate_chunk_contrasts(runmeta,runtime_signatures)
     comparisons=[];comparison_checks=0
     for path in sorted((root/'runs').glob('*.json')):
         saved=read(path)
@@ -211,14 +236,23 @@ def audit(input_root,archive_hash,source_root=None):
                       retained_memberships=sum(len(set(r['peers_a'])&set(r['peers_b'])) for r in actual['companies']),
                       comparison_sha256=sha(path))
         comparisons.append(actual)
-    if len(runmeta)!=6 or comparison_checks!=6:raise ValueError('Unexpected number of runs/comparisons')
+    baseline_runs={'pilot_tfidf','pilot_e5_192','pilot_e5_320','pilot_e5_192_gpu','pilot_bge_192','pilot_qwen_192_gpu'}
+    baseline_comparisons={'tfidf_vs_e5_192','e5_192_vs_320','e5_cpu_vs_gpu_192','e5_vs_bge_192','e5_vs_qwen_192_gpu','bge_vs_qwen_192'}
+    complete_runs=baseline_runs|{'pilot_bge_320','pilot_qwen_320_gpu'}
+    complete_comparisons=baseline_comparisons|{'bge_192_vs_320','qwen_192_vs_320_gpu'}
+    actual_comparisons={c['comparison_id'] for c in comparisons}
+    if not ((set(runmeta)==baseline_runs and actual_comparisons==baseline_comparisons) or
+            (set(runmeta)==complete_runs and actual_comparisons==complete_comparisons)):
+        raise ValueError('Expected either the frozen initial pilot or the complete model/chunk pilot')
     return {'scope':'descriptive 12-company pilot; no finance/backtest/inference rerun',
             'input_archive_sha256':archive_hash,'corpus_sha256':sha(root/'corpus_extracted_v1.json'),
             'model_lock_sha256':sha(root/'models.lock.json'),'models':lock,
             'documents':[{k:r[k] for k in ['ticker','cik','document_id','report_date','accepted_at','source_url','raw_sha256','text_sha256','source_map_sha256']} for r in corpus],
             'verification':{'run_count':len(runmeta),'comparison_count':comparison_checks,'verified_output_hashes':hash_checks,
                             'verified_source_artifacts':len(source_checks),'source_checks_enabled':source_root is not None,
-                            'all_192_neural_chunk_records_identical':True,'neural_inference_rerun':False,
+                            'all_192_neural_chunk_records_identical':True,'all_320_neural_chunk_records_identical':True,
+                            'initial_chunk_grid_complete':set(runmeta)==complete_runs,'chunk_inference_settings_and_third_party_environments_matched':True,
+                            'project_distribution_metadata_changes':project_metadata_changes,'neural_inference_rerun':False,
                             'tokenizer_budget_recount':False,'source_span_hashes_and_coverage_checked':source_root is not None,
                             'tfidf_recomputed_from_source':texts is not None,
                             'independence':'Same assistant reviewed the saved runs; not an independent audit.'},

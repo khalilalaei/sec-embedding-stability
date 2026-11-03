@@ -13,3 +13,11 @@ Synthetic fixtures exist only in temporary test directories. No real SEC filing 
 Actual user-run neural inference and six completed comparisons are now audited in reports/pilot_stability_2026-11-03.md. The audit checks 39 output hashes, 49 distinct source/text/extraction-evidence artifacts, all 72 company comparison rows, model-register consistency, final vector normalization and Gram matrices, exact chunk source spans/coverage, and a TF-IDF reconstruction from source. Inference and tokenizer counts were not independently rerun. The separate audit script adds four regression tests for unsafe archives, Windows path handling and corrupted summary/order evidence. This supersedes prior current-status statements that neural inference had not run; financial experiments remain unrun.
 
 Pilot release verification: 25 offline tests passed on 2026-11-03, including all four new evidence-audit checks. The audited full user archive reproduced all six comparison summaries, all 72 company rows and the TF-IDF matrix from source text. The generated SVG was rendered and visually checked. No additional neural inference or financial experiment was run during this audit.
+
+## Complete initial chunk grid — 2026-11-03
+
+The complete eight-run/eight-comparison upload preserves all 53 files in the initial upload byte-for-byte. Audit checks now cover 53 run-output hashes, 49 original/text/extraction source artifacts, all 96 company-level comparison rows, shared source chunks at both budgets and within-model inference settings/third-party runtime consistency. BGE's project-distribution metadata changes 0.1.0 to 0.2.0; inference CLI and numerical-core Git blob hashes match across the two recorded commits. This metadata exception is logged rather than silently treated as a fully identical environment.
+
+A new regression check accepts the intended budget change, rejects changes in device/precision/Python and logs project-distribution metadata changes. Neural inference and tokenizer counts were not rerun during the audit.
+
+Complete-grid release: 26 offline tests passed. The upgraded auditor also reproduces the original six-run/six-comparison archive. The latest SVG was rendered and inspected, and report links/counts were checked. Exact audit receipts and source-code identity checks are in results/pilot_2026-11-03_complete/audit_receipt.json.

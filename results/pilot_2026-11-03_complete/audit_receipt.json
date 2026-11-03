@@ -1,0 +1,25 @@
+{
+  "audit_date": "2026-11-03",
+  "uploaded_archive_sha256": "03bec3c6f387ec97b90f82a48fe39f618ab0dd9fb9e60bb336ffeccc81c48c09",
+  "verified_evidence_sha256": "eeee2707fba9245266990308eb3bb55eace0fc58d360ef0af4a4dfda11b08323",
+  "auditor_source_sha256": "1fc4e10ba93ecfb22be36bc8e15b6fdbe5d38a3d96d82187a062d647f59f5218",
+  "renderer_source_sha256": "96f5fe97c0d1af2c22229171790c11fc7a397bfc959f601dff256bd40005975e",
+  "inference_code_commits": [
+    "5026930dce1d579dd29dfed6f473339b0221b87d",
+    "b7d6998ccea715791e7b218a0fb43b14cd351e81"
+  ],
+  "inference_cli_git_blob_sha_across_both_commits": "63f230c6fbd9178d115e2291aa7db9677761c764",
+  "numerical_core_git_blob_sha_across_both_commits": "cfdca003f4a30f0f7b41b9614123a4f8c7b44209",
+  "source_equality_checked_with_github": true,
+  "initial_input_files_preserved_byte_for_byte": 53,
+  "new_input_files": 18,
+  "offline_tests_passed": 26,
+  "initial_six_run_audit_regression_passed": true,
+  "independence": "Same-assistant offline artifact review; no independent neural inference rerun",
+  "outputs": {
+    "reports/pilot_stability_2026-11-03.md": "8816e66b747c66dd760584cbb6a722514a7368d3e085fb0e8a59904064719fc5",
+    "reports/figures/pilot_stability_2026-11-03.svg": "c0e6064b268fba662c64f551520d6f8938cc22a7a761f5ecef71e561b7f3270b",
+    "results/pilot_2026-11-03_complete/comparison_summary.csv": "988da6b5bb5c8d7e016fe53e9ffa7e70686dca7e69056c331625b76d91381ca6",
+    "results/pilot_2026-11-03_complete/company_peer_changes.csv": "061b9767eafdbc65481cc4075cd342fdc034b9a2781027eedab507c075f47666"
+  }
+}

@@ -15,5 +15,5 @@ data/extraction_v*/
 extracted-risk-factors-v1/
 sec-extracted-risk-factors.zip
 sec-filings.zip
-pilot-results.zip
+pilot-results*.zip
 audit_check.json
