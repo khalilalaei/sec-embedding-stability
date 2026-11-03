@@ -1,0 +1,66 @@
+{
+  "purpose": "Descriptive pilot only; deliberately selected sample, not a representative historical universe",
+  "as_of": "2026-11-02",
+  "companies": [
+    {
+      "ticker": "MSFT",
+      "cik": "0000789019",
+      "sector_pair": "technology"
+    },
+    {
+      "ticker": "ORCL",
+      "cik": "0001341439",
+      "sector_pair": "technology"
+    },
+    {
+      "ticker": "JPM",
+      "cik": "0000019617",
+      "sector_pair": "financials"
+    },
+    {
+      "ticker": "BAC",
+      "cik": "0000070858",
+      "sector_pair": "financials"
+    },
+    {
+      "ticker": "XOM",
+      "cik": "0000034088",
+      "sector_pair": "energy"
+    },
+    {
+      "ticker": "CVX",
+      "cik": "0000093410",
+      "sector_pair": "energy"
+    },
+    {
+      "ticker": "JNJ",
+      "cik": "0000200406",
+      "sector_pair": "healthcare"
+    },
+    {
+      "ticker": "MRK",
+      "cik": "0000310158",
+      "sector_pair": "healthcare"
+    },
+    {
+      "ticker": "CAT",
+      "cik": "0000018230",
+      "sector_pair": "industrials"
+    },
+    {
+      "ticker": "DE",
+      "cik": "0000315189",
+      "sector_pair": "industrials"
+    },
+    {
+      "ticker": "WMT",
+      "cik": "0000104169",
+      "sector_pair": "retail"
+    },
+    {
+      "ticker": "TGT",
+      "cik": "0000027419",
+      "sector_pair": "retail"
+    }
+  ]
+}

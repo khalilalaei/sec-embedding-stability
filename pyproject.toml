@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sec-embedding-stability"
+version = "0.1.0"
+description = "Independent SEC filing representation stability research starter"
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.26,<3", "pandas>=2.1,<4", "scikit-learn>=1.4,<2", "scipy>=1.11,<2"]
+
+[project.optional-dependencies]
+embed = ["sentence-transformers>=5.0,<6", "transformers>=4.51,<5", "huggingface-hub>=0.30,<1", "torch>=2.2,<3"]
+
+[project.scripts]
+secstab = "secstab.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

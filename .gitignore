@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+*.egg-info/
+data/raw/
+data/text/
+data/filings.json
+data/corpus.json
+runs/
+configs/models.lock.json

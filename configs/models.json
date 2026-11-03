@@ -1,0 +1,25 @@
+{
+  "models": [
+    {
+      "key": "e5",
+      "model_id": "intfloat/e5-base-v2",
+      "prefix": "query: ",
+      "max_length": 512,
+      "role": "Primary encoder; symmetric semantic similarity convention"
+    },
+    {
+      "key": "bge",
+      "model_id": "BAAI/bge-base-en-v1.5",
+      "prefix": "",
+      "max_length": 512,
+      "role": "Independent English encoder comparator"
+    },
+    {
+      "key": "qwen",
+      "model_id": "Qwen/Qwen3-Embedding-0.6B",
+      "prefix": "Instruct: Represent this SEC filing passage for comparing companies by business activities and risk exposures.\nQuery: ",
+      "max_length": 32768,
+      "role": "LLM-based instruction-aware embedding comparator; symmetric instruction is a study choice"
+    }
+  ]
+}
