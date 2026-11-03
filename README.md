@@ -4,11 +4,11 @@ Independent research starter by Khalil Alaei. Built from an empty project: no ex
 
 **Research question:** How much do SEC-filing company similarities and financial conclusions change across embedding models and processing choices, and does text add value beyond price and industry information?
 
-**Current status:** runnable starter code with offline software tests. No SEC downloads, pretrained-model inference, measured embedding stability, or financial experiments have been executed in this package. Unit-test fixtures are synthetic and are never research evidence.
+**Current status (2026-11-03):** the 12 user-downloaded SEC filings have been hash-checked and their Item 1A sections extracted with AI-assisted source/boundary review. Cross-parser non-whitespace text equality passed for all 12. See [extraction report](reports/extraction_2026-11-03.md). No pretrained-model inference, measured embedding stability, or financial experiment has run. Software fixtures are synthetic and are never research evidence.
 
 ## Chosen starting design
 
-- Text: **10-K Item 1A Risk Factors**. One manually reviewed section per company.
+- Text: **10-K Item 1A Risk Factors**. One source-checked section per company; AI-assisted pilot review is explicitly distinguished from human review.
 - Pilot: **12 companies / six industry pairs**, selected before inspecting results. Latest eligible original 10-K in SEC recent submissions, with filing date no later than 2026-11-02. This is a descriptive date-based pilot; not a historical point-in-time universe.
 - Primary model: **intfloat/e5-base-v2**.
 - Comparators: **BAAI/bge-base-en-v1.5**, **Qwen/Qwen3-Embedding-0.6B**.
@@ -59,20 +59,31 @@ Replace the example email with your actual contact. The command saves original f
 
 Requests are sequential with a pause. Respect SEC fair-access instructions; stop and inspect access errors rather than aggressively retrying. A partial collection is preserved; the command refuses to overwrite an existing `data/filings.json`. To restart, archive the entire current data directory first. Large older histories may require SEC historical submission files; this starter fails clearly rather than substituting another form.
 
-## Step 4: Review and admit the text
+## Step 4: Prepare the Risk Factors corpus
 
-Follow `docs/DATA_REVIEW.md`. Save one complete, reviewed UTF-8 Risk Factors section per company in `data/text/`. Use the accession number printed by `fetch` as the document ID.
+For the delivered 12-filing batch, manual copying is complete via automated extraction. Download the separate `sec-extracted-risk-factors.zip` package provided in the chat and save it in this project folder. Run these commands one at a time:
 
 ```powershell
-.\.venv\Scripts\secstab.exe admit --document-id "ACTUAL-ACCESSION-NUMBER" --text data/text/MSFT_item1a.txt --reviewer "Khalil Alaei" --notes "Verified full Item 1A against saved SEC source; excluded table of contents and next item; extraction method and limitations recorded in review log."
+git pull
+Expand-Archive -Path .\sec-extracted-risk-factors.zip -DestinationPath .\extracted-risk-factors-v1
+.\.venv\Scripts\python.exe .\extracted-risk-factors-v1\install_extracted_corpus.py --project .
 ```
 
-Repeat for every company. Do not paste the example assertion unless you actually performed those checks. The first complete pilot uses all 12; >=4 documents are allowed for development checks only. Source bytes and admitted text hashes are checked before every analysis.
+The installer verifies package/source hashes and refuses to overwrite differing destination files. It preserves `data/corpus.json` and manually saved text. The complete new corpus is **data/corpus_extracted_v1.json**. Its `ai_assisted_passed` status is accepted only for a descriptive pilot with an intact source map. This is not an independent human audit. Read `reports/extraction_2026-11-03.md` and the package's full source maps/review log.
+
+For future batches, manual review/admission remains available as documented in `docs/DATA_REVIEW.md`. Alternatively install the optional extractor dependency and generate a new candidate package:
+
+```powershell
+.\.venv\Scripts\python.exe -m pip install -e ".[extract]"
+.\.venv\Scripts\python.exe -m secstab.extraction --manifest data/filings.json --output extraction_candidates_v2
+```
+
+Candidate status is **extracted_pending_review** and is rejected by analysis. The automatic extractor does not approve its own output. Review boundaries, removals, source maps and parser disagreement before promoting a version. Do not relabel machine checks as human approval.
 
 ## Step 5: Run the lexical baseline
 
 ```powershell
-.\.venv\Scripts\secstab.exe tfidf --run-id pilot_tfidf --k 2
+.\.venv\Scripts\secstab.exe tfidf --corpus data/corpus_extracted_v1.json --run-id pilot_tfidf --k 2
 ```
 
 Read `runs/pilot_tfidf/peers.json`. This checks the corpus/analysis workflow without downloading a neural model. It is not evidence that a neural embedding helps.
@@ -88,9 +99,9 @@ This queries each official Hugging Face model repository and records its exact c
 ## Step 7: Embed identical spans with each model
 
 ```powershell
-.\.venv\Scripts\secstab.exe embed --model e5 --budget 192 --run-id pilot_e5_192
-.\.venv\Scripts\secstab.exe embed --model bge --budget 192 --run-id pilot_bge_192
-.\.venv\Scripts\secstab.exe embed --model qwen --budget 192 --run-id pilot_qwen_192 --device cuda --batch-size 8
+.\.venv\Scripts\secstab.exe embed --corpus data/corpus_extracted_v1.json --model e5 --budget 192 --run-id pilot_e5_192
+.\.venv\Scripts\secstab.exe embed --corpus data/corpus_extracted_v1.json --model bge --budget 192 --run-id pilot_bge_192
+.\.venv\Scripts\secstab.exe embed --corpus data/corpus_extracted_v1.json --model qwen --budget 192 --run-id pilot_qwen_192 --device cuda --batch-size 8
 ```
 
 The first two default to CPU. Qwen's example requires a CUDA-capable PyTorch installation and available GPU; use `--device cpu --batch-size 1` if necessary, with a potentially much longer runtime. The code does not assume a GPU is available. No timing or memory benchmark is claimed.
@@ -100,7 +111,7 @@ All three runs load all locked tokenizers to create the same contiguous source s
 Then repeat E5 with 320 tokens:
 
 ```powershell
-.\.venv\Scripts\secstab.exe embed --model e5 --budget 320 --run-id pilot_e5_320
+.\.venv\Scripts\secstab.exe embed --corpus data/corpus_extracted_v1.json --model e5 --budget 320 --run-id pilot_e5_320
 ```
 
 For all three models' budget sensitivity, repeat BGE and Qwen at 320 too. Change only the declared budget. A larger budget reduces chunk count, not source coverage. All chunks are embedded; the document is not limited to its opening passage.
@@ -121,6 +132,6 @@ Use `docs/FINANCIAL_NEXT.md`. Obtain properly licensed returns, define actual hi
 
 ## What to commit
 
-Commit source, configs, protocol, review templates, and curated evidence summaries. Raw filings, extracted text, model lock, and run directories are ignored by default to prevent accidental bulk or sensitive-data uploads. Preserve complete run evidence locally with backups. Once validated, intentionally add the exact model lock and a sanitized results/provenance summary to the research branch. Never commit credentials or licensed market data without checking terms.
+Commit source, configs, protocol, review templates, and curated evidence summaries. Do not commit uploaded ZIP archives or expanded data bundles. Raw filings, extracted text, model lock, and run directories are ignored by default to prevent accidental bulk or sensitive-data uploads. Preserve complete run evidence locally with backups. Once validated, intentionally add the exact model lock and a sanitized results/provenance summary to the research branch. Never commit credentials or licensed market data without checking terms.
 
 See `docs/MODELS.md` for primary sources. No research performance is claimed by this starter.

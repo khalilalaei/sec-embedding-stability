@@ -1,6 +1,6 @@
 # Review original Risk Factors sections
 
-The source downloader intentionally does not pretend automatic HTML extraction is reliable. This first version uses researcher-reviewed text. Extraction automation can be introduced later and validated against these examples.
+The downloader preserves original filings. Version 0.2 adds source-mapped extraction in `secstab.extraction`; see the README and 2026-11-03 extraction report for the current 12-company batch. Its review is explicitly AI-assisted, not an independent human audit. The manual alternative below remains available. Candidate machine extraction is never automatically marked as human-approved.
 
 1. Run `secstab fetch` from the project root. Open the source_url in data/filings.json and the corresponding saved filing.html. Confirm issuer, CIK, accession, original 10-K form, reporting period, and dates.
 2. Locate the ACTUAL Item 1A Risk Factors section. The table of contents is not the section. Read the preceding and following headings.

@@ -1,0 +1,386 @@
+{
+  "summary": [
+    {
+      "ticker": "MSFT",
+      "document_id": "0001193125-26-323660",
+      "characters": 81061,
+      "words": 11678,
+      "start_heading": "ITEM 1A. RISK FACTORS",
+      "following_heading": "ITEM 1B. UNRESOLVED STAFF COMMENTS",
+      "cleaning_counts": {
+        "standalone_page_number": 15,
+        "running_part_header": 15,
+        "running_item_header": 15
+      },
+      "text_sha256": "3e56f1d26cb8d38defd2c714a5ecd564a02ca9257730cf741d267340d42f6d26"
+    },
+    {
+      "ticker": "ORCL",
+      "document_id": "0001193125-26-277521",
+      "characters": 101624,
+      "words": 15039,
+      "start_heading": "Item 1A. Risk Factors",
+      "following_heading": "Item 1B. Unresolved Staff Comments",
+      "cleaning_counts": {
+        "standalone_page_number": 19,
+        "navigation_label": 19
+      },
+      "text_sha256": "1a92455f89e09245bd03be86ec201ebb947b6a89806cbd2099861cc88d96c123"
+    },
+    {
+      "ticker": "JPM",
+      "document_id": "0001628280-26-008131",
+      "characters": 112600,
+      "words": 15467,
+      "start_heading": "Item 1A. Risk Factors.",
+      "following_heading": "Item 1B. Unresolved Staff Comments.",
+      "cleaning_counts": {
+        "standalone_page_number": 23,
+        "running_part_header": 12
+      },
+      "text_sha256": "746e044b490a639001349b28f076f0c434fa98c26413df4e1fa6ede554abf979"
+    },
+    {
+      "ticker": "BAC",
+      "document_id": "0000070858-26-000157",
+      "characters": 116783,
+      "words": 16573,
+      "start_heading": "Item 1A. Risk Factors",
+      "following_heading": "Item 1B. Unresolved Staff Comments",
+      "cleaning_counts": {
+        "company_page_footer": 15
+      },
+      "text_sha256": "5c035a44b332a3c18f13a043d09936916c43e39ea57aa301cd085ededd7a9c13"
+    },
+    {
+      "ticker": "XOM",
+      "document_id": "0000034088-26-000045",
+      "characters": 35560,
+      "words": 5079,
+      "start_heading": "ITEM 1A. RISK FACTORS",
+      "following_heading": "ITEM 1B. UNRESOLVED STAFF COMMENTS",
+      "cleaning_counts": {
+        "standalone_page_number": 6,
+        "navigation_label": 12
+      },
+      "text_sha256": "1d05742a8204968bffbdc9e9e4bd13c9694bf9e0d4dcab39095925ff3e9faed9"
+    },
+    {
+      "ticker": "CVX",
+      "document_id": "0000093410-26-000078",
+      "characters": 34517,
+      "words": 4937,
+      "start_heading": "Item 1A. Risk Factors",
+      "following_heading": "Item 1B. Unresolved Staff Comments",
+      "cleaning_counts": {
+        "standalone_page_number": 6,
+        "navigation_label": 6
+      },
+      "text_sha256": "19b8820e13d19e9bb7f84824b4096767b1da138fe33ab6635713b956a441beb1"
+    },
+    {
+      "ticker": "JNJ",
+      "document_id": "0000200406-26-000016",
+      "characters": 43310,
+      "words": 6260,
+      "start_heading": "Item 1A. Risk factors",
+      "following_heading": "Item 1B. Unresolved staff comments",
+      "cleaning_counts": {
+        "repeated_report_footer": 4,
+        "standalone_page_number": 8
+      },
+      "text_sha256": "4f1d3db038fce11e299cf5519b5da92a842ba9d0b1f77ff2f8b3d6a741f75307"
+    },
+    {
+      "ticker": "MRK",
+      "document_id": "0000310158-26-000063",
+      "characters": 77169,
+      "words": 11300,
+      "start_heading": "Item 1A.Risk Factors.",
+      "following_heading": "Item 1B.Unresolved Staff Comments.",
+      "cleaning_counts": {
+        "standalone_page_number": 16,
+        "navigation_label": 16
+      },
+      "text_sha256": "15d6f547365534af7a84e6c6a2580058033498cf453532baff12ae02336fdb8b"
+    },
+    {
+      "ticker": "CAT",
+      "document_id": "0000018230-26-000008",
+      "characters": 53327,
+      "words": 7844,
+      "start_heading": "Item 1A.Risk Factors.",
+      "following_heading": "Item 1B.Unresolved Staff Comments.",
+      "cleaning_counts": {
+        "standalone_page_number": 10,
+        "navigation_label": 10
+      },
+      "text_sha256": "d9e5103fccb3a6ec4834caada47deb9659df572fa435e9683c516a4411667b41"
+    },
+    {
+      "ticker": "DE",
+      "document_id": "0001104659-25-122321",
+      "characters": 60316,
+      "words": 8748,
+      "start_heading": "ITEM 1A.",
+      "following_heading": "ITEM 1B.",
+      "cleaning_counts": {
+        "standalone_page_number": 11,
+        "navigation_label": 11
+      },
+      "text_sha256": "43c44dbbf54ccc46fdb8ac321db37a9ea80ace42694395769d74db06b7ef3f3e"
+    },
+    {
+      "ticker": "WMT",
+      "document_id": "0000104169-26-000055",
+      "characters": 93249,
+      "words": 13545,
+      "start_heading": "ITEM 1A. RISK FACTORS",
+      "following_heading": "ITEM 1B. UNRESOLVED STAFF COMMENTS",
+      "cleaning_counts": {
+        "standalone_page_number": 14
+      },
+      "text_sha256": "907d64705693d1e312949d26b937b0f5d1ab522b6ffb1f261daa5e81cd583c52"
+    },
+    {
+      "ticker": "TGT",
+      "document_id": "0000027419-26-000016",
+      "characters": 55151,
+      "words": 7912,
+      "start_heading": "Item 1A. Risk Factors",
+      "following_heading": "Item 1B. Unresolved Staff Comments",
+      "cleaning_counts": {
+        "repeated_company_footer": 11,
+        "repeated_report_footer": 11,
+        "standalone_page_number": 11,
+        "repeated_section_header": 10,
+        "navigation_label": 22,
+        "running_section_header": 1
+      },
+      "text_sha256": "1f3b39a59a899afe2a842eb8e0a4099210e0a4ca596941762ff78d1c417b6927"
+    }
+  ],
+  "review": {
+    "review_date": "2026-11-03",
+    "reviewer": "ChatGPT (AI-assisted source and boundary review)",
+    "review_status": "ai_assisted_passed",
+    "review_scope": "descriptive_pilot_only",
+    "checks_performed": [
+      "24 original-source/SEC-metadata file hashes matched uploaded manifest",
+      "12 issuer CIKs, accession identities, original 10-K forms and filing/report/acceptance dates checked against saved SEC submissions",
+      "One unique long Item 1A-to-Item 1B span for each issuer; table-of-contents candidates rejected",
+      "Openings, final substantive lines, following headings, and all removed-line lists inspected by the assistant",
+      "All standalone numeric-line removals in these 12 selected sections are sequential page numbers",
+      "Independent stdlib HTMLParser and lxml parser implementations produced identical non-whitespace section text under the shared selection/cleanup policy",
+      "Retained text has output offsets and visible-text-to-HTML-DOM source locations"
+    ],
+    "limits": [
+      "Same assistant authored and checked the extraction; this is not an independent audit or full human review",
+      "Two parsers share boundary/cleanup policy: agreement does not independently validate that policy",
+      "No browser-rendered pixel comparison or sentence-by-sentence semantic audit",
+      "Twelve companies are a deliberately selected current-company pilot, not historical unbiased index membership",
+      "Reporting periods differ (November 2025 through June 2026); not a synchronized disclosure panel",
+      "No pretrained inference, return/risk model or forecasting evaluation has run",
+      "Full sections include original risk summaries and cross-references; referenced outside material is not appended"
+    ],
+    "metadata_checks": [
+      {
+        "ticker": "MSFT",
+        "cik_identity_matches": true,
+        "original_10K_accession_and_dates_match_submissions": true,
+        "raw_sha256": "1794e4290cb6bb1c92eeb0d40d2f8cba113cb5afe717adbab2e043eaaaa08d56",
+        "submissions_sha256": "5c93fe7c62627741a3bd1ff48b9ce38e68be07f03c0b452624316f68ba69b068"
+      },
+      {
+        "ticker": "ORCL",
+        "cik_identity_matches": true,
+        "original_10K_accession_and_dates_match_submissions": true,
+        "raw_sha256": "6901bd48b2f2f8d46b8859648c673c5103936abbc8943452ec08a5c1ce2c33b9",
+        "submissions_sha256": "2e2a986b6dd1316f45ae32b81f6ea12f7d51361091a78ef30348d487a7d3ebf1"
+      },
+      {
+        "ticker": "JPM",
+        "cik_identity_matches": true,
+        "original_10K_accession_and_dates_match_submissions": true,
+        "raw_sha256": "1ab1c0551cf4e950f0bea86e93f696af17b6ede58cb91d1c33e5e9be02d7e4ab",
+        "submissions_sha256": "6655a69b93f9d251cfab8190e10b9e964787a7b5f49e87fc85ba941e5aa9ce2b"
+      },
+      {
+        "ticker": "BAC",
+        "cik_identity_matches": true,
+        "original_10K_accession_and_dates_match_submissions": true,
+        "raw_sha256": "94adda929d04fffaf8adece3dcb756ecde92546e32db9b62d296cdc61a311de8",
+        "submissions_sha256": "9288fc292ea0151013f3ede57857d80f03634677e158813ead4d9becb06a7310"
+      },
+      {
+        "ticker": "XOM",
+        "cik_identity_matches": true,
+        "original_10K_accession_and_dates_match_submissions": true,
+        "raw_sha256": "c5e99a99618fafe627c008186dc4a3aa0699b031642c038bd8d6157eda21d8d4",
+        "submissions_sha256": "79aacad669ef044bf654934b659b9fda89514e0ba5514838dbfb787d53e48773"
+      },
+      {
+        "ticker": "CVX",
+        "cik_identity_matches": true,
+        "original_10K_accession_and_dates_match_submissions": true,
+        "raw_sha256": "c0e7b4f886de915ce818a48da5c502e437f99a41680a5c76221a1ff44751e330",
+        "submissions_sha256": "4985cf88d0b64e5e8dc2a60638ddc35942633015887922c68c17ac7a1988ef5f"
+      },
+      {
+        "ticker": "JNJ",
+        "cik_identity_matches": true,
+        "original_10K_accession_and_dates_match_submissions": true,
+        "raw_sha256": "50d32209b3844b270a96c31d7836e3c450bd2008a7f63616b99445e3e673f8d5",
+        "submissions_sha256": "826d25d6bf11a6a11f2a95444fd68456e913555e16a1cd416f714c2b8d32c935"
+      },
+      {
+        "ticker": "MRK",
+        "cik_identity_matches": true,
+        "original_10K_accession_and_dates_match_submissions": true,
+        "raw_sha256": "7edda1e2baf9e0d42919f59f8c81fa9842ac82c6ee3ebe11289f3d4afe9a57a0",
+        "submissions_sha256": "1b896ec9e09fd3f939f48d01c63e9c9593387d1ab1f488513bc04fa81c1f691f"
+      },
+      {
+        "ticker": "CAT",
+        "cik_identity_matches": true,
+        "original_10K_accession_and_dates_match_submissions": true,
+        "raw_sha256": "4fae23fd2c5487caf920e90cb34d90bbec8c9c94777949ee7c8513168c890a66",
+        "submissions_sha256": "1970b89594ad6d47bb6aeee0ace265606752a950eb2663523c43470cdbe17f04"
+      },
+      {
+        "ticker": "DE",
+        "cik_identity_matches": true,
+        "original_10K_accession_and_dates_match_submissions": true,
+        "raw_sha256": "c0c73b7613dd12c170f01969907e298c662425dce6ce47a0ba1f10300bbefb8e",
+        "submissions_sha256": "4347a2d0d9c6a028b492cb9e5679eb61ac8beae6b4ef252d133ffe6401bde62a"
+      },
+      {
+        "ticker": "WMT",
+        "cik_identity_matches": true,
+        "original_10K_accession_and_dates_match_submissions": true,
+        "raw_sha256": "4d70187588c5f542a7d399ee62420cb9c6ef671d40f27eb187c27ec5a724ecec",
+        "submissions_sha256": "a51e0de254d1c0c038aa92bc5d9da9d936d4ec1adf2d58013a404d1cc470d626"
+      },
+      {
+        "ticker": "TGT",
+        "cik_identity_matches": true,
+        "original_10K_accession_and_dates_match_submissions": true,
+        "raw_sha256": "3ee2f55d136a2d540cd24360466c61b0e5c6c5670681663e8ac26e0ae191533e",
+        "submissions_sha256": "3d133aa9e678fcf843c4ed95e51dd6c5f298df3a21cc6b6e2b84429a8b506975"
+      }
+    ],
+    "parser_checks": [
+      {
+        "ticker": "MSFT",
+        "nonwhitespace_characters_lxml": 69244,
+        "nonwhitespace_characters_stdlib": 69244,
+        "exact_nonwhitespace_match": true,
+        "raw_sha256": "1794e4290cb6bb1c92eeb0d40d2f8cba113cb5afe717adbab2e043eaaaa08d56",
+        "text_sha256": "3e56f1d26cb8d38defd2c714a5ecd564a02ca9257730cf741d267340d42f6d26"
+      },
+      {
+        "ticker": "ORCL",
+        "nonwhitespace_characters_lxml": 86286,
+        "nonwhitespace_characters_stdlib": 86286,
+        "exact_nonwhitespace_match": true,
+        "raw_sha256": "6901bd48b2f2f8d46b8859648c673c5103936abbc8943452ec08a5c1ce2c33b9",
+        "text_sha256": "1a92455f89e09245bd03be86ec201ebb947b6a89806cbd2099861cc88d96c123"
+      },
+      {
+        "ticker": "JPM",
+        "nonwhitespace_characters_lxml": 96501,
+        "nonwhitespace_characters_stdlib": 96501,
+        "exact_nonwhitespace_match": true,
+        "raw_sha256": "1ab1c0551cf4e950f0bea86e93f696af17b6ede58cb91d1c33e5e9be02d7e4ab",
+        "text_sha256": "746e044b490a639001349b28f076f0c434fa98c26413df4e1fa6ede554abf979"
+      },
+      {
+        "ticker": "BAC",
+        "nonwhitespace_characters_lxml": 100033,
+        "nonwhitespace_characters_stdlib": 100033,
+        "exact_nonwhitespace_match": true,
+        "raw_sha256": "94adda929d04fffaf8adece3dcb756ecde92546e32db9b62d296cdc61a311de8",
+        "text_sha256": "5c035a44b332a3c18f13a043d09936916c43e39ea57aa301cd085ededd7a9c13"
+      },
+      {
+        "ticker": "XOM",
+        "nonwhitespace_characters_lxml": 30436,
+        "nonwhitespace_characters_stdlib": 30436,
+        "exact_nonwhitespace_match": true,
+        "raw_sha256": "c5e99a99618fafe627c008186dc4a3aa0699b031642c038bd8d6157eda21d8d4",
+        "text_sha256": "1d05742a8204968bffbdc9e9e4bd13c9694bf9e0d4dcab39095925ff3e9faed9"
+      },
+      {
+        "ticker": "CVX",
+        "nonwhitespace_characters_lxml": 29543,
+        "nonwhitespace_characters_stdlib": 29543,
+        "exact_nonwhitespace_match": true,
+        "raw_sha256": "c0e7b4f886de915ce818a48da5c502e437f99a41680a5c76221a1ff44751e330",
+        "text_sha256": "19b8820e13d19e9bb7f84824b4096767b1da138fe33ab6635713b956a441beb1"
+      },
+      {
+        "ticker": "JNJ",
+        "nonwhitespace_characters_lxml": 36971,
+        "nonwhitespace_characters_stdlib": 36971,
+        "exact_nonwhitespace_match": true,
+        "raw_sha256": "50d32209b3844b270a96c31d7836e3c450bd2008a7f63616b99445e3e673f8d5",
+        "text_sha256": "4f1d3db038fce11e299cf5519b5da92a842ba9d0b1f77ff2f8b3d6a741f75307"
+      },
+      {
+        "ticker": "MRK",
+        "nonwhitespace_characters_lxml": 65684,
+        "nonwhitespace_characters_stdlib": 65684,
+        "exact_nonwhitespace_match": true,
+        "raw_sha256": "7edda1e2baf9e0d42919f59f8c81fa9842ac82c6ee3ebe11289f3d4afe9a57a0",
+        "text_sha256": "15d6f547365534af7a84e6c6a2580058033498cf453532baff12ae02336fdb8b"
+      },
+      {
+        "ticker": "CAT",
+        "nonwhitespace_characters_lxml": 45373,
+        "nonwhitespace_characters_stdlib": 45373,
+        "exact_nonwhitespace_match": true,
+        "raw_sha256": "4fae23fd2c5487caf920e90cb34d90bbec8c9c94777949ee7c8513168c890a66",
+        "text_sha256": "d9e5103fccb3a6ec4834caada47deb9659df572fa435e9683c516a4411667b41"
+      },
+      {
+        "ticker": "DE",
+        "nonwhitespace_characters_lxml": 51403,
+        "nonwhitespace_characters_stdlib": 51403,
+        "exact_nonwhitespace_match": true,
+        "raw_sha256": "c0c73b7613dd12c170f01969907e298c662425dce6ce47a0ba1f10300bbefb8e",
+        "text_sha256": "43c44dbbf54ccc46fdb8ac321db37a9ea80ace42694395769d74db06b7ef3f3e"
+      },
+      {
+        "ticker": "WMT",
+        "nonwhitespace_characters_lxml": 79589,
+        "nonwhitespace_characters_stdlib": 79589,
+        "exact_nonwhitespace_match": true,
+        "raw_sha256": "4d70187588c5f542a7d399ee62420cb9c6ef671d40f27eb187c27ec5a724ecec",
+        "text_sha256": "907d64705693d1e312949d26b937b0f5d1ab522b6ffb1f261daa5e81cd583c52"
+      },
+      {
+        "ticker": "TGT",
+        "nonwhitespace_characters_lxml": 47164,
+        "nonwhitespace_characters_stdlib": 47164,
+        "exact_nonwhitespace_match": true,
+        "raw_sha256": "3ee2f55d136a2d540cd24360466c61b0e5c6c5670681663e8ac26e0ae191533e",
+        "text_sha256": "1f3b39a59a899afe2a842eb8e0a4099210e0a4ca596941762ff78d1c417b6927"
+      }
+    ],
+    "source_archive_sha256": "39f497eda337872e2bd03e4326f4272719a219415208c7dfd03b454a887eb9d6",
+    "source_manifest_sha256": "6b7355cd6f05482489511df97487fb29cf750713ef71dec3fd1eb8fe8a6b04c2",
+    "extractor_source_sha256": "3a022ba4191b90c8c5071411a725e847450e6d715572ec1a996c45cdbbff2c5c",
+    "second_parser_source_sha256": "1143c45f0e014e4235f62a387853f4b63efdd52414995d1aa9802e4552caa63a"
+  },
+  "validation": {
+    "all_12_installed_and_loaded": true,
+    "manual_files_and_corpus_preserved": true,
+    "idempotent_repeat": true,
+    "changed_raw_source_rejected": true,
+    "different_destination_not_overwritten": true,
+    "total_words": 124382,
+    "offline_unit_tests_passed": 21,
+    "real_batch_parser_matches": 12,
+    "platform_scope": "Installer integration exercised on the local Linux/Python runtime; user Windows execution remains the next step."
+  }
+}

@@ -133,6 +133,22 @@ class OfflinePipelineTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'reviewed'):
             corpus(self.path)
 
+    def test_ai_review_requires_explicit_scope_and_intact_source_map(self):
+        rows = json.loads(self.path.read_text())
+        proof = self.root/'source_map.json'
+        proof.write_text('{"audit": "synthetic fixture"}')
+        rows[0].update(review_status='ai_assisted_passed', reviewer='AI fixture',
+                       source_map_path=str(proof),source_map_sha256=sha256(proof))
+        self.path.write_text(json.dumps(rows))
+        with self.assertRaisesRegex(ValueError,'reviewed'):
+            corpus(self.path)
+        rows[0]['review_scope'] = 'descriptive_pilot_only'
+        self.path.write_text(json.dumps(rows))
+        self.assertEqual(len(corpus(self.path)[0]),4)
+        proof.write_text('{}')
+        with self.assertRaisesRegex(ValueError,'source map'):
+            corpus(self.path)
+
 
 if __name__ == '__main__':
     unittest.main()

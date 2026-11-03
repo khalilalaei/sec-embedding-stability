@@ -1,4 +1,4 @@
-# Independent pilot protocol v0.1 — proposed, 2026-11-02
+# Independent pilot protocol v0.2 — proposed, updated 2026-11-03
 
 Owner: Khalil Alaei. This protocol is newly specified for this project. It imports no previous team code, documents, embeddings, company results, or experiment outputs.
 
@@ -18,7 +18,7 @@ This small current-company selection is not an unbiased historical universe. Rep
 
 ## Source gate
 
-Download raw original SEC HTML and submission metadata; retain hashes. Extract and manually review the entire Item 1A. Reject missing, garbled, incomplete, or ambiguous sections and record reasons. No synthetic filler, hallucinated text, or inference results from unreviewed sources. Manual review is an author check, not an independent audit. Four documents suffice for a software development check; all 12 are required for the intended pilot. Report failures/missingness, and do not silently change the universe.
+Download raw original SEC HTML and submission metadata; retain hashes. Extract the entire Item 1A and record the reviewer type and scope. For the current descriptive pilot, AI-assisted source/boundary review is permitted and labeled separately from manual human review. Reject missing, garbled, incomplete, or ambiguous sections and record reasons. No synthetic filler, hallucinated text, or inference results from unreviewed sources. Manual review is an author check, not an independent audit. AI-assisted review is also not an independent audit or a claim of sentence-by-sentence human review. It uses ai_assisted_passed only with descriptive_pilot_only scope and intact source-map hashes; ordinary pending extraction remains blocked. Four documents suffice for a software development check; all 12 are required for the intended pilot. Report failures/missingness, and do not silently change the universe.
 
 ## Representation
 
@@ -39,3 +39,7 @@ No filing availability lag, historical security link, total-return feed, histori
 ## Change control
 
 Before running, commit this protocol. Record any later edits with date, rationale, and whether outcomes were already seen. Freeze a separate version before main-study experiments. Every claim must point to exact run IDs, input hashes, code commit, metric definitions and result fields.
+
+## Amendment log
+
+2026-11-03, before neural or financial outcomes: user requested the assistant perform extraction rather than manual copying. Added versioned DOM extraction, same-assistant source/boundary review with a separate stdlib parser consistency check, logged page-artifact cleanup and visible-text/DOM source maps. Broadened the descriptive source gate to explicitly labeled AI-assisted review. No model, sample, primary metric or financial gate changed. Original manual files/corpus are preserved and the new corpus has its own version.

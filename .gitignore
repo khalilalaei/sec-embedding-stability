@@ -9,3 +9,8 @@ data/filings.json
 data/corpus.json
 runs/
 configs/models.lock.json
+data/corpus_*.json
+data/extraction_v*/
+extracted-risk-factors-v1/
+sec-extracted-risk-factors.zip
+sec-filings.zip

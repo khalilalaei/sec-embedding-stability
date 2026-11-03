@@ -109,8 +109,14 @@ def corpus(path):
         raise ValueError("Pilot requires exactly one document per company")
     texts = []
     for r in records:
-        if r["review_status"] != "passed" or r["section"] != "Item 1A Risk Factors":
+        status = r.get("review_status")
+        ai_review = (status == "ai_assisted_passed" and
+                     r.get("review_scope") == "descriptive_pilot_only" and
+                     bool(r.get("reviewer")) and bool(r.get("source_map_sha256")))
+        if (status != "passed" and not ai_review) or r["section"] != "Item 1A Risk Factors":
             raise ValueError("Only reviewed, same-section documents admitted")
+        if ai_review and sha256(Path(r["source_map_path"])) != r["source_map_sha256"]:
+            raise ValueError("Changed extraction source map for " + r["document_id"])
         for key in ("raw", "text"):
             if sha256(Path(r[f"{key}_path"])) != r[f"{key}_sha256"]:
                 raise ValueError(f"Changed {key} bytes for {r['document_id']}")
