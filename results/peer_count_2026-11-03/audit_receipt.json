@@ -1,0 +1,20 @@
+{
+  "scope": "post hoc exploratory supplement; primary k=2 unchanged",
+  "offline_tests_passed": 38,
+  "source_evidence_sha256": "eeee2707fba9245266990308eb3bb55eace0fc58d360ef0af4a4dfda11b08323",
+  "source_input_checked_against_frozen_receipt": true,
+  "user_E5_Qwen_summaries_reproduced_for_k": [
+    1,
+    2,
+    3,
+    5
+  ],
+  "new_model_inference": false,
+  "financial_evaluation": false,
+  "script_sha256": "252001a486bab89a810f2ce92381566c829fe892c790c924d230a7c5e94d8856",
+  "outputs": {
+    "results/peer_count_2026-11-03/verified_sensitivity.json": "66a88dbce3294223c505a0350751e426bf99f1bb06b3f7a021bfccb357c8fc47",
+    "reports/peer_count_2026-11-03.md": "ff42ffa53b98124682387f617f63095abbff59761e61b0a82ff7d41d9d994b57",
+    "results/peer_count_2026-11-03/summary.csv": "7c78140a00948b04d3d925629880688dbd6967de5a7764ad15e10c6b5fe9e509"
+  }
+}

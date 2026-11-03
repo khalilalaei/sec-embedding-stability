@@ -1,0 +1,5634 @@
+{
+  "scope": "Post hoc exploratory peer-count check; k=2 remains primary; no financial outcomes",
+  "source_evidence_sha256": "eeee2707fba9245266990308eb3bb55eace0fc58d360ef0af4a4dfda11b08323",
+  "n_companies": 12,
+  "ks": [
+    1,
+    2,
+    3,
+    5
+  ],
+  "reference_assumption": "Two independent uniformly sampled k-element subsets of n-1 possible peers, per focal company.",
+  "reference_formula": "E[intersection/k]=k/(n-1); normalized_excess=(observed-reference)/(1-reference)",
+  "limitations": "Not a significance test. Scores, configurations and company pairs are dependent. Larger sets permit re-entry of peers and raise expected overlap mechanically. No inference rerun.",
+  "summaries": [
+    {
+      "comparison_id": "e5_vs_bge_192",
+      "k": 1,
+      "retained_memberships": 10,
+      "total_memberships": 12,
+      "mean_top_k_overlap": 0.8333333333333334,
+      "mean_top_k_jaccard": 0.8333333333333334,
+      "uniform_independent_reference_overlap": 0.09090909090909091,
+      "normalized_excess_overlap": 0.8166666666666667,
+      "spearman_pair_similarity": 0.9798768395783324,
+      "mean_absolute_similarity_change": 0.04868434381705501
+    },
+    {
+      "comparison_id": "e5_vs_bge_192",
+      "k": 2,
+      "retained_memberships": 21,
+      "total_memberships": 24,
+      "mean_top_k_overlap": 0.875,
+      "mean_top_k_jaccard": 0.8611111111111112,
+      "uniform_independent_reference_overlap": 0.18181818181818182,
+      "normalized_excess_overlap": 0.8472222222222222,
+      "spearman_pair_similarity": 0.9798768395783324,
+      "mean_absolute_similarity_change": 0.04868434381705501
+    },
+    {
+      "comparison_id": "e5_vs_bge_192",
+      "k": 3,
+      "retained_memberships": 31,
+      "total_memberships": 36,
+      "mean_top_k_overlap": 0.861111111111111,
+      "mean_top_k_jaccard": 0.7916666666666666,
+      "uniform_independent_reference_overlap": 0.2727272727272727,
+      "normalized_excess_overlap": 0.8090277777777777,
+      "spearman_pair_similarity": 0.9798768395783324,
+      "mean_absolute_similarity_change": 0.04868434381705501
+    },
+    {
+      "comparison_id": "e5_vs_bge_192",
+      "k": 5,
+      "retained_memberships": 52,
+      "total_memberships": 60,
+      "mean_top_k_overlap": 0.8666666666666668,
+      "mean_top_k_jaccard": 0.7777777777777778,
+      "uniform_independent_reference_overlap": 0.45454545454545453,
+      "normalized_excess_overlap": 0.7555555555555559,
+      "spearman_pair_similarity": 0.9798768395783324,
+      "mean_absolute_similarity_change": 0.04868434381705501
+    },
+    {
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "k": 1,
+      "retained_memberships": 11,
+      "total_memberships": 12,
+      "mean_top_k_overlap": 0.9166666666666666,
+      "mean_top_k_jaccard": 0.9166666666666666,
+      "uniform_independent_reference_overlap": 0.09090909090909091,
+      "normalized_excess_overlap": 0.9083333333333333,
+      "spearman_pair_similarity": 0.9682705354347146,
+      "mean_absolute_similarity_change": 0.12232404830167228
+    },
+    {
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "k": 2,
+      "retained_memberships": 19,
+      "total_memberships": 24,
+      "mean_top_k_overlap": 0.7916666666666666,
+      "mean_top_k_jaccard": 0.7222222222222222,
+      "uniform_independent_reference_overlap": 0.18181818181818182,
+      "normalized_excess_overlap": 0.7453703703703705,
+      "spearman_pair_similarity": 0.9682705354347146,
+      "mean_absolute_similarity_change": 0.12232404830167228
+    },
+    {
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "k": 3,
+      "retained_memberships": 26,
+      "total_memberships": 36,
+      "mean_top_k_overlap": 0.7222222222222222,
+      "mean_top_k_jaccard": 0.6,
+      "uniform_independent_reference_overlap": 0.2727272727272727,
+      "normalized_excess_overlap": 0.6180555555555556,
+      "spearman_pair_similarity": 0.9682705354347146,
+      "mean_absolute_similarity_change": 0.12232404830167228
+    },
+    {
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "k": 5,
+      "retained_memberships": 52,
+      "total_memberships": 60,
+      "mean_top_k_overlap": 0.8666666666666668,
+      "mean_top_k_jaccard": 0.7777777777777777,
+      "uniform_independent_reference_overlap": 0.45454545454545453,
+      "normalized_excess_overlap": 0.7555555555555559,
+      "spearman_pair_similarity": 0.9682705354347146,
+      "mean_absolute_similarity_change": 0.12232404830167228
+    },
+    {
+      "comparison_id": "bge_vs_qwen_192",
+      "k": 1,
+      "retained_memberships": 10,
+      "total_memberships": 12,
+      "mean_top_k_overlap": 0.8333333333333334,
+      "mean_top_k_jaccard": 0.8333333333333334,
+      "uniform_independent_reference_overlap": 0.09090909090909091,
+      "normalized_excess_overlap": 0.8166666666666667,
+      "spearman_pair_similarity": 0.9839265212399542,
+      "mean_absolute_similarity_change": 0.0736397554212439
+    },
+    {
+      "comparison_id": "bge_vs_qwen_192",
+      "k": 2,
+      "retained_memberships": 19,
+      "total_memberships": 24,
+      "mean_top_k_overlap": 0.7916666666666666,
+      "mean_top_k_jaccard": 0.75,
+      "uniform_independent_reference_overlap": 0.18181818181818182,
+      "normalized_excess_overlap": 0.7453703703703705,
+      "spearman_pair_similarity": 0.9839265212399542,
+      "mean_absolute_similarity_change": 0.0736397554212439
+    },
+    {
+      "comparison_id": "bge_vs_qwen_192",
+      "k": 3,
+      "retained_memberships": 30,
+      "total_memberships": 36,
+      "mean_top_k_overlap": 0.8333333333333331,
+      "mean_top_k_jaccard": 0.7666666666666666,
+      "uniform_independent_reference_overlap": 0.2727272727272727,
+      "normalized_excess_overlap": 0.770833333333333,
+      "spearman_pair_similarity": 0.9839265212399542,
+      "mean_absolute_similarity_change": 0.0736397554212439
+    },
+    {
+      "comparison_id": "bge_vs_qwen_192",
+      "k": 5,
+      "retained_memberships": 53,
+      "total_memberships": 60,
+      "mean_top_k_overlap": 0.8833333333333334,
+      "mean_top_k_jaccard": 0.8055555555555555,
+      "uniform_independent_reference_overlap": 0.45454545454545453,
+      "normalized_excess_overlap": 0.7861111111111113,
+      "spearman_pair_similarity": 0.9839265212399542,
+      "mean_absolute_similarity_change": 0.0736397554212439
+    },
+    {
+      "comparison_id": "e5_192_vs_320",
+      "k": 1,
+      "retained_memberships": 11,
+      "total_memberships": 12,
+      "mean_top_k_overlap": 0.9166666666666666,
+      "mean_top_k_jaccard": 0.9166666666666666,
+      "uniform_independent_reference_overlap": 0.09090909090909091,
+      "normalized_excess_overlap": 0.9083333333333333,
+      "spearman_pair_similarity": 0.9915666423129111,
+      "mean_absolute_similarity_change": 0.0034603548585201223
+    },
+    {
+      "comparison_id": "e5_192_vs_320",
+      "k": 2,
+      "retained_memberships": 21,
+      "total_memberships": 24,
+      "mean_top_k_overlap": 0.875,
+      "mean_top_k_jaccard": 0.8333333333333334,
+      "uniform_independent_reference_overlap": 0.18181818181818182,
+      "normalized_excess_overlap": 0.8472222222222222,
+      "spearman_pair_similarity": 0.9915666423129111,
+      "mean_absolute_similarity_change": 0.0034603548585201223
+    },
+    {
+      "comparison_id": "e5_192_vs_320",
+      "k": 3,
+      "retained_memberships": 34,
+      "total_memberships": 36,
+      "mean_top_k_overlap": 0.9444444444444443,
+      "mean_top_k_jaccard": 0.9166666666666666,
+      "uniform_independent_reference_overlap": 0.2727272727272727,
+      "normalized_excess_overlap": 0.9236111111111109,
+      "spearman_pair_similarity": 0.9915666423129111,
+      "mean_absolute_similarity_change": 0.0034603548585201223
+    },
+    {
+      "comparison_id": "e5_192_vs_320",
+      "k": 5,
+      "retained_memberships": 58,
+      "total_memberships": 60,
+      "mean_top_k_overlap": 0.9666666666666667,
+      "mean_top_k_jaccard": 0.9444444444444443,
+      "uniform_independent_reference_overlap": 0.45454545454545453,
+      "normalized_excess_overlap": 0.9388888888888891,
+      "spearman_pair_similarity": 0.9915666423129111,
+      "mean_absolute_similarity_change": 0.0034603548585201223
+    },
+    {
+      "comparison_id": "bge_192_vs_320",
+      "k": 1,
+      "retained_memberships": 11,
+      "total_memberships": 12,
+      "mean_top_k_overlap": 0.9166666666666666,
+      "mean_top_k_jaccard": 0.9166666666666666,
+      "uniform_independent_reference_overlap": 0.09090909090909091,
+      "normalized_excess_overlap": 0.9083333333333333,
+      "spearman_pair_similarity": 0.9954910760880912,
+      "mean_absolute_similarity_change": 0.010973354680773758
+    },
+    {
+      "comparison_id": "bge_192_vs_320",
+      "k": 2,
+      "retained_memberships": 22,
+      "total_memberships": 24,
+      "mean_top_k_overlap": 0.9166666666666666,
+      "mean_top_k_jaccard": 0.8888888888888888,
+      "uniform_independent_reference_overlap": 0.18181818181818182,
+      "normalized_excess_overlap": 0.8981481481481483,
+      "spearman_pair_similarity": 0.9954910760880912,
+      "mean_absolute_similarity_change": 0.010973354680773758
+    },
+    {
+      "comparison_id": "bge_192_vs_320",
+      "k": 3,
+      "retained_memberships": 33,
+      "total_memberships": 36,
+      "mean_top_k_overlap": 0.9166666666666665,
+      "mean_top_k_jaccard": 0.875,
+      "uniform_independent_reference_overlap": 0.2727272727272727,
+      "normalized_excess_overlap": 0.8854166666666665,
+      "spearman_pair_similarity": 0.9954910760880912,
+      "mean_absolute_similarity_change": 0.010973354680773758
+    },
+    {
+      "comparison_id": "bge_192_vs_320",
+      "k": 5,
+      "retained_memberships": 58,
+      "total_memberships": 60,
+      "mean_top_k_overlap": 0.9666666666666668,
+      "mean_top_k_jaccard": 0.9444444444444443,
+      "uniform_independent_reference_overlap": 0.45454545454545453,
+      "normalized_excess_overlap": 0.9388888888888891,
+      "spearman_pair_similarity": 0.9954910760880912,
+      "mean_absolute_similarity_change": 0.010973354680773758
+    },
+    {
+      "comparison_id": "qwen_192_vs_320_gpu",
+      "k": 1,
+      "retained_memberships": 12,
+      "total_memberships": 12,
+      "mean_top_k_overlap": 1.0,
+      "mean_top_k_jaccard": 1.0,
+      "uniform_independent_reference_overlap": 0.09090909090909091,
+      "normalized_excess_overlap": 1.0,
+      "spearman_pair_similarity": 0.9900219183801274,
+      "mean_absolute_similarity_change": 0.03630909440890627
+    },
+    {
+      "comparison_id": "qwen_192_vs_320_gpu",
+      "k": 2,
+      "retained_memberships": 23,
+      "total_memberships": 24,
+      "mean_top_k_overlap": 0.9583333333333334,
+      "mean_top_k_jaccard": 0.9444444444444445,
+      "uniform_independent_reference_overlap": 0.18181818181818182,
+      "normalized_excess_overlap": 0.9490740740740743,
+      "spearman_pair_similarity": 0.9900219183801274,
+      "mean_absolute_similarity_change": 0.03630909440890627
+    },
+    {
+      "comparison_id": "qwen_192_vs_320_gpu",
+      "k": 3,
+      "retained_memberships": 33,
+      "total_memberships": 36,
+      "mean_top_k_overlap": 0.9166666666666665,
+      "mean_top_k_jaccard": 0.875,
+      "uniform_independent_reference_overlap": 0.2727272727272727,
+      "normalized_excess_overlap": 0.8854166666666665,
+      "spearman_pair_similarity": 0.9900219183801274,
+      "mean_absolute_similarity_change": 0.03630909440890627
+    },
+    {
+      "comparison_id": "qwen_192_vs_320_gpu",
+      "k": 5,
+      "retained_memberships": 55,
+      "total_memberships": 60,
+      "mean_top_k_overlap": 0.9166666666666669,
+      "mean_top_k_jaccard": 0.8611111111111112,
+      "uniform_independent_reference_overlap": 0.45454545454545453,
+      "normalized_excess_overlap": 0.8472222222222227,
+      "spearman_pair_similarity": 0.9900219183801274,
+      "mean_absolute_similarity_change": 0.03630909440890627
+    }
+  ],
+  "companies": [
+    {
+      "comparison_id": "e5_vs_bge_192",
+      "k": 1,
+      "ticker": "MSFT",
+      "peers_a": [
+        "ORCL"
+      ],
+      "peers_b": [
+        "ORCL"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.005074316401819323,
+      "margin_b": 0.012402758162331162
+    },
+    {
+      "comparison_id": "e5_vs_bge_192",
+      "k": 1,
+      "ticker": "ORCL",
+      "peers_a": [
+        "MSFT"
+      ],
+      "peers_b": [
+        "MSFT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0006405284193209404,
+      "margin_b": 0.0018968347947589947
+    },
+    {
+      "comparison_id": "e5_vs_bge_192",
+      "k": 1,
+      "ticker": "JPM",
+      "peers_a": [
+        "BAC"
+      ],
+      "peers_b": [
+        "BAC"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.004480625557657603,
+      "margin_b": 0.01870030030416303
+    },
+    {
+      "comparison_id": "e5_vs_bge_192",
+      "k": 1,
+      "ticker": "BAC",
+      "peers_a": [
+        "CAT"
+      ],
+      "peers_b": [
+        "CAT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0012688390300247265,
+      "margin_b": 0.010963275293695451
+    },
+    {
+      "comparison_id": "e5_vs_bge_192",
+      "k": 1,
+      "ticker": "XOM",
+      "peers_a": [
+        "CVX"
+      ],
+      "peers_b": [
+        "CVX"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.004264144542855286,
+      "margin_b": 0.019388753856578234
+    },
+    {
+      "comparison_id": "e5_vs_bge_192",
+      "k": 1,
+      "ticker": "CVX",
+      "peers_a": [
+        "XOM"
+      ],
+      "peers_b": [
+        "XOM"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.014271590464023154,
+      "margin_b": 0.03844067190844569
+    },
+    {
+      "comparison_id": "e5_vs_bge_192",
+      "k": 1,
+      "ticker": "JNJ",
+      "peers_a": [
+        "MRK"
+      ],
+      "peers_b": [
+        "MRK"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.005970276870251312,
+      "margin_b": 0.01727201582956228
+    },
+    {
+      "comparison_id": "e5_vs_bge_192",
+      "k": 1,
+      "ticker": "MRK",
+      "peers_a": [
+        "JNJ"
+      ],
+      "peers_b": [
+        "JNJ"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.019950423367356307,
+      "margin_b": 0.041594654066681724
+    },
+    {
+      "comparison_id": "e5_vs_bge_192",
+      "k": 1,
+      "ticker": "CAT",
+      "peers_a": [
+        "DE"
+      ],
+      "peers_b": [
+        "BAC"
+      ],
+      "overlap": 0.0,
+      "jaccard": 0.0,
+      "margin_a": 0.0005818698137040057,
+      "margin_b": 0.000651229412500065
+    },
+    {
+      "comparison_id": "e5_vs_bge_192",
+      "k": 1,
+      "ticker": "DE",
+      "peers_a": [
+        "ORCL"
+      ],
+      "peers_b": [
+        "TGT"
+      ],
+      "overlap": 0.0,
+      "jaccard": 0.0,
+      "margin_a": 0.0012071076972114403,
+      "margin_b": 0.0016427296585451723
+    },
+    {
+      "comparison_id": "e5_vs_bge_192",
+      "k": 1,
+      "ticker": "WMT",
+      "peers_a": [
+        "TGT"
+      ],
+      "peers_b": [
+        "TGT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0003603072771091176,
+      "margin_b": 0.006141996643068137
+    },
+    {
+      "comparison_id": "e5_vs_bge_192",
+      "k": 1,
+      "ticker": "TGT",
+      "peers_a": [
+        "WMT"
+      ],
+      "peers_b": [
+        "WMT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.003256184790159322,
+      "margin_b": 0.007399877756437245
+    },
+    {
+      "comparison_id": "e5_vs_bge_192",
+      "k": 2,
+      "ticker": "MSFT",
+      "peers_a": [
+        "ORCL",
+        "WMT"
+      ],
+      "peers_b": [
+        "ORCL",
+        "WMT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0015394852235990353,
+      "margin_b": 0.008051525363580447
+    },
+    {
+      "comparison_id": "e5_vs_bge_192",
+      "k": 2,
+      "ticker": "ORCL",
+      "peers_a": [
+        "MSFT",
+        "WMT"
+      ],
+      "peers_b": [
+        "MSFT",
+        "WMT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0013518626380695231,
+      "margin_b": 0.003585229698730319
+    },
+    {
+      "comparison_id": "e5_vs_bge_192",
+      "k": 2,
+      "ticker": "JPM",
+      "peers_a": [
+        "BAC",
+        "CAT"
+      ],
+      "peers_b": [
+        "BAC",
+        "CAT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0027512678074825825,
+      "margin_b": 0.012623843263030676
+    },
+    {
+      "comparison_id": "e5_vs_bge_192",
+      "k": 2,
+      "ticker": "BAC",
+      "peers_a": [
+        "CAT",
+        "ORCL"
+      ],
+      "peers_b": [
+        "CAT",
+        "ORCL"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0012548066903202981,
+      "margin_b": 0.002348670283172427
+    },
+    {
+      "comparison_id": "e5_vs_bge_192",
+      "k": 2,
+      "ticker": "XOM",
+      "peers_a": [
+        "CVX",
+        "DE"
+      ],
+      "peers_b": [
+        "CVX",
+        "DE"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.002841438013428288,
+      "margin_b": 0.011129852755746739
+    },
+    {
+      "comparison_id": "e5_vs_bge_192",
+      "k": 2,
+      "ticker": "CVX",
+      "peers_a": [
+        "XOM",
+        "CAT"
+      ],
+      "peers_b": [
+        "XOM",
+        "CAT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.00010270684010549314,
+      "margin_b": 0.006568328589863781
+    },
+    {
+      "comparison_id": "e5_vs_bge_192",
+      "k": 2,
+      "ticker": "JNJ",
+      "peers_a": [
+        "MRK",
+        "WMT"
+      ],
+      "peers_b": [
+        "MRK",
+        "WMT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.00025637862971905623,
+      "margin_b": 0.0007720890549191006
+    },
+    {
+      "comparison_id": "e5_vs_bge_192",
+      "k": 2,
+      "ticker": "MRK",
+      "peers_a": [
+        "JNJ",
+        "DE"
+      ],
+      "peers_b": [
+        "JNJ",
+        "DE"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.000815679938196201,
+      "margin_b": 0.00299374571961486
+    },
+    {
+      "comparison_id": "e5_vs_bge_192",
+      "k": 2,
+      "ticker": "CAT",
+      "peers_a": [
+        "DE",
+        "ORCL"
+      ],
+      "peers_b": [
+        "BAC",
+        "DE"
+      ],
+      "overlap": 0.5,
+      "jaccard": 0.3333333333333333,
+      "margin_a": 0.0002722541360644648,
+      "margin_b": 0.005390066925377357
+    },
+    {
+      "comparison_id": "e5_vs_bge_192",
+      "k": 2,
+      "ticker": "DE",
+      "peers_a": [
+        "ORCL",
+        "CAT"
+      ],
+      "peers_b": [
+        "TGT",
+        "WMT"
+      ],
+      "overlap": 0.0,
+      "jaccard": 0.0,
+      "margin_a": 0.00033690717776924117,
+      "margin_b": 0.0006846189268160385
+    },
+    {
+      "comparison_id": "e5_vs_bge_192",
+      "k": 2,
+      "ticker": "WMT",
+      "peers_a": [
+        "TGT",
+        "ORCL"
+      ],
+      "peers_b": [
+        "TGT",
+        "ORCL"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0029916884646068453,
+      "margin_b": 0.0029006107719142804
+    },
+    {
+      "comparison_id": "e5_vs_bge_192",
+      "k": 2,
+      "ticker": "TGT",
+      "peers_a": [
+        "WMT",
+        "DE"
+      ],
+      "peers_b": [
+        "WMT",
+        "DE"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0008798159843564912,
+      "margin_b": 0.006296257352046086
+    },
+    {
+      "comparison_id": "e5_vs_bge_192",
+      "k": 3,
+      "ticker": "MSFT",
+      "peers_a": [
+        "ORCL",
+        "WMT",
+        "DE"
+      ],
+      "peers_b": [
+        "ORCL",
+        "WMT",
+        "DE"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0024643945224817054,
+      "margin_b": 0.0061796593310736725
+    },
+    {
+      "comparison_id": "e5_vs_bge_192",
+      "k": 3,
+      "ticker": "ORCL",
+      "peers_a": [
+        "MSFT",
+        "WMT",
+        "DE"
+      ],
+      "peers_b": [
+        "MSFT",
+        "WMT",
+        "DE"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.001788977510915446,
+      "margin_b": 0.0039689087666848755
+    },
+    {
+      "comparison_id": "e5_vs_bge_192",
+      "k": 3,
+      "ticker": "JPM",
+      "peers_a": [
+        "BAC",
+        "CAT",
+        "JNJ"
+      ],
+      "peers_b": [
+        "BAC",
+        "CAT",
+        "ORCL"
+      ],
+      "overlap": 0.6666666666666666,
+      "jaccard": 0.5,
+      "margin_a": 0.0026061890377198083,
+      "margin_b": 0.003583151598826606
+    },
+    {
+      "comparison_id": "e5_vs_bge_192",
+      "k": 3,
+      "ticker": "BAC",
+      "peers_a": [
+        "CAT",
+        "ORCL",
+        "WMT"
+      ],
+      "peers_b": [
+        "CAT",
+        "ORCL",
+        "WMT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.003180616479943721,
+      "margin_b": 0.007568183337861578
+    },
+    {
+      "comparison_id": "e5_vs_bge_192",
+      "k": 3,
+      "ticker": "XOM",
+      "peers_a": [
+        "CVX",
+        "DE",
+        "CAT"
+      ],
+      "peers_b": [
+        "CVX",
+        "DE",
+        "CAT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0038129659722763165,
+      "margin_b": 0.00816854573402126
+    },
+    {
+      "comparison_id": "e5_vs_bge_192",
+      "k": 3,
+      "ticker": "CVX",
+      "peers_a": [
+        "XOM",
+        "CAT",
+        "JNJ"
+      ],
+      "peers_b": [
+        "XOM",
+        "CAT",
+        "DE"
+      ],
+      "overlap": 0.6666666666666666,
+      "jaccard": 0.5,
+      "margin_a": 0.003448908857510924,
+      "margin_b": 0.001096398955891198
+    },
+    {
+      "comparison_id": "e5_vs_bge_192",
+      "k": 3,
+      "ticker": "JNJ",
+      "peers_a": [
+        "MRK",
+        "WMT",
+        "ORCL"
+      ],
+      "peers_b": [
+        "MRK",
+        "WMT",
+        "DE"
+      ],
+      "overlap": 0.6666666666666666,
+      "jaccard": 0.5,
+      "margin_a": 0.0004685549690539581,
+      "margin_b": 5.263245336983857e-05
+    },
+    {
+      "comparison_id": "e5_vs_bge_192",
+      "k": 3,
+      "ticker": "MRK",
+      "peers_a": [
+        "JNJ",
+        "DE",
+        "ORCL"
+      ],
+      "peers_b": [
+        "JNJ",
+        "DE",
+        "WMT"
+      ],
+      "overlap": 0.6666666666666666,
+      "jaccard": 0.5,
+      "margin_a": 0.0006059517202473552,
+      "margin_b": 0.00048461348718997765
+    },
+    {
+      "comparison_id": "e5_vs_bge_192",
+      "k": 3,
+      "ticker": "CAT",
+      "peers_a": [
+        "DE",
+        "ORCL",
+        "BAC"
+      ],
+      "peers_b": [
+        "BAC",
+        "DE",
+        "ORCL"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0011547004986575127,
+      "margin_b": 0.00065786702067816
+    },
+    {
+      "comparison_id": "e5_vs_bge_192",
+      "k": 3,
+      "ticker": "DE",
+      "peers_a": [
+        "ORCL",
+        "CAT",
+        "TGT"
+      ],
+      "peers_b": [
+        "TGT",
+        "WMT",
+        "ORCL"
+      ],
+      "overlap": 0.6666666666666666,
+      "jaccard": 0.5,
+      "margin_a": 9.581095155664077e-05,
+      "margin_b": 0.0003118480085132491
+    },
+    {
+      "comparison_id": "e5_vs_bge_192",
+      "k": 3,
+      "ticker": "WMT",
+      "peers_a": [
+        "TGT",
+        "ORCL",
+        "DE"
+      ],
+      "peers_b": [
+        "TGT",
+        "ORCL",
+        "DE"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0014420995178915375,
+      "margin_b": 0.007044400881384805
+    },
+    {
+      "comparison_id": "e5_vs_bge_192",
+      "k": 3,
+      "ticker": "TGT",
+      "peers_a": [
+        "WMT",
+        "DE",
+        "ORCL"
+      ],
+      "peers_b": [
+        "WMT",
+        "DE",
+        "ORCL"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.00247413674597019,
+      "margin_b": 0.002898081500322669
+    },
+    {
+      "comparison_id": "e5_vs_bge_192",
+      "k": 5,
+      "ticker": "MSFT",
+      "peers_a": [
+        "ORCL",
+        "WMT",
+        "DE",
+        "TGT",
+        "BAC"
+      ],
+      "peers_b": [
+        "ORCL",
+        "WMT",
+        "DE",
+        "TGT",
+        "JNJ"
+      ],
+      "overlap": 0.8,
+      "jaccard": 0.6666666666666666,
+      "margin_a": 0.0019752707008078296,
+      "margin_b": 0.004759825110049798
+    },
+    {
+      "comparison_id": "e5_vs_bge_192",
+      "k": 5,
+      "ticker": "ORCL",
+      "peers_a": [
+        "MSFT",
+        "WMT",
+        "DE",
+        "CAT",
+        "TGT"
+      ],
+      "peers_b": [
+        "MSFT",
+        "WMT",
+        "DE",
+        "TGT",
+        "CAT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0009062398176674646,
+      "margin_b": 0.003038383656057908
+    },
+    {
+      "comparison_id": "e5_vs_bge_192",
+      "k": 5,
+      "ticker": "JPM",
+      "peers_a": [
+        "BAC",
+        "CAT",
+        "JNJ",
+        "ORCL",
+        "WMT"
+      ],
+      "peers_b": [
+        "BAC",
+        "CAT",
+        "ORCL",
+        "WMT",
+        "TGT"
+      ],
+      "overlap": 0.8,
+      "jaccard": 0.6666666666666666,
+      "margin_a": 0.0034103847813427013,
+      "margin_b": 0.005552036547265438
+    },
+    {
+      "comparison_id": "e5_vs_bge_192",
+      "k": 5,
+      "ticker": "BAC",
+      "peers_a": [
+        "CAT",
+        "ORCL",
+        "WMT",
+        "DE",
+        "TGT"
+      ],
+      "peers_b": [
+        "CAT",
+        "ORCL",
+        "WMT",
+        "DE",
+        "TGT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0020082329364855545,
+      "margin_b": 0.011706768329053818
+    },
+    {
+      "comparison_id": "e5_vs_bge_192",
+      "k": 5,
+      "ticker": "XOM",
+      "peers_a": [
+        "CVX",
+        "DE",
+        "CAT",
+        "JNJ",
+        "ORCL"
+      ],
+      "peers_b": [
+        "CVX",
+        "DE",
+        "CAT",
+        "JNJ",
+        "TGT"
+      ],
+      "overlap": 0.8,
+      "jaccard": 0.6666666666666666,
+      "margin_a": 0.0008956305802201303,
+      "margin_b": 0.0008434459337501865
+    },
+    {
+      "comparison_id": "e5_vs_bge_192",
+      "k": 5,
+      "ticker": "CVX",
+      "peers_a": [
+        "XOM",
+        "CAT",
+        "JNJ",
+        "DE",
+        "MRK"
+      ],
+      "peers_b": [
+        "XOM",
+        "CAT",
+        "DE",
+        "JNJ",
+        "TGT"
+      ],
+      "overlap": 0.8,
+      "jaccard": 0.6666666666666666,
+      "margin_a": 0.0005940810887767878,
+      "margin_b": 0.003947471583490958
+    },
+    {
+      "comparison_id": "e5_vs_bge_192",
+      "k": 5,
+      "ticker": "JNJ",
+      "peers_a": [
+        "MRK",
+        "WMT",
+        "ORCL",
+        "DE",
+        "CAT"
+      ],
+      "peers_b": [
+        "MRK",
+        "WMT",
+        "DE",
+        "ORCL",
+        "TGT"
+      ],
+      "overlap": 0.8,
+      "jaccard": 0.6666666666666666,
+      "margin_a": 0.0024406666890965933,
+      "margin_b": 0.0034616585511373366
+    },
+    {
+      "comparison_id": "e5_vs_bge_192",
+      "k": 5,
+      "ticker": "MRK",
+      "peers_a": [
+        "JNJ",
+        "DE",
+        "ORCL",
+        "WMT",
+        "CAT"
+      ],
+      "peers_b": [
+        "JNJ",
+        "DE",
+        "WMT",
+        "ORCL",
+        "TGT"
+      ],
+      "overlap": 0.8,
+      "jaccard": 0.6666666666666666,
+      "margin_a": 0.0034811362954649816,
+      "margin_b": 0.006042438107024095
+    },
+    {
+      "comparison_id": "e5_vs_bge_192",
+      "k": 5,
+      "ticker": "CAT",
+      "peers_a": [
+        "DE",
+        "ORCL",
+        "BAC",
+        "WMT",
+        "TGT"
+      ],
+      "peers_b": [
+        "BAC",
+        "DE",
+        "ORCL",
+        "WMT",
+        "TGT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0017607181434824426,
+      "margin_b": 0.011732446159171017
+    },
+    {
+      "comparison_id": "e5_vs_bge_192",
+      "k": 5,
+      "ticker": "DE",
+      "peers_a": [
+        "ORCL",
+        "CAT",
+        "TGT",
+        "WMT",
+        "MSFT"
+      ],
+      "peers_b": [
+        "TGT",
+        "WMT",
+        "ORCL",
+        "CAT",
+        "JNJ"
+      ],
+      "overlap": 0.8,
+      "jaccard": 0.6666666666666666,
+      "margin_a": 0.0018251625755331125,
+      "margin_b": 0.00628455289584362
+    },
+    {
+      "comparison_id": "e5_vs_bge_192",
+      "k": 5,
+      "ticker": "WMT",
+      "peers_a": [
+        "TGT",
+        "ORCL",
+        "DE",
+        "MSFT",
+        "CAT"
+      ],
+      "peers_b": [
+        "TGT",
+        "ORCL",
+        "DE",
+        "CAT",
+        "MSFT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.001368945221687512,
+      "margin_b": 0.0009948834128177264
+    },
+    {
+      "comparison_id": "e5_vs_bge_192",
+      "k": 5,
+      "ticker": "TGT",
+      "peers_a": [
+        "WMT",
+        "DE",
+        "ORCL",
+        "CAT",
+        "MSFT"
+      ],
+      "peers_b": [
+        "WMT",
+        "DE",
+        "ORCL",
+        "CAT",
+        "JNJ"
+      ],
+      "overlap": 0.8,
+      "jaccard": 0.6666666666666666,
+      "margin_a": 0.0020135473473767984,
+      "margin_b": 0.006014100488454743
+    },
+    {
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "k": 1,
+      "ticker": "MSFT",
+      "peers_a": [
+        "ORCL"
+      ],
+      "peers_b": [
+        "ORCL"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.005074328715085286,
+      "margin_b": 0.05102036524267284
+    },
+    {
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "k": 1,
+      "ticker": "ORCL",
+      "peers_a": [
+        "MSFT"
+      ],
+      "peers_b": [
+        "MSFT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0006405333289609683,
+      "margin_b": 0.030760331131969854
+    },
+    {
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "k": 1,
+      "ticker": "JPM",
+      "peers_a": [
+        "BAC"
+      ],
+      "peers_b": [
+        "BAC"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.004480636637716917,
+      "margin_b": 0.05759993377040573
+    },
+    {
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "k": 1,
+      "ticker": "BAC",
+      "peers_a": [
+        "CAT"
+      ],
+      "peers_b": [
+        "CAT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0012688419072753865,
+      "margin_b": 0.011476825580080563
+    },
+    {
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "k": 1,
+      "ticker": "XOM",
+      "peers_a": [
+        "CVX"
+      ],
+      "peers_b": [
+        "CVX"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.004264141571956204,
+      "margin_b": 0.03810804369263843
+    },
+    {
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "k": 1,
+      "ticker": "CVX",
+      "peers_a": [
+        "XOM"
+      ],
+      "peers_b": [
+        "XOM"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.014271605268012633,
+      "margin_b": 0.08224922771430276
+    },
+    {
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "k": 1,
+      "ticker": "JNJ",
+      "peers_a": [
+        "MRK"
+      ],
+      "peers_b": [
+        "MRK"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.005970293759482548,
+      "margin_b": 0.02796418534270284
+    },
+    {
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "k": 1,
+      "ticker": "MRK",
+      "peers_a": [
+        "JNJ"
+      ],
+      "peers_b": [
+        "JNJ"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.019950463418147546,
+      "margin_b": 0.07166718621585855
+    },
+    {
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "k": 1,
+      "ticker": "CAT",
+      "peers_a": [
+        "DE"
+      ],
+      "peers_b": [
+        "DE"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0005818704501736605,
+      "margin_b": 0.012987191735293613
+    },
+    {
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "k": 1,
+      "ticker": "DE",
+      "peers_a": [
+        "ORCL"
+      ],
+      "peers_b": [
+        "CAT"
+      ],
+      "overlap": 0.0,
+      "jaccard": 0.0,
+      "margin_a": 0.0012071104905893026,
+      "margin_b": 0.0185571984356504
+    },
+    {
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "k": 1,
+      "ticker": "WMT",
+      "peers_a": [
+        "TGT"
+      ],
+      "peers_b": [
+        "TGT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0003603045382479797,
+      "margin_b": 0.03022887160213883
+    },
+    {
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "k": 1,
+      "ticker": "TGT",
+      "peers_a": [
+        "WMT"
+      ],
+      "peers_b": [
+        "WMT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0032561907450198158,
+      "margin_b": 0.036671140326181906
+    },
+    {
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "k": 2,
+      "ticker": "MSFT",
+      "peers_a": [
+        "ORCL",
+        "WMT"
+      ],
+      "peers_b": [
+        "ORCL",
+        "WMT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0015394858054801341,
+      "margin_b": 0.010675570074210161
+    },
+    {
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "k": 2,
+      "ticker": "ORCL",
+      "peers_a": [
+        "MSFT",
+        "WMT"
+      ],
+      "peers_b": [
+        "MSFT",
+        "WMT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0013518632195583802,
+      "margin_b": 0.0056363476418074265
+    },
+    {
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "k": 2,
+      "ticker": "JPM",
+      "peers_a": [
+        "BAC",
+        "CAT"
+      ],
+      "peers_b": [
+        "BAC",
+        "CAT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.002751264322605973,
+      "margin_b": 0.026007840370887214
+    },
+    {
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "k": 2,
+      "ticker": "BAC",
+      "peers_a": [
+        "CAT",
+        "ORCL"
+      ],
+      "peers_b": [
+        "CAT",
+        "ORCL"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0012548092425755941,
+      "margin_b": 0.009461338537401276
+    },
+    {
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "k": 2,
+      "ticker": "XOM",
+      "peers_a": [
+        "CVX",
+        "DE"
+      ],
+      "peers_b": [
+        "CVX",
+        "CAT"
+      ],
+      "overlap": 0.5,
+      "jaccard": 0.3333333333333333,
+      "margin_a": 0.002841437871455632,
+      "margin_b": 0.0034351812601748355
+    },
+    {
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "k": 2,
+      "ticker": "CVX",
+      "peers_a": [
+        "XOM",
+        "CAT"
+      ],
+      "peers_b": [
+        "XOM",
+        "CAT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.00010271776414494393,
+      "margin_b": 0.008108885375289643
+    },
+    {
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "k": 2,
+      "ticker": "JNJ",
+      "peers_a": [
+        "MRK",
+        "WMT"
+      ],
+      "peers_b": [
+        "MRK",
+        "DE"
+      ],
+      "overlap": 0.5,
+      "jaccard": 0.3333333333333333,
+      "margin_a": 0.0002563727256243986,
+      "margin_b": 0.00034719070338873337
+    },
+    {
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "k": 2,
+      "ticker": "MRK",
+      "peers_a": [
+        "JNJ",
+        "DE"
+      ],
+      "peers_b": [
+        "JNJ",
+        "WMT"
+      ],
+      "overlap": 0.5,
+      "jaccard": 0.3333333333333333,
+      "margin_a": 0.0008156801938383751,
+      "margin_b": 0.009545611069068038
+    },
+    {
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "k": 2,
+      "ticker": "CAT",
+      "peers_a": [
+        "DE",
+        "ORCL"
+      ],
+      "peers_b": [
+        "DE",
+        "BAC"
+      ],
+      "overlap": 0.5,
+      "jaccard": 0.3333333333333333,
+      "margin_a": 0.00027225638766159577,
+      "margin_b": 0.008834614203922952
+    },
+    {
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "k": 2,
+      "ticker": "DE",
+      "peers_a": [
+        "ORCL",
+        "CAT"
+      ],
+      "peers_b": [
+        "CAT",
+        "JNJ"
+      ],
+      "overlap": 0.5,
+      "jaccard": 0.3333333333333333,
+      "margin_a": 0.00033691249662415323,
+      "margin_b": 0.004411342461274836
+    },
+    {
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "k": 2,
+      "ticker": "WMT",
+      "peers_a": [
+        "TGT",
+        "ORCL"
+      ],
+      "peers_b": [
+        "TGT",
+        "ORCL"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.002991695058392807,
+      "margin_b": 0.0006436354555334756
+    },
+    {
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "k": 2,
+      "ticker": "TGT",
+      "peers_a": [
+        "WMT",
+        "DE"
+      ],
+      "peers_b": [
+        "WMT",
+        "DE"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0008798154181598461,
+      "margin_b": 0.004953631188001406
+    },
+    {
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "k": 3,
+      "ticker": "MSFT",
+      "peers_a": [
+        "ORCL",
+        "WMT",
+        "DE"
+      ],
+      "peers_b": [
+        "ORCL",
+        "WMT",
+        "DE"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0024644027601485874,
+      "margin_b": 0.008748733425016919
+    },
+    {
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "k": 3,
+      "ticker": "ORCL",
+      "peers_a": [
+        "MSFT",
+        "WMT",
+        "DE"
+      ],
+      "peers_b": [
+        "MSFT",
+        "WMT",
+        "CAT"
+      ],
+      "overlap": 0.6666666666666666,
+      "jaccard": 0.5,
+      "margin_a": 0.001788980940762963,
+      "margin_b": 0.0005669159900610898
+    },
+    {
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "k": 3,
+      "ticker": "JPM",
+      "peers_a": [
+        "BAC",
+        "CAT",
+        "JNJ"
+      ],
+      "peers_b": [
+        "BAC",
+        "CAT",
+        "ORCL"
+      ],
+      "overlap": 0.6666666666666666,
+      "jaccard": 0.5,
+      "margin_a": 0.0026061912802783915,
+      "margin_b": 0.006447037067720762
+    },
+    {
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "k": 3,
+      "ticker": "BAC",
+      "peers_a": [
+        "CAT",
+        "ORCL",
+        "WMT"
+      ],
+      "peers_b": [
+        "CAT",
+        "ORCL",
+        "WMT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.003180621910903847,
+      "margin_b": 0.014428408814877391
+    },
+    {
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "k": 3,
+      "ticker": "XOM",
+      "peers_a": [
+        "CVX",
+        "DE",
+        "CAT"
+      ],
+      "peers_b": [
+        "CVX",
+        "CAT",
+        "DE"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.00381297528430391,
+      "margin_b": 0.02501251602786969
+    },
+    {
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "k": 3,
+      "ticker": "CVX",
+      "peers_a": [
+        "XOM",
+        "CAT",
+        "JNJ"
+      ],
+      "peers_b": [
+        "XOM",
+        "CAT",
+        "DE"
+      ],
+      "overlap": 0.6666666666666666,
+      "jaccard": 0.5,
+      "margin_a": 0.0034489110777452536,
+      "margin_b": 0.031532322656570466
+    },
+    {
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "k": 3,
+      "ticker": "JNJ",
+      "peers_a": [
+        "MRK",
+        "WMT",
+        "ORCL"
+      ],
+      "peers_b": [
+        "MRK",
+        "DE",
+        "WMT"
+      ],
+      "overlap": 0.6666666666666666,
+      "jaccard": 0.5,
+      "margin_a": 0.0004685588038427779,
+      "margin_b": 0.008972836757531244
+    },
+    {
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "k": 3,
+      "ticker": "MRK",
+      "peers_a": [
+        "JNJ",
+        "DE",
+        "ORCL"
+      ],
+      "peers_b": [
+        "JNJ",
+        "WMT",
+        "DE"
+      ],
+      "overlap": 0.6666666666666666,
+      "jaccard": 0.5,
+      "margin_a": 0.0006059559883728749,
+      "margin_b": 0.008744576251196956
+    },
+    {
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "k": 3,
+      "ticker": "CAT",
+      "peers_a": [
+        "DE",
+        "ORCL",
+        "BAC"
+      ],
+      "peers_b": [
+        "DE",
+        "BAC",
+        "WMT"
+      ],
+      "overlap": 0.6666666666666666,
+      "jaccard": 0.5,
+      "margin_a": 0.0011547024953473262,
+      "margin_b": 0.0020752953860965206
+    },
+    {
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "k": 3,
+      "ticker": "DE",
+      "peers_a": [
+        "ORCL",
+        "CAT",
+        "TGT"
+      ],
+      "peers_b": [
+        "CAT",
+        "JNJ",
+        "WMT"
+      ],
+      "overlap": 0.3333333333333333,
+      "jaccard": 0.2,
+      "margin_a": 9.580885162097097e-05,
+      "margin_b": 0.001714288690682464
+    },
+    {
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "k": 3,
+      "ticker": "WMT",
+      "peers_a": [
+        "TGT",
+        "ORCL",
+        "DE"
+      ],
+      "peers_b": [
+        "TGT",
+        "ORCL",
+        "JNJ"
+      ],
+      "overlap": 0.6666666666666666,
+      "jaccard": 0.5,
+      "margin_a": 0.0014421003277315103,
+      "margin_b": 0.0029174168001774303
+    },
+    {
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "k": 3,
+      "ticker": "TGT",
+      "peers_a": [
+        "WMT",
+        "DE",
+        "ORCL"
+      ],
+      "peers_b": [
+        "WMT",
+        "DE",
+        "CAT"
+      ],
+      "overlap": 0.6666666666666666,
+      "jaccard": 0.5,
+      "margin_a": 0.002474139482381621,
+      "margin_b": 0.008304966274888193
+    },
+    {
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "k": 5,
+      "ticker": "MSFT",
+      "peers_a": [
+        "ORCL",
+        "WMT",
+        "DE",
+        "TGT",
+        "BAC"
+      ],
+      "peers_b": [
+        "ORCL",
+        "WMT",
+        "DE",
+        "BAC",
+        "TGT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.001975275328987891,
+      "margin_b": 0.00016573407627462622
+    },
+    {
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "k": 5,
+      "ticker": "ORCL",
+      "peers_a": [
+        "MSFT",
+        "WMT",
+        "DE",
+        "CAT",
+        "TGT"
+      ],
+      "peers_b": [
+        "MSFT",
+        "WMT",
+        "CAT",
+        "BAC",
+        "DE"
+      ],
+      "overlap": 0.8,
+      "jaccard": 0.6666666666666666,
+      "margin_a": 0.0009062408303266434,
+      "margin_b": 0.004237672743657495
+    },
+    {
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "k": 5,
+      "ticker": "JPM",
+      "peers_a": [
+        "BAC",
+        "CAT",
+        "JNJ",
+        "ORCL",
+        "WMT"
+      ],
+      "peers_b": [
+        "BAC",
+        "CAT",
+        "ORCL",
+        "WMT",
+        "TGT"
+      ],
+      "overlap": 0.8,
+      "jaccard": 0.6666666666666666,
+      "margin_a": 0.003410389931171709,
+      "margin_b": 0.0013947758327715887
+    },
+    {
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "k": 5,
+      "ticker": "BAC",
+      "peers_a": [
+        "CAT",
+        "ORCL",
+        "WMT",
+        "DE",
+        "TGT"
+      ],
+      "peers_b": [
+        "CAT",
+        "ORCL",
+        "WMT",
+        "DE",
+        "TGT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0020082355985657774,
+      "margin_b": 0.006286957739208177
+    },
+    {
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "k": 5,
+      "ticker": "XOM",
+      "peers_a": [
+        "CVX",
+        "DE",
+        "CAT",
+        "JNJ",
+        "ORCL"
+      ],
+      "peers_b": [
+        "CVX",
+        "CAT",
+        "DE",
+        "JNJ",
+        "BAC"
+      ],
+      "overlap": 0.8,
+      "jaccard": 0.6666666666666666,
+      "margin_a": 0.000895638761444828,
+      "margin_b": 0.0007798188000472939
+    },
+    {
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "k": 5,
+      "ticker": "CVX",
+      "peers_a": [
+        "XOM",
+        "CAT",
+        "JNJ",
+        "DE",
+        "MRK"
+      ],
+      "peers_b": [
+        "XOM",
+        "CAT",
+        "DE",
+        "JNJ",
+        "TGT"
+      ],
+      "overlap": 0.8,
+      "jaccard": 0.6666666666666666,
+      "margin_a": 0.0005940689280932165,
+      "margin_b": 0.005118888307295455
+    },
+    {
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "k": 5,
+      "ticker": "JNJ",
+      "peers_a": [
+        "MRK",
+        "WMT",
+        "ORCL",
+        "DE",
+        "CAT"
+      ],
+      "peers_b": [
+        "MRK",
+        "DE",
+        "WMT",
+        "CAT",
+        "ORCL"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0024406761857368453,
+      "margin_b": 0.015361195445212306
+    },
+    {
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "k": 5,
+      "ticker": "MRK",
+      "peers_a": [
+        "JNJ",
+        "DE",
+        "ORCL",
+        "WMT",
+        "CAT"
+      ],
+      "peers_b": [
+        "JNJ",
+        "WMT",
+        "DE",
+        "ORCL",
+        "CAT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.003481143603512593,
+      "margin_b": 0.010626351285677016
+    },
+    {
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "k": 5,
+      "ticker": "CAT",
+      "peers_a": [
+        "DE",
+        "ORCL",
+        "BAC",
+        "WMT",
+        "TGT"
+      ],
+      "peers_b": [
+        "DE",
+        "BAC",
+        "WMT",
+        "ORCL",
+        "JNJ"
+      ],
+      "overlap": 0.8,
+      "jaccard": 0.6666666666666666,
+      "margin_a": 0.0017607230026092102,
+      "margin_b": 0.001779427698979763
+    },
+    {
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "k": 5,
+      "ticker": "DE",
+      "peers_a": [
+        "ORCL",
+        "CAT",
+        "TGT",
+        "WMT",
+        "MSFT"
+      ],
+      "peers_b": [
+        "CAT",
+        "JNJ",
+        "WMT",
+        "ORCL",
+        "TGT"
+      ],
+      "overlap": 0.8,
+      "jaccard": 0.6666666666666666,
+      "margin_a": 0.0018251715228961851,
+      "margin_b": 0.023650742260104107
+    },
+    {
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "k": 5,
+      "ticker": "WMT",
+      "peers_a": [
+        "TGT",
+        "ORCL",
+        "DE",
+        "MSFT",
+        "CAT"
+      ],
+      "peers_b": [
+        "TGT",
+        "ORCL",
+        "JNJ",
+        "CAT",
+        "DE"
+      ],
+      "overlap": 0.8,
+      "jaccard": 0.6666666666666666,
+      "margin_a": 0.0013689486545036544,
+      "margin_b": 0.010956814955850214
+    },
+    {
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "k": 5,
+      "ticker": "TGT",
+      "peers_a": [
+        "WMT",
+        "DE",
+        "ORCL",
+        "CAT",
+        "MSFT"
+      ],
+      "peers_b": [
+        "WMT",
+        "DE",
+        "CAT",
+        "ORCL",
+        "JNJ"
+      ],
+      "overlap": 0.8,
+      "jaccard": 0.6666666666666666,
+      "margin_a": 0.0020135563439063198,
+      "margin_b": 0.0073764357777500456
+    },
+    {
+      "comparison_id": "bge_vs_qwen_192",
+      "k": 1,
+      "ticker": "MSFT",
+      "peers_a": [
+        "ORCL"
+      ],
+      "peers_b": [
+        "ORCL"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.012402758162331162,
+      "margin_b": 0.05102036524267284
+    },
+    {
+      "comparison_id": "bge_vs_qwen_192",
+      "k": 1,
+      "ticker": "ORCL",
+      "peers_a": [
+        "MSFT"
+      ],
+      "peers_b": [
+        "MSFT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0018968347947589947,
+      "margin_b": 0.030760331131969854
+    },
+    {
+      "comparison_id": "bge_vs_qwen_192",
+      "k": 1,
+      "ticker": "JPM",
+      "peers_a": [
+        "BAC"
+      ],
+      "peers_b": [
+        "BAC"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.01870030030416303,
+      "margin_b": 0.05759993377040573
+    },
+    {
+      "comparison_id": "bge_vs_qwen_192",
+      "k": 1,
+      "ticker": "BAC",
+      "peers_a": [
+        "CAT"
+      ],
+      "peers_b": [
+        "CAT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.010963275293695451,
+      "margin_b": 0.011476825580080563
+    },
+    {
+      "comparison_id": "bge_vs_qwen_192",
+      "k": 1,
+      "ticker": "XOM",
+      "peers_a": [
+        "CVX"
+      ],
+      "peers_b": [
+        "CVX"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.019388753856578234,
+      "margin_b": 0.03810804369263843
+    },
+    {
+      "comparison_id": "bge_vs_qwen_192",
+      "k": 1,
+      "ticker": "CVX",
+      "peers_a": [
+        "XOM"
+      ],
+      "peers_b": [
+        "XOM"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.03844067190844569,
+      "margin_b": 0.08224922771430276
+    },
+    {
+      "comparison_id": "bge_vs_qwen_192",
+      "k": 1,
+      "ticker": "JNJ",
+      "peers_a": [
+        "MRK"
+      ],
+      "peers_b": [
+        "MRK"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.01727201582956228,
+      "margin_b": 0.02796418534270284
+    },
+    {
+      "comparison_id": "bge_vs_qwen_192",
+      "k": 1,
+      "ticker": "MRK",
+      "peers_a": [
+        "JNJ"
+      ],
+      "peers_b": [
+        "JNJ"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.041594654066681724,
+      "margin_b": 0.07166718621585855
+    },
+    {
+      "comparison_id": "bge_vs_qwen_192",
+      "k": 1,
+      "ticker": "CAT",
+      "peers_a": [
+        "BAC"
+      ],
+      "peers_b": [
+        "DE"
+      ],
+      "overlap": 0.0,
+      "jaccard": 0.0,
+      "margin_a": 0.000651229412500065,
+      "margin_b": 0.012987191735293613
+    },
+    {
+      "comparison_id": "bge_vs_qwen_192",
+      "k": 1,
+      "ticker": "DE",
+      "peers_a": [
+        "TGT"
+      ],
+      "peers_b": [
+        "CAT"
+      ],
+      "overlap": 0.0,
+      "jaccard": 0.0,
+      "margin_a": 0.0016427296585451723,
+      "margin_b": 0.0185571984356504
+    },
+    {
+      "comparison_id": "bge_vs_qwen_192",
+      "k": 1,
+      "ticker": "WMT",
+      "peers_a": [
+        "TGT"
+      ],
+      "peers_b": [
+        "TGT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.006141996643068137,
+      "margin_b": 0.03022887160213883
+    },
+    {
+      "comparison_id": "bge_vs_qwen_192",
+      "k": 1,
+      "ticker": "TGT",
+      "peers_a": [
+        "WMT"
+      ],
+      "peers_b": [
+        "WMT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.007399877756437245,
+      "margin_b": 0.036671140326181906
+    },
+    {
+      "comparison_id": "bge_vs_qwen_192",
+      "k": 2,
+      "ticker": "MSFT",
+      "peers_a": [
+        "ORCL",
+        "WMT"
+      ],
+      "peers_b": [
+        "ORCL",
+        "WMT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.008051525363580447,
+      "margin_b": 0.010675570074210161
+    },
+    {
+      "comparison_id": "bge_vs_qwen_192",
+      "k": 2,
+      "ticker": "ORCL",
+      "peers_a": [
+        "MSFT",
+        "WMT"
+      ],
+      "peers_b": [
+        "MSFT",
+        "WMT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.003585229698730319,
+      "margin_b": 0.0056363476418074265
+    },
+    {
+      "comparison_id": "bge_vs_qwen_192",
+      "k": 2,
+      "ticker": "JPM",
+      "peers_a": [
+        "BAC",
+        "CAT"
+      ],
+      "peers_b": [
+        "BAC",
+        "CAT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.012623843263030676,
+      "margin_b": 0.026007840370887214
+    },
+    {
+      "comparison_id": "bge_vs_qwen_192",
+      "k": 2,
+      "ticker": "BAC",
+      "peers_a": [
+        "CAT",
+        "ORCL"
+      ],
+      "peers_b": [
+        "CAT",
+        "ORCL"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.002348670283172427,
+      "margin_b": 0.009461338537401276
+    },
+    {
+      "comparison_id": "bge_vs_qwen_192",
+      "k": 2,
+      "ticker": "XOM",
+      "peers_a": [
+        "CVX",
+        "DE"
+      ],
+      "peers_b": [
+        "CVX",
+        "CAT"
+      ],
+      "overlap": 0.5,
+      "jaccard": 0.3333333333333333,
+      "margin_a": 0.011129852755746739,
+      "margin_b": 0.0034351812601748355
+    },
+    {
+      "comparison_id": "bge_vs_qwen_192",
+      "k": 2,
+      "ticker": "CVX",
+      "peers_a": [
+        "XOM",
+        "CAT"
+      ],
+      "peers_b": [
+        "XOM",
+        "CAT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.006568328589863781,
+      "margin_b": 0.008108885375289643
+    },
+    {
+      "comparison_id": "bge_vs_qwen_192",
+      "k": 2,
+      "ticker": "JNJ",
+      "peers_a": [
+        "MRK",
+        "WMT"
+      ],
+      "peers_b": [
+        "MRK",
+        "DE"
+      ],
+      "overlap": 0.5,
+      "jaccard": 0.3333333333333333,
+      "margin_a": 0.0007720890549191006,
+      "margin_b": 0.00034719070338873337
+    },
+    {
+      "comparison_id": "bge_vs_qwen_192",
+      "k": 2,
+      "ticker": "MRK",
+      "peers_a": [
+        "JNJ",
+        "DE"
+      ],
+      "peers_b": [
+        "JNJ",
+        "WMT"
+      ],
+      "overlap": 0.5,
+      "jaccard": 0.3333333333333333,
+      "margin_a": 0.00299374571961486,
+      "margin_b": 0.009545611069068038
+    },
+    {
+      "comparison_id": "bge_vs_qwen_192",
+      "k": 2,
+      "ticker": "CAT",
+      "peers_a": [
+        "BAC",
+        "DE"
+      ],
+      "peers_b": [
+        "DE",
+        "BAC"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.005390066925377357,
+      "margin_b": 0.008834614203922952
+    },
+    {
+      "comparison_id": "bge_vs_qwen_192",
+      "k": 2,
+      "ticker": "DE",
+      "peers_a": [
+        "TGT",
+        "WMT"
+      ],
+      "peers_b": [
+        "CAT",
+        "JNJ"
+      ],
+      "overlap": 0.0,
+      "jaccard": 0.0,
+      "margin_a": 0.0006846189268160385,
+      "margin_b": 0.004411342461274836
+    },
+    {
+      "comparison_id": "bge_vs_qwen_192",
+      "k": 2,
+      "ticker": "WMT",
+      "peers_a": [
+        "TGT",
+        "ORCL"
+      ],
+      "peers_b": [
+        "TGT",
+        "ORCL"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0029006107719142804,
+      "margin_b": 0.0006436354555334756
+    },
+    {
+      "comparison_id": "bge_vs_qwen_192",
+      "k": 2,
+      "ticker": "TGT",
+      "peers_a": [
+        "WMT",
+        "DE"
+      ],
+      "peers_b": [
+        "WMT",
+        "DE"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.006296257352046086,
+      "margin_b": 0.004953631188001406
+    },
+    {
+      "comparison_id": "bge_vs_qwen_192",
+      "k": 3,
+      "ticker": "MSFT",
+      "peers_a": [
+        "ORCL",
+        "WMT",
+        "DE"
+      ],
+      "peers_b": [
+        "ORCL",
+        "WMT",
+        "DE"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0061796593310736725,
+      "margin_b": 0.008748733425016919
+    },
+    {
+      "comparison_id": "bge_vs_qwen_192",
+      "k": 3,
+      "ticker": "ORCL",
+      "peers_a": [
+        "MSFT",
+        "WMT",
+        "DE"
+      ],
+      "peers_b": [
+        "MSFT",
+        "WMT",
+        "CAT"
+      ],
+      "overlap": 0.6666666666666666,
+      "jaccard": 0.5,
+      "margin_a": 0.0039689087666848755,
+      "margin_b": 0.0005669159900610898
+    },
+    {
+      "comparison_id": "bge_vs_qwen_192",
+      "k": 3,
+      "ticker": "JPM",
+      "peers_a": [
+        "BAC",
+        "CAT",
+        "ORCL"
+      ],
+      "peers_b": [
+        "BAC",
+        "CAT",
+        "ORCL"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.003583151598826606,
+      "margin_b": 0.006447037067720762
+    },
+    {
+      "comparison_id": "bge_vs_qwen_192",
+      "k": 3,
+      "ticker": "BAC",
+      "peers_a": [
+        "CAT",
+        "ORCL",
+        "WMT"
+      ],
+      "peers_b": [
+        "CAT",
+        "ORCL",
+        "WMT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.007568183337861578,
+      "margin_b": 0.014428408814877391
+    },
+    {
+      "comparison_id": "bge_vs_qwen_192",
+      "k": 3,
+      "ticker": "XOM",
+      "peers_a": [
+        "CVX",
+        "DE",
+        "CAT"
+      ],
+      "peers_b": [
+        "CVX",
+        "CAT",
+        "DE"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.00816854573402126,
+      "margin_b": 0.02501251602786969
+    },
+    {
+      "comparison_id": "bge_vs_qwen_192",
+      "k": 3,
+      "ticker": "CVX",
+      "peers_a": [
+        "XOM",
+        "CAT",
+        "DE"
+      ],
+      "peers_b": [
+        "XOM",
+        "CAT",
+        "DE"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.001096398955891198,
+      "margin_b": 0.031532322656570466
+    },
+    {
+      "comparison_id": "bge_vs_qwen_192",
+      "k": 3,
+      "ticker": "JNJ",
+      "peers_a": [
+        "MRK",
+        "WMT",
+        "DE"
+      ],
+      "peers_b": [
+        "MRK",
+        "DE",
+        "WMT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 5.263245336983857e-05,
+      "margin_b": 0.008972836757531244
+    },
+    {
+      "comparison_id": "bge_vs_qwen_192",
+      "k": 3,
+      "ticker": "MRK",
+      "peers_a": [
+        "JNJ",
+        "DE",
+        "WMT"
+      ],
+      "peers_b": [
+        "JNJ",
+        "WMT",
+        "DE"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.00048461348718997765,
+      "margin_b": 0.008744576251196956
+    },
+    {
+      "comparison_id": "bge_vs_qwen_192",
+      "k": 3,
+      "ticker": "CAT",
+      "peers_a": [
+        "BAC",
+        "DE",
+        "ORCL"
+      ],
+      "peers_b": [
+        "DE",
+        "BAC",
+        "WMT"
+      ],
+      "overlap": 0.6666666666666666,
+      "jaccard": 0.5,
+      "margin_a": 0.00065786702067816,
+      "margin_b": 0.0020752953860965206
+    },
+    {
+      "comparison_id": "bge_vs_qwen_192",
+      "k": 3,
+      "ticker": "DE",
+      "peers_a": [
+        "TGT",
+        "WMT",
+        "ORCL"
+      ],
+      "peers_b": [
+        "CAT",
+        "JNJ",
+        "WMT"
+      ],
+      "overlap": 0.3333333333333333,
+      "jaccard": 0.2,
+      "margin_a": 0.0003118480085132491,
+      "margin_b": 0.001714288690682464
+    },
+    {
+      "comparison_id": "bge_vs_qwen_192",
+      "k": 3,
+      "ticker": "WMT",
+      "peers_a": [
+        "TGT",
+        "ORCL",
+        "DE"
+      ],
+      "peers_b": [
+        "TGT",
+        "ORCL",
+        "JNJ"
+      ],
+      "overlap": 0.6666666666666666,
+      "jaccard": 0.5,
+      "margin_a": 0.007044400881384805,
+      "margin_b": 0.0029174168001774303
+    },
+    {
+      "comparison_id": "bge_vs_qwen_192",
+      "k": 3,
+      "ticker": "TGT",
+      "peers_a": [
+        "WMT",
+        "DE",
+        "ORCL"
+      ],
+      "peers_b": [
+        "WMT",
+        "DE",
+        "CAT"
+      ],
+      "overlap": 0.6666666666666666,
+      "jaccard": 0.5,
+      "margin_a": 0.002898081500322669,
+      "margin_b": 0.008304966274888193
+    },
+    {
+      "comparison_id": "bge_vs_qwen_192",
+      "k": 5,
+      "ticker": "MSFT",
+      "peers_a": [
+        "ORCL",
+        "WMT",
+        "DE",
+        "TGT",
+        "JNJ"
+      ],
+      "peers_b": [
+        "ORCL",
+        "WMT",
+        "DE",
+        "BAC",
+        "TGT"
+      ],
+      "overlap": 0.8,
+      "jaccard": 0.6666666666666666,
+      "margin_a": 0.004759825110049798,
+      "margin_b": 0.00016573407627462622
+    },
+    {
+      "comparison_id": "bge_vs_qwen_192",
+      "k": 5,
+      "ticker": "ORCL",
+      "peers_a": [
+        "MSFT",
+        "WMT",
+        "DE",
+        "TGT",
+        "CAT"
+      ],
+      "peers_b": [
+        "MSFT",
+        "WMT",
+        "CAT",
+        "BAC",
+        "DE"
+      ],
+      "overlap": 0.8,
+      "jaccard": 0.6666666666666666,
+      "margin_a": 0.003038383656057908,
+      "margin_b": 0.004237672743657495
+    },
+    {
+      "comparison_id": "bge_vs_qwen_192",
+      "k": 5,
+      "ticker": "JPM",
+      "peers_a": [
+        "BAC",
+        "CAT",
+        "ORCL",
+        "WMT",
+        "TGT"
+      ],
+      "peers_b": [
+        "BAC",
+        "CAT",
+        "ORCL",
+        "WMT",
+        "TGT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.005552036547265438,
+      "margin_b": 0.0013947758327715887
+    },
+    {
+      "comparison_id": "bge_vs_qwen_192",
+      "k": 5,
+      "ticker": "BAC",
+      "peers_a": [
+        "CAT",
+        "ORCL",
+        "WMT",
+        "DE",
+        "TGT"
+      ],
+      "peers_b": [
+        "CAT",
+        "ORCL",
+        "WMT",
+        "DE",
+        "TGT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.011706768329053818,
+      "margin_b": 0.006286957739208177
+    },
+    {
+      "comparison_id": "bge_vs_qwen_192",
+      "k": 5,
+      "ticker": "XOM",
+      "peers_a": [
+        "CVX",
+        "DE",
+        "CAT",
+        "JNJ",
+        "TGT"
+      ],
+      "peers_b": [
+        "CVX",
+        "CAT",
+        "DE",
+        "JNJ",
+        "BAC"
+      ],
+      "overlap": 0.8,
+      "jaccard": 0.6666666666666666,
+      "margin_a": 0.0008434459337501865,
+      "margin_b": 0.0007798188000472939
+    },
+    {
+      "comparison_id": "bge_vs_qwen_192",
+      "k": 5,
+      "ticker": "CVX",
+      "peers_a": [
+        "XOM",
+        "CAT",
+        "DE",
+        "JNJ",
+        "TGT"
+      ],
+      "peers_b": [
+        "XOM",
+        "CAT",
+        "DE",
+        "JNJ",
+        "TGT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.003947471583490958,
+      "margin_b": 0.005118888307295455
+    },
+    {
+      "comparison_id": "bge_vs_qwen_192",
+      "k": 5,
+      "ticker": "JNJ",
+      "peers_a": [
+        "MRK",
+        "WMT",
+        "DE",
+        "ORCL",
+        "TGT"
+      ],
+      "peers_b": [
+        "MRK",
+        "DE",
+        "WMT",
+        "CAT",
+        "ORCL"
+      ],
+      "overlap": 0.8,
+      "jaccard": 0.6666666666666666,
+      "margin_a": 0.0034616585511373366,
+      "margin_b": 0.015361195445212306
+    },
+    {
+      "comparison_id": "bge_vs_qwen_192",
+      "k": 5,
+      "ticker": "MRK",
+      "peers_a": [
+        "JNJ",
+        "DE",
+        "WMT",
+        "ORCL",
+        "TGT"
+      ],
+      "peers_b": [
+        "JNJ",
+        "WMT",
+        "DE",
+        "ORCL",
+        "CAT"
+      ],
+      "overlap": 0.8,
+      "jaccard": 0.6666666666666666,
+      "margin_a": 0.006042438107024095,
+      "margin_b": 0.010626351285677016
+    },
+    {
+      "comparison_id": "bge_vs_qwen_192",
+      "k": 5,
+      "ticker": "CAT",
+      "peers_a": [
+        "BAC",
+        "DE",
+        "ORCL",
+        "WMT",
+        "TGT"
+      ],
+      "peers_b": [
+        "DE",
+        "BAC",
+        "WMT",
+        "ORCL",
+        "JNJ"
+      ],
+      "overlap": 0.8,
+      "jaccard": 0.6666666666666666,
+      "margin_a": 0.011732446159171017,
+      "margin_b": 0.001779427698979763
+    },
+    {
+      "comparison_id": "bge_vs_qwen_192",
+      "k": 5,
+      "ticker": "DE",
+      "peers_a": [
+        "TGT",
+        "WMT",
+        "ORCL",
+        "CAT",
+        "JNJ"
+      ],
+      "peers_b": [
+        "CAT",
+        "JNJ",
+        "WMT",
+        "ORCL",
+        "TGT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.00628455289584362,
+      "margin_b": 0.023650742260104107
+    },
+    {
+      "comparison_id": "bge_vs_qwen_192",
+      "k": 5,
+      "ticker": "WMT",
+      "peers_a": [
+        "TGT",
+        "ORCL",
+        "DE",
+        "CAT",
+        "MSFT"
+      ],
+      "peers_b": [
+        "TGT",
+        "ORCL",
+        "JNJ",
+        "CAT",
+        "DE"
+      ],
+      "overlap": 0.8,
+      "jaccard": 0.6666666666666666,
+      "margin_a": 0.0009948834128177264,
+      "margin_b": 0.010956814955850214
+    },
+    {
+      "comparison_id": "bge_vs_qwen_192",
+      "k": 5,
+      "ticker": "TGT",
+      "peers_a": [
+        "WMT",
+        "DE",
+        "ORCL",
+        "CAT",
+        "JNJ"
+      ],
+      "peers_b": [
+        "WMT",
+        "DE",
+        "CAT",
+        "ORCL",
+        "JNJ"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.006014100488454743,
+      "margin_b": 0.0073764357777500456
+    },
+    {
+      "comparison_id": "e5_192_vs_320",
+      "k": 1,
+      "ticker": "MSFT",
+      "peers_a": [
+        "ORCL"
+      ],
+      "peers_b": [
+        "ORCL"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.005074316401819323,
+      "margin_b": 0.007341004937312379
+    },
+    {
+      "comparison_id": "e5_192_vs_320",
+      "k": 1,
+      "ticker": "ORCL",
+      "peers_a": [
+        "MSFT"
+      ],
+      "peers_b": [
+        "MSFT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0006405284193209404,
+      "margin_b": 0.0025876449051077666
+    },
+    {
+      "comparison_id": "e5_192_vs_320",
+      "k": 1,
+      "ticker": "JPM",
+      "peers_a": [
+        "BAC"
+      ],
+      "peers_b": [
+        "BAC"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.004480625557657603,
+      "margin_b": 0.0052608580594434295
+    },
+    {
+      "comparison_id": "e5_192_vs_320",
+      "k": 1,
+      "ticker": "BAC",
+      "peers_a": [
+        "CAT"
+      ],
+      "peers_b": [
+        "CAT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0012688390300247265,
+      "margin_b": 0.00195289795834519
+    },
+    {
+      "comparison_id": "e5_192_vs_320",
+      "k": 1,
+      "ticker": "XOM",
+      "peers_a": [
+        "CVX"
+      ],
+      "peers_b": [
+        "CVX"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.004264144542855286,
+      "margin_b": 0.0053812324195045
+    },
+    {
+      "comparison_id": "e5_192_vs_320",
+      "k": 1,
+      "ticker": "CVX",
+      "peers_a": [
+        "XOM"
+      ],
+      "peers_b": [
+        "XOM"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.014271590464023154,
+      "margin_b": 0.010454940646853261
+    },
+    {
+      "comparison_id": "e5_192_vs_320",
+      "k": 1,
+      "ticker": "JNJ",
+      "peers_a": [
+        "MRK"
+      ],
+      "peers_b": [
+        "MRK"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.005970276870251312,
+      "margin_b": 0.006677858045602503
+    },
+    {
+      "comparison_id": "e5_192_vs_320",
+      "k": 1,
+      "ticker": "MRK",
+      "peers_a": [
+        "JNJ"
+      ],
+      "peers_b": [
+        "JNJ"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.019950423367356307,
+      "margin_b": 0.022870069039606422
+    },
+    {
+      "comparison_id": "e5_192_vs_320",
+      "k": 1,
+      "ticker": "CAT",
+      "peers_a": [
+        "DE"
+      ],
+      "peers_b": [
+        "BAC"
+      ],
+      "overlap": 0.0,
+      "jaccard": 0.0,
+      "margin_a": 0.0005818698137040057,
+      "margin_b": 0.00013254371217796823
+    },
+    {
+      "comparison_id": "e5_192_vs_320",
+      "k": 1,
+      "ticker": "DE",
+      "peers_a": [
+        "ORCL"
+      ],
+      "peers_b": [
+        "ORCL"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0012071076972114403,
+      "margin_b": 0.00042265992525347684
+    },
+    {
+      "comparison_id": "e5_192_vs_320",
+      "k": 1,
+      "ticker": "WMT",
+      "peers_a": [
+        "TGT"
+      ],
+      "peers_b": [
+        "TGT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0003603072771091176,
+      "margin_b": 0.0004758655809965484
+    },
+    {
+      "comparison_id": "e5_192_vs_320",
+      "k": 1,
+      "ticker": "TGT",
+      "peers_a": [
+        "WMT"
+      ],
+      "peers_b": [
+        "WMT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.003256184790159322,
+      "margin_b": 0.004654397315216108
+    },
+    {
+      "comparison_id": "e5_192_vs_320",
+      "k": 2,
+      "ticker": "MSFT",
+      "peers_a": [
+        "ORCL",
+        "WMT"
+      ],
+      "peers_b": [
+        "ORCL",
+        "WMT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0015394852235990353,
+      "margin_b": 0.001946477394719981
+    },
+    {
+      "comparison_id": "e5_192_vs_320",
+      "k": 2,
+      "ticker": "ORCL",
+      "peers_a": [
+        "MSFT",
+        "WMT"
+      ],
+      "peers_b": [
+        "MSFT",
+        "WMT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0013518626380695231,
+      "margin_b": 0.001722817809573729
+    },
+    {
+      "comparison_id": "e5_192_vs_320",
+      "k": 2,
+      "ticker": "JPM",
+      "peers_a": [
+        "BAC",
+        "CAT"
+      ],
+      "peers_b": [
+        "BAC",
+        "CAT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0027512678074825825,
+      "margin_b": 0.003628980777937274
+    },
+    {
+      "comparison_id": "e5_192_vs_320",
+      "k": 2,
+      "ticker": "BAC",
+      "peers_a": [
+        "CAT",
+        "ORCL"
+      ],
+      "peers_b": [
+        "CAT",
+        "ORCL"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0012548066903202981,
+      "margin_b": 0.0024770438978852782
+    },
+    {
+      "comparison_id": "e5_192_vs_320",
+      "k": 2,
+      "ticker": "XOM",
+      "peers_a": [
+        "CVX",
+        "DE"
+      ],
+      "peers_b": [
+        "CVX",
+        "DE"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.002841438013428288,
+      "margin_b": 0.0005605144622359282
+    },
+    {
+      "comparison_id": "e5_192_vs_320",
+      "k": 2,
+      "ticker": "CVX",
+      "peers_a": [
+        "XOM",
+        "CAT"
+      ],
+      "peers_b": [
+        "XOM",
+        "CAT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.00010270684010549314,
+      "margin_b": 0.0023337078379891407
+    },
+    {
+      "comparison_id": "e5_192_vs_320",
+      "k": 2,
+      "ticker": "JNJ",
+      "peers_a": [
+        "MRK",
+        "WMT"
+      ],
+      "peers_b": [
+        "MRK",
+        "ORCL"
+      ],
+      "overlap": 0.5,
+      "jaccard": 0.3333333333333333,
+      "margin_a": 0.00025637862971905623,
+      "margin_b": 0.0003427994244040722
+    },
+    {
+      "comparison_id": "e5_192_vs_320",
+      "k": 2,
+      "ticker": "MRK",
+      "peers_a": [
+        "JNJ",
+        "DE"
+      ],
+      "peers_b": [
+        "JNJ",
+        "DE"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.000815679938196201,
+      "margin_b": 0.00036645568374471527
+    },
+    {
+      "comparison_id": "e5_192_vs_320",
+      "k": 2,
+      "ticker": "CAT",
+      "peers_a": [
+        "DE",
+        "ORCL"
+      ],
+      "peers_b": [
+        "BAC",
+        "DE"
+      ],
+      "overlap": 0.5,
+      "jaccard": 0.3333333333333333,
+      "margin_a": 0.0002722541360644648,
+      "margin_b": 0.0006389332296466987
+    },
+    {
+      "comparison_id": "e5_192_vs_320",
+      "k": 2,
+      "ticker": "DE",
+      "peers_a": [
+        "ORCL",
+        "CAT"
+      ],
+      "peers_b": [
+        "ORCL",
+        "CAT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.00033690717776924117,
+      "margin_b": 0.0021889396000175365
+    },
+    {
+      "comparison_id": "e5_192_vs_320",
+      "k": 2,
+      "ticker": "WMT",
+      "peers_a": [
+        "TGT",
+        "ORCL"
+      ],
+      "peers_b": [
+        "TGT",
+        "ORCL"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0029916884646068453,
+      "margin_b": 0.004161278514290934
+    },
+    {
+      "comparison_id": "e5_192_vs_320",
+      "k": 2,
+      "ticker": "TGT",
+      "peers_a": [
+        "WMT",
+        "DE"
+      ],
+      "peers_b": [
+        "WMT",
+        "ORCL"
+      ],
+      "overlap": 0.5,
+      "jaccard": 0.3333333333333333,
+      "margin_a": 0.0008798159843564912,
+      "margin_b": 0.0006859249914603627
+    },
+    {
+      "comparison_id": "e5_192_vs_320",
+      "k": 3,
+      "ticker": "MSFT",
+      "peers_a": [
+        "ORCL",
+        "WMT",
+        "DE"
+      ],
+      "peers_b": [
+        "ORCL",
+        "WMT",
+        "DE"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0024643945224817054,
+      "margin_b": 0.002034440372173596
+    },
+    {
+      "comparison_id": "e5_192_vs_320",
+      "k": 3,
+      "ticker": "ORCL",
+      "peers_a": [
+        "MSFT",
+        "WMT",
+        "DE"
+      ],
+      "peers_b": [
+        "MSFT",
+        "WMT",
+        "DE"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.001788977510915446,
+      "margin_b": 0.0010615931549001756
+    },
+    {
+      "comparison_id": "e5_192_vs_320",
+      "k": 3,
+      "ticker": "JPM",
+      "peers_a": [
+        "BAC",
+        "CAT",
+        "JNJ"
+      ],
+      "peers_b": [
+        "BAC",
+        "CAT",
+        "JNJ"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0026061890377198083,
+      "margin_b": 0.00172922514031415
+    },
+    {
+      "comparison_id": "e5_192_vs_320",
+      "k": 3,
+      "ticker": "BAC",
+      "peers_a": [
+        "CAT",
+        "ORCL",
+        "WMT"
+      ],
+      "peers_b": [
+        "CAT",
+        "ORCL",
+        "WMT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.003180616479943721,
+      "margin_b": 0.00335315339466824
+    },
+    {
+      "comparison_id": "e5_192_vs_320",
+      "k": 3,
+      "ticker": "XOM",
+      "peers_a": [
+        "CVX",
+        "DE",
+        "CAT"
+      ],
+      "peers_b": [
+        "CVX",
+        "DE",
+        "CAT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0038129659722763165,
+      "margin_b": 0.005396457843286573
+    },
+    {
+      "comparison_id": "e5_192_vs_320",
+      "k": 3,
+      "ticker": "CVX",
+      "peers_a": [
+        "XOM",
+        "CAT",
+        "JNJ"
+      ],
+      "peers_b": [
+        "XOM",
+        "CAT",
+        "JNJ"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.003448908857510924,
+      "margin_b": 0.003305275874920355
+    },
+    {
+      "comparison_id": "e5_192_vs_320",
+      "k": 3,
+      "ticker": "JNJ",
+      "peers_a": [
+        "MRK",
+        "WMT",
+        "ORCL"
+      ],
+      "peers_b": [
+        "MRK",
+        "ORCL",
+        "WMT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0004685549690539581,
+      "margin_b": 0.0014943525256521095
+    },
+    {
+      "comparison_id": "e5_192_vs_320",
+      "k": 3,
+      "ticker": "MRK",
+      "peers_a": [
+        "JNJ",
+        "DE",
+        "ORCL"
+      ],
+      "peers_b": [
+        "JNJ",
+        "DE",
+        "ORCL"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0006059517202473552,
+      "margin_b": 0.000657576981206609
+    },
+    {
+      "comparison_id": "e5_192_vs_320",
+      "k": 3,
+      "ticker": "CAT",
+      "peers_a": [
+        "DE",
+        "ORCL",
+        "BAC"
+      ],
+      "peers_b": [
+        "BAC",
+        "DE",
+        "ORCL"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0011547004986575127,
+      "margin_b": 0.001376867549817029
+    },
+    {
+      "comparison_id": "e5_192_vs_320",
+      "k": 3,
+      "ticker": "DE",
+      "peers_a": [
+        "ORCL",
+        "CAT",
+        "TGT"
+      ],
+      "peers_b": [
+        "ORCL",
+        "CAT",
+        "WMT"
+      ],
+      "overlap": 0.6666666666666666,
+      "jaccard": 0.5,
+      "margin_a": 9.581095155664077e-05,
+      "margin_b": 0.0005300393908351797
+    },
+    {
+      "comparison_id": "e5_192_vs_320",
+      "k": 3,
+      "ticker": "WMT",
+      "peers_a": [
+        "TGT",
+        "ORCL",
+        "DE"
+      ],
+      "peers_b": [
+        "TGT",
+        "ORCL",
+        "CAT"
+      ],
+      "overlap": 0.6666666666666666,
+      "jaccard": 0.5,
+      "margin_a": 0.0014420995178915375,
+      "margin_b": 0.0001731388205538087
+    },
+    {
+      "comparison_id": "e5_192_vs_320",
+      "k": 3,
+      "ticker": "TGT",
+      "peers_a": [
+        "WMT",
+        "DE",
+        "ORCL"
+      ],
+      "peers_b": [
+        "WMT",
+        "ORCL",
+        "DE"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.00247413674597019,
+      "margin_b": 0.0012659769955947198
+    },
+    {
+      "comparison_id": "e5_192_vs_320",
+      "k": 5,
+      "ticker": "MSFT",
+      "peers_a": [
+        "ORCL",
+        "WMT",
+        "DE",
+        "TGT",
+        "BAC"
+      ],
+      "peers_b": [
+        "ORCL",
+        "WMT",
+        "DE",
+        "TGT",
+        "BAC"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0019752707008078296,
+      "margin_b": 0.0026710052673538653
+    },
+    {
+      "comparison_id": "e5_192_vs_320",
+      "k": 5,
+      "ticker": "ORCL",
+      "peers_a": [
+        "MSFT",
+        "WMT",
+        "DE",
+        "CAT",
+        "TGT"
+      ],
+      "peers_b": [
+        "MSFT",
+        "WMT",
+        "DE",
+        "CAT",
+        "BAC"
+      ],
+      "overlap": 0.8,
+      "jaccard": 0.6666666666666666,
+      "margin_a": 0.0009062398176674646,
+      "margin_b": 0.0002126997532251318
+    },
+    {
+      "comparison_id": "e5_192_vs_320",
+      "k": 5,
+      "ticker": "JPM",
+      "peers_a": [
+        "BAC",
+        "CAT",
+        "JNJ",
+        "ORCL",
+        "WMT"
+      ],
+      "peers_b": [
+        "BAC",
+        "CAT",
+        "JNJ",
+        "ORCL",
+        "WMT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0034103847813427013,
+      "margin_b": 0.004473669226179422
+    },
+    {
+      "comparison_id": "e5_192_vs_320",
+      "k": 5,
+      "ticker": "BAC",
+      "peers_a": [
+        "CAT",
+        "ORCL",
+        "WMT",
+        "DE",
+        "TGT"
+      ],
+      "peers_b": [
+        "CAT",
+        "ORCL",
+        "WMT",
+        "DE",
+        "TGT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0020082329364855545,
+      "margin_b": 0.0005146453948351448
+    },
+    {
+      "comparison_id": "e5_192_vs_320",
+      "k": 5,
+      "ticker": "XOM",
+      "peers_a": [
+        "CVX",
+        "DE",
+        "CAT",
+        "JNJ",
+        "ORCL"
+      ],
+      "peers_b": [
+        "CVX",
+        "DE",
+        "CAT",
+        "JNJ",
+        "ORCL"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0008956305802201303,
+      "margin_b": 0.0012753523789224008
+    },
+    {
+      "comparison_id": "e5_192_vs_320",
+      "k": 5,
+      "ticker": "CVX",
+      "peers_a": [
+        "XOM",
+        "CAT",
+        "JNJ",
+        "DE",
+        "MRK"
+      ],
+      "peers_b": [
+        "XOM",
+        "CAT",
+        "JNJ",
+        "DE",
+        "BAC"
+      ],
+      "overlap": 0.8,
+      "jaccard": 0.6666666666666666,
+      "margin_a": 0.0005940810887767878,
+      "margin_b": 3.087706306148519e-05
+    },
+    {
+      "comparison_id": "e5_192_vs_320",
+      "k": 5,
+      "ticker": "JNJ",
+      "peers_a": [
+        "MRK",
+        "WMT",
+        "ORCL",
+        "DE",
+        "CAT"
+      ],
+      "peers_b": [
+        "MRK",
+        "ORCL",
+        "WMT",
+        "CAT",
+        "DE"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0024406666890965933,
+      "margin_b": 0.0024902876877981317
+    },
+    {
+      "comparison_id": "e5_192_vs_320",
+      "k": 5,
+      "ticker": "MRK",
+      "peers_a": [
+        "JNJ",
+        "DE",
+        "ORCL",
+        "WMT",
+        "CAT"
+      ],
+      "peers_b": [
+        "JNJ",
+        "DE",
+        "ORCL",
+        "WMT",
+        "CAT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0034811362954649816,
+      "margin_b": 0.00492905292292789
+    },
+    {
+      "comparison_id": "e5_192_vs_320",
+      "k": 5,
+      "ticker": "CAT",
+      "peers_a": [
+        "DE",
+        "ORCL",
+        "BAC",
+        "WMT",
+        "TGT"
+      ],
+      "peers_b": [
+        "BAC",
+        "DE",
+        "ORCL",
+        "WMT",
+        "TGT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0017607181434824426,
+      "margin_b": 0.0026840638870017086
+    },
+    {
+      "comparison_id": "e5_192_vs_320",
+      "k": 5,
+      "ticker": "DE",
+      "peers_a": [
+        "ORCL",
+        "CAT",
+        "TGT",
+        "WMT",
+        "MSFT"
+      ],
+      "peers_b": [
+        "ORCL",
+        "CAT",
+        "WMT",
+        "TGT",
+        "MSFT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0018251625755331125,
+      "margin_b": 0.0023896998147159287
+    },
+    {
+      "comparison_id": "e5_192_vs_320",
+      "k": 5,
+      "ticker": "WMT",
+      "peers_a": [
+        "TGT",
+        "ORCL",
+        "DE",
+        "MSFT",
+        "CAT"
+      ],
+      "peers_b": [
+        "TGT",
+        "ORCL",
+        "CAT",
+        "DE",
+        "MSFT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.001368945221687512,
+      "margin_b": 0.0016895158466750937
+    },
+    {
+      "comparison_id": "e5_192_vs_320",
+      "k": 5,
+      "ticker": "TGT",
+      "peers_a": [
+        "WMT",
+        "DE",
+        "ORCL",
+        "CAT",
+        "MSFT"
+      ],
+      "peers_b": [
+        "WMT",
+        "ORCL",
+        "DE",
+        "CAT",
+        "MSFT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0020135473473767984,
+      "margin_b": 0.002351245011288361
+    },
+    {
+      "comparison_id": "bge_192_vs_320",
+      "k": 1,
+      "ticker": "MSFT",
+      "peers_a": [
+        "ORCL"
+      ],
+      "peers_b": [
+        "ORCL"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.012402758162331162,
+      "margin_b": 0.016880019913482314
+    },
+    {
+      "comparison_id": "bge_192_vs_320",
+      "k": 1,
+      "ticker": "ORCL",
+      "peers_a": [
+        "MSFT"
+      ],
+      "peers_b": [
+        "MSFT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0018968347947589947,
+      "margin_b": 0.0076738182220082995
+    },
+    {
+      "comparison_id": "bge_192_vs_320",
+      "k": 1,
+      "ticker": "JPM",
+      "peers_a": [
+        "BAC"
+      ],
+      "peers_b": [
+        "BAC"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.01870030030416303,
+      "margin_b": 0.021524512759550585
+    },
+    {
+      "comparison_id": "bge_192_vs_320",
+      "k": 1,
+      "ticker": "BAC",
+      "peers_a": [
+        "CAT"
+      ],
+      "peers_b": [
+        "CAT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.010963275293695451,
+      "margin_b": 0.012422465074782951
+    },
+    {
+      "comparison_id": "bge_192_vs_320",
+      "k": 1,
+      "ticker": "XOM",
+      "peers_a": [
+        "CVX"
+      ],
+      "peers_b": [
+        "CVX"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.019388753856578234,
+      "margin_b": 0.025676335451036314
+    },
+    {
+      "comparison_id": "bge_192_vs_320",
+      "k": 1,
+      "ticker": "CVX",
+      "peers_a": [
+        "XOM"
+      ],
+      "peers_b": [
+        "XOM"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.03844067190844569,
+      "margin_b": 0.0411386170037058
+    },
+    {
+      "comparison_id": "bge_192_vs_320",
+      "k": 1,
+      "ticker": "JNJ",
+      "peers_a": [
+        "MRK"
+      ],
+      "peers_b": [
+        "MRK"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.01727201582956228,
+      "margin_b": 0.023269721979705005
+    },
+    {
+      "comparison_id": "bge_192_vs_320",
+      "k": 1,
+      "ticker": "MRK",
+      "peers_a": [
+        "JNJ"
+      ],
+      "peers_b": [
+        "JNJ"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.041594654066681724,
+      "margin_b": 0.04746724212699216
+    },
+    {
+      "comparison_id": "bge_192_vs_320",
+      "k": 1,
+      "ticker": "CAT",
+      "peers_a": [
+        "BAC"
+      ],
+      "peers_b": [
+        "BAC"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.000651229412500065,
+      "margin_b": 0.000844438999544117
+    },
+    {
+      "comparison_id": "bge_192_vs_320",
+      "k": 1,
+      "ticker": "DE",
+      "peers_a": [
+        "TGT"
+      ],
+      "peers_b": [
+        "CAT"
+      ],
+      "overlap": 0.0,
+      "jaccard": 0.0,
+      "margin_a": 0.0016427296585451723,
+      "margin_b": 0.000720552830616783
+    },
+    {
+      "comparison_id": "bge_192_vs_320",
+      "k": 1,
+      "ticker": "WMT",
+      "peers_a": [
+        "TGT"
+      ],
+      "peers_b": [
+        "TGT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.006141996643068137,
+      "margin_b": 0.008675282929113903
+    },
+    {
+      "comparison_id": "bge_192_vs_320",
+      "k": 1,
+      "ticker": "TGT",
+      "peers_a": [
+        "WMT"
+      ],
+      "peers_b": [
+        "WMT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.007399877756437245,
+      "margin_b": 0.011959343855868498
+    },
+    {
+      "comparison_id": "bge_192_vs_320",
+      "k": 2,
+      "ticker": "MSFT",
+      "peers_a": [
+        "ORCL",
+        "WMT"
+      ],
+      "peers_b": [
+        "ORCL",
+        "WMT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.008051525363580447,
+      "margin_b": 0.011924560655418248
+    },
+    {
+      "comparison_id": "bge_192_vs_320",
+      "k": 2,
+      "ticker": "ORCL",
+      "peers_a": [
+        "MSFT",
+        "WMT"
+      ],
+      "peers_b": [
+        "MSFT",
+        "WMT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.003585229698730319,
+      "margin_b": 0.005157179947848145
+    },
+    {
+      "comparison_id": "bge_192_vs_320",
+      "k": 2,
+      "ticker": "JPM",
+      "peers_a": [
+        "BAC",
+        "CAT"
+      ],
+      "peers_b": [
+        "BAC",
+        "CAT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.012623843263030676,
+      "margin_b": 0.009669873015403563
+    },
+    {
+      "comparison_id": "bge_192_vs_320",
+      "k": 2,
+      "ticker": "BAC",
+      "peers_a": [
+        "CAT",
+        "ORCL"
+      ],
+      "peers_b": [
+        "CAT",
+        "ORCL"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.002348670283172427,
+      "margin_b": 0.007117499762191892
+    },
+    {
+      "comparison_id": "bge_192_vs_320",
+      "k": 2,
+      "ticker": "XOM",
+      "peers_a": [
+        "CVX",
+        "DE"
+      ],
+      "peers_b": [
+        "CVX",
+        "DE"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.011129852755746739,
+      "margin_b": 0.010151695676568706
+    },
+    {
+      "comparison_id": "bge_192_vs_320",
+      "k": 2,
+      "ticker": "CVX",
+      "peers_a": [
+        "XOM",
+        "CAT"
+      ],
+      "peers_b": [
+        "XOM",
+        "CAT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.006568328589863781,
+      "margin_b": 0.009742297150136747
+    },
+    {
+      "comparison_id": "bge_192_vs_320",
+      "k": 2,
+      "ticker": "JNJ",
+      "peers_a": [
+        "MRK",
+        "WMT"
+      ],
+      "peers_b": [
+        "MRK",
+        "DE"
+      ],
+      "overlap": 0.5,
+      "jaccard": 0.3333333333333333,
+      "margin_a": 0.0007720890549191006,
+      "margin_b": 0.00011272994949140802
+    },
+    {
+      "comparison_id": "bge_192_vs_320",
+      "k": 2,
+      "ticker": "MRK",
+      "peers_a": [
+        "JNJ",
+        "DE"
+      ],
+      "peers_b": [
+        "JNJ",
+        "DE"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.00299374571961486,
+      "margin_b": 0.003704123241560886
+    },
+    {
+      "comparison_id": "bge_192_vs_320",
+      "k": 2,
+      "ticker": "CAT",
+      "peers_a": [
+        "BAC",
+        "DE"
+      ],
+      "peers_b": [
+        "BAC",
+        "DE"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.005390066925377357,
+      "margin_b": 0.004090781383184305
+    },
+    {
+      "comparison_id": "bge_192_vs_320",
+      "k": 2,
+      "ticker": "DE",
+      "peers_a": [
+        "TGT",
+        "WMT"
+      ],
+      "peers_b": [
+        "CAT",
+        "TGT"
+      ],
+      "overlap": 0.5,
+      "jaccard": 0.3333333333333333,
+      "margin_a": 0.0006846189268160385,
+      "margin_b": 0.00023668234491502904
+    },
+    {
+      "comparison_id": "bge_192_vs_320",
+      "k": 2,
+      "ticker": "WMT",
+      "peers_a": [
+        "TGT",
+        "ORCL"
+      ],
+      "peers_b": [
+        "TGT",
+        "ORCL"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0029006107719142804,
+      "margin_b": 0.003520743271669624
+    },
+    {
+      "comparison_id": "bge_192_vs_320",
+      "k": 2,
+      "ticker": "TGT",
+      "peers_a": [
+        "WMT",
+        "DE"
+      ],
+      "peers_b": [
+        "WMT",
+        "DE"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.006296257352046086,
+      "margin_b": 0.0033702285525675224
+    },
+    {
+      "comparison_id": "bge_192_vs_320",
+      "k": 3,
+      "ticker": "MSFT",
+      "peers_a": [
+        "ORCL",
+        "WMT",
+        "DE"
+      ],
+      "peers_b": [
+        "ORCL",
+        "WMT",
+        "DE"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0061796593310736725,
+      "margin_b": 0.0036727922071077
+    },
+    {
+      "comparison_id": "bge_192_vs_320",
+      "k": 3,
+      "ticker": "ORCL",
+      "peers_a": [
+        "MSFT",
+        "WMT",
+        "DE"
+      ],
+      "peers_b": [
+        "MSFT",
+        "WMT",
+        "DE"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0039689087666848755,
+      "margin_b": 0.0020587036921027035
+    },
+    {
+      "comparison_id": "bge_192_vs_320",
+      "k": 3,
+      "ticker": "JPM",
+      "peers_a": [
+        "BAC",
+        "CAT",
+        "ORCL"
+      ],
+      "peers_b": [
+        "BAC",
+        "CAT",
+        "ORCL"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.003583151598826606,
+      "margin_b": 0.0047513518283377465
+    },
+    {
+      "comparison_id": "bge_192_vs_320",
+      "k": 3,
+      "ticker": "BAC",
+      "peers_a": [
+        "CAT",
+        "ORCL",
+        "WMT"
+      ],
+      "peers_b": [
+        "CAT",
+        "ORCL",
+        "WMT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.007568183337861578,
+      "margin_b": 0.005747776048868891
+    },
+    {
+      "comparison_id": "bge_192_vs_320",
+      "k": 3,
+      "ticker": "XOM",
+      "peers_a": [
+        "CVX",
+        "DE",
+        "CAT"
+      ],
+      "peers_b": [
+        "CVX",
+        "DE",
+        "CAT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.00816854573402126,
+      "margin_b": 0.007143899274841825
+    },
+    {
+      "comparison_id": "bge_192_vs_320",
+      "k": 3,
+      "ticker": "CVX",
+      "peers_a": [
+        "XOM",
+        "CAT",
+        "DE"
+      ],
+      "peers_b": [
+        "XOM",
+        "CAT",
+        "DE"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.001096398955891198,
+      "margin_b": 0.00111885849668647
+    },
+    {
+      "comparison_id": "bge_192_vs_320",
+      "k": 3,
+      "ticker": "JNJ",
+      "peers_a": [
+        "MRK",
+        "WMT",
+        "DE"
+      ],
+      "peers_b": [
+        "MRK",
+        "DE",
+        "WMT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 5.263245336983857e-05,
+      "margin_b": 0.0009541952405681675
+    },
+    {
+      "comparison_id": "bge_192_vs_320",
+      "k": 3,
+      "ticker": "MRK",
+      "peers_a": [
+        "JNJ",
+        "DE",
+        "WMT"
+      ],
+      "peers_b": [
+        "JNJ",
+        "DE",
+        "WMT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.00048461348718997765,
+      "margin_b": 0.0018151880303495238
+    },
+    {
+      "comparison_id": "bge_192_vs_320",
+      "k": 3,
+      "ticker": "CAT",
+      "peers_a": [
+        "BAC",
+        "DE",
+        "ORCL"
+      ],
+      "peers_b": [
+        "BAC",
+        "DE",
+        "TGT"
+      ],
+      "overlap": 0.6666666666666666,
+      "jaccard": 0.5,
+      "margin_a": 0.00065786702067816,
+      "margin_b": 0.001462740131101925
+    },
+    {
+      "comparison_id": "bge_192_vs_320",
+      "k": 3,
+      "ticker": "DE",
+      "peers_a": [
+        "TGT",
+        "WMT",
+        "ORCL"
+      ],
+      "peers_b": [
+        "CAT",
+        "TGT",
+        "WMT"
+      ],
+      "overlap": 0.6666666666666666,
+      "jaccard": 0.5,
+      "margin_a": 0.0003118480085132491,
+      "margin_b": 0.001636436676178521
+    },
+    {
+      "comparison_id": "bge_192_vs_320",
+      "k": 3,
+      "ticker": "WMT",
+      "peers_a": [
+        "TGT",
+        "ORCL",
+        "DE"
+      ],
+      "peers_b": [
+        "TGT",
+        "ORCL",
+        "DE"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.007044400881384805,
+      "margin_b": 0.00568545841980439
+    },
+    {
+      "comparison_id": "bge_192_vs_320",
+      "k": 3,
+      "ticker": "TGT",
+      "peers_a": [
+        "WMT",
+        "DE",
+        "ORCL"
+      ],
+      "peers_b": [
+        "WMT",
+        "DE",
+        "CAT"
+      ],
+      "overlap": 0.6666666666666666,
+      "jaccard": 0.5,
+      "margin_a": 0.002898081500322669,
+      "margin_b": 0.0005615941606287311
+    },
+    {
+      "comparison_id": "bge_192_vs_320",
+      "k": 5,
+      "ticker": "MSFT",
+      "peers_a": [
+        "ORCL",
+        "WMT",
+        "DE",
+        "TGT",
+        "JNJ"
+      ],
+      "peers_b": [
+        "ORCL",
+        "WMT",
+        "DE",
+        "TGT",
+        "JNJ"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.004759825110049798,
+      "margin_b": 0.0026307664687361676
+    },
+    {
+      "comparison_id": "bge_192_vs_320",
+      "k": 5,
+      "ticker": "ORCL",
+      "peers_a": [
+        "MSFT",
+        "WMT",
+        "DE",
+        "TGT",
+        "CAT"
+      ],
+      "peers_b": [
+        "MSFT",
+        "WMT",
+        "DE",
+        "TGT",
+        "CAT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.003038383656057908,
+      "margin_b": 0.0031734204651523434
+    },
+    {
+      "comparison_id": "bge_192_vs_320",
+      "k": 5,
+      "ticker": "JPM",
+      "peers_a": [
+        "BAC",
+        "CAT",
+        "ORCL",
+        "WMT",
+        "TGT"
+      ],
+      "peers_b": [
+        "BAC",
+        "CAT",
+        "ORCL",
+        "WMT",
+        "TGT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.005552036547265438,
+      "margin_b": 0.004388264175625545
+    },
+    {
+      "comparison_id": "bge_192_vs_320",
+      "k": 5,
+      "ticker": "BAC",
+      "peers_a": [
+        "CAT",
+        "ORCL",
+        "WMT",
+        "DE",
+        "TGT"
+      ],
+      "peers_b": [
+        "CAT",
+        "ORCL",
+        "WMT",
+        "DE",
+        "TGT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.011706768329053818,
+      "margin_b": 0.008318682287485668
+    },
+    {
+      "comparison_id": "bge_192_vs_320",
+      "k": 5,
+      "ticker": "XOM",
+      "peers_a": [
+        "CVX",
+        "DE",
+        "CAT",
+        "JNJ",
+        "TGT"
+      ],
+      "peers_b": [
+        "CVX",
+        "DE",
+        "CAT",
+        "JNJ",
+        "ORCL"
+      ],
+      "overlap": 0.8,
+      "jaccard": 0.6666666666666666,
+      "margin_a": 0.0008434459337501865,
+      "margin_b": 0.0016806203040582446
+    },
+    {
+      "comparison_id": "bge_192_vs_320",
+      "k": 5,
+      "ticker": "CVX",
+      "peers_a": [
+        "XOM",
+        "CAT",
+        "DE",
+        "JNJ",
+        "TGT"
+      ],
+      "peers_b": [
+        "XOM",
+        "CAT",
+        "DE",
+        "JNJ",
+        "TGT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.003947471583490958,
+      "margin_b": 0.0013028548236007076
+    },
+    {
+      "comparison_id": "bge_192_vs_320",
+      "k": 5,
+      "ticker": "JNJ",
+      "peers_a": [
+        "MRK",
+        "WMT",
+        "DE",
+        "ORCL",
+        "TGT"
+      ],
+      "peers_b": [
+        "MRK",
+        "DE",
+        "WMT",
+        "ORCL",
+        "TGT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0034616585511373366,
+      "margin_b": 0.0036869336039936362
+    },
+    {
+      "comparison_id": "bge_192_vs_320",
+      "k": 5,
+      "ticker": "MRK",
+      "peers_a": [
+        "JNJ",
+        "DE",
+        "WMT",
+        "ORCL",
+        "TGT"
+      ],
+      "peers_b": [
+        "JNJ",
+        "DE",
+        "WMT",
+        "ORCL",
+        "TGT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.006042438107024095,
+      "margin_b": 0.0059568947322140575
+    },
+    {
+      "comparison_id": "bge_192_vs_320",
+      "k": 5,
+      "ticker": "CAT",
+      "peers_a": [
+        "BAC",
+        "DE",
+        "ORCL",
+        "WMT",
+        "TGT"
+      ],
+      "peers_b": [
+        "BAC",
+        "DE",
+        "TGT",
+        "ORCL",
+        "WMT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.011732446159171017,
+      "margin_b": 0.011853116531380326
+    },
+    {
+      "comparison_id": "bge_192_vs_320",
+      "k": 5,
+      "ticker": "DE",
+      "peers_a": [
+        "TGT",
+        "WMT",
+        "ORCL",
+        "CAT",
+        "JNJ"
+      ],
+      "peers_b": [
+        "CAT",
+        "TGT",
+        "WMT",
+        "ORCL",
+        "JNJ"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.00628455289584362,
+      "margin_b": 0.010907237461375452
+    },
+    {
+      "comparison_id": "bge_192_vs_320",
+      "k": 5,
+      "ticker": "WMT",
+      "peers_a": [
+        "TGT",
+        "ORCL",
+        "DE",
+        "CAT",
+        "MSFT"
+      ],
+      "peers_b": [
+        "TGT",
+        "ORCL",
+        "DE",
+        "MSFT",
+        "JNJ"
+      ],
+      "overlap": 0.8,
+      "jaccard": 0.6666666666666666,
+      "margin_a": 0.0009948834128177264,
+      "margin_b": 0.0016608434949727524
+    },
+    {
+      "comparison_id": "bge_192_vs_320",
+      "k": 5,
+      "ticker": "TGT",
+      "peers_a": [
+        "WMT",
+        "DE",
+        "ORCL",
+        "CAT",
+        "JNJ"
+      ],
+      "peers_b": [
+        "WMT",
+        "DE",
+        "CAT",
+        "ORCL",
+        "JNJ"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.006014100488454743,
+      "margin_b": 0.004640273296632302
+    },
+    {
+      "comparison_id": "qwen_192_vs_320_gpu",
+      "k": 1,
+      "ticker": "MSFT",
+      "peers_a": [
+        "ORCL"
+      ],
+      "peers_b": [
+        "ORCL"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.05102036524267284,
+      "margin_b": 0.07359685862748566
+    },
+    {
+      "comparison_id": "qwen_192_vs_320_gpu",
+      "k": 1,
+      "ticker": "ORCL",
+      "peers_a": [
+        "MSFT"
+      ],
+      "peers_b": [
+        "MSFT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.030760331131969854,
+      "margin_b": 0.05423938498499492
+    },
+    {
+      "comparison_id": "qwen_192_vs_320_gpu",
+      "k": 1,
+      "ticker": "JPM",
+      "peers_a": [
+        "BAC"
+      ],
+      "peers_b": [
+        "BAC"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.05759993377040573,
+      "margin_b": 0.07809827755366017
+    },
+    {
+      "comparison_id": "qwen_192_vs_320_gpu",
+      "k": 1,
+      "ticker": "BAC",
+      "peers_a": [
+        "CAT"
+      ],
+      "peers_b": [
+        "CAT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.011476825580080563,
+      "margin_b": 0.011490874953770769
+    },
+    {
+      "comparison_id": "qwen_192_vs_320_gpu",
+      "k": 1,
+      "ticker": "XOM",
+      "peers_a": [
+        "CVX"
+      ],
+      "peers_b": [
+        "CVX"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.03810804369263843,
+      "margin_b": 0.055196337680486485
+    },
+    {
+      "comparison_id": "qwen_192_vs_320_gpu",
+      "k": 1,
+      "ticker": "CVX",
+      "peers_a": [
+        "XOM"
+      ],
+      "peers_b": [
+        "XOM"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.08224922771430276,
+      "margin_b": 0.06397375981297249
+    },
+    {
+      "comparison_id": "qwen_192_vs_320_gpu",
+      "k": 1,
+      "ticker": "JNJ",
+      "peers_a": [
+        "MRK"
+      ],
+      "peers_b": [
+        "MRK"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.02796418534270284,
+      "margin_b": 0.05785314765804894
+    },
+    {
+      "comparison_id": "qwen_192_vs_320_gpu",
+      "k": 1,
+      "ticker": "MRK",
+      "peers_a": [
+        "JNJ"
+      ],
+      "peers_b": [
+        "JNJ"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.07166718621585855,
+      "margin_b": 0.09351088313283118
+    },
+    {
+      "comparison_id": "qwen_192_vs_320_gpu",
+      "k": 1,
+      "ticker": "CAT",
+      "peers_a": [
+        "DE"
+      ],
+      "peers_b": [
+        "DE"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.012987191735293613,
+      "margin_b": 0.019690126702024635
+    },
+    {
+      "comparison_id": "qwen_192_vs_320_gpu",
+      "k": 1,
+      "ticker": "DE",
+      "peers_a": [
+        "CAT"
+      ],
+      "peers_b": [
+        "CAT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0185571984356504,
+      "margin_b": 0.035366991046164586
+    },
+    {
+      "comparison_id": "qwen_192_vs_320_gpu",
+      "k": 1,
+      "ticker": "WMT",
+      "peers_a": [
+        "TGT"
+      ],
+      "peers_b": [
+        "TGT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.03022887160213883,
+      "margin_b": 0.04917024171392392
+    },
+    {
+      "comparison_id": "qwen_192_vs_320_gpu",
+      "k": 1,
+      "ticker": "TGT",
+      "peers_a": [
+        "WMT"
+      ],
+      "peers_b": [
+        "WMT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.036671140326181906,
+      "margin_b": 0.05613937483811615
+    },
+    {
+      "comparison_id": "qwen_192_vs_320_gpu",
+      "k": 2,
+      "ticker": "MSFT",
+      "peers_a": [
+        "ORCL",
+        "WMT"
+      ],
+      "peers_b": [
+        "ORCL",
+        "WMT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.010675570074210161,
+      "margin_b": 0.012436274704818229
+    },
+    {
+      "comparison_id": "qwen_192_vs_320_gpu",
+      "k": 2,
+      "ticker": "ORCL",
+      "peers_a": [
+        "MSFT",
+        "WMT"
+      ],
+      "peers_b": [
+        "MSFT",
+        "WMT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0056363476418074265,
+      "margin_b": 0.003236953634581985
+    },
+    {
+      "comparison_id": "qwen_192_vs_320_gpu",
+      "k": 2,
+      "ticker": "JPM",
+      "peers_a": [
+        "BAC",
+        "CAT"
+      ],
+      "peers_b": [
+        "BAC",
+        "CAT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.026007840370887214,
+      "margin_b": 0.02908650978439098
+    },
+    {
+      "comparison_id": "qwen_192_vs_320_gpu",
+      "k": 2,
+      "ticker": "BAC",
+      "peers_a": [
+        "CAT",
+        "ORCL"
+      ],
+      "peers_b": [
+        "CAT",
+        "ORCL"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.009461338537401276,
+      "margin_b": 0.012382678698128924
+    },
+    {
+      "comparison_id": "qwen_192_vs_320_gpu",
+      "k": 2,
+      "ticker": "XOM",
+      "peers_a": [
+        "CVX",
+        "CAT"
+      ],
+      "peers_b": [
+        "CVX",
+        "CAT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0034351812601748355,
+      "margin_b": 0.028610283113172597
+    },
+    {
+      "comparison_id": "qwen_192_vs_320_gpu",
+      "k": 2,
+      "ticker": "CVX",
+      "peers_a": [
+        "XOM",
+        "CAT"
+      ],
+      "peers_b": [
+        "XOM",
+        "CAT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.008108885375289643,
+      "margin_b": 0.027000793298580517
+    },
+    {
+      "comparison_id": "qwen_192_vs_320_gpu",
+      "k": 2,
+      "ticker": "JNJ",
+      "peers_a": [
+        "MRK",
+        "DE"
+      ],
+      "peers_b": [
+        "MRK",
+        "DE"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.00034719070338873337,
+      "margin_b": 0.0011031359768577387
+    },
+    {
+      "comparison_id": "qwen_192_vs_320_gpu",
+      "k": 2,
+      "ticker": "MRK",
+      "peers_a": [
+        "JNJ",
+        "WMT"
+      ],
+      "peers_b": [
+        "JNJ",
+        "WMT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.009545611069068038,
+      "margin_b": 0.016176931959759
+    },
+    {
+      "comparison_id": "qwen_192_vs_320_gpu",
+      "k": 2,
+      "ticker": "CAT",
+      "peers_a": [
+        "DE",
+        "BAC"
+      ],
+      "peers_b": [
+        "DE",
+        "BAC"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.008834614203922952,
+      "margin_b": 0.008713943229522014
+    },
+    {
+      "comparison_id": "qwen_192_vs_320_gpu",
+      "k": 2,
+      "ticker": "DE",
+      "peers_a": [
+        "CAT",
+        "JNJ"
+      ],
+      "peers_b": [
+        "CAT",
+        "JNJ"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.004411342461274836,
+      "margin_b": 0.007303094284766387
+    },
+    {
+      "comparison_id": "qwen_192_vs_320_gpu",
+      "k": 2,
+      "ticker": "WMT",
+      "peers_a": [
+        "TGT",
+        "ORCL"
+      ],
+      "peers_b": [
+        "TGT",
+        "ORCL"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0006436354555334756,
+      "margin_b": 0.00046002191033323037
+    },
+    {
+      "comparison_id": "qwen_192_vs_320_gpu",
+      "k": 2,
+      "ticker": "TGT",
+      "peers_a": [
+        "WMT",
+        "DE"
+      ],
+      "peers_b": [
+        "WMT",
+        "CAT"
+      ],
+      "overlap": 0.5,
+      "jaccard": 0.3333333333333333,
+      "margin_a": 0.004953631188001406,
+      "margin_b": 0.014489522498229546
+    },
+    {
+      "comparison_id": "qwen_192_vs_320_gpu",
+      "k": 3,
+      "ticker": "MSFT",
+      "peers_a": [
+        "ORCL",
+        "WMT",
+        "DE"
+      ],
+      "peers_b": [
+        "ORCL",
+        "WMT",
+        "BAC"
+      ],
+      "overlap": 0.6666666666666666,
+      "jaccard": 0.5,
+      "margin_a": 0.008748733425016919,
+      "margin_b": 0.007837572325536835
+    },
+    {
+      "comparison_id": "qwen_192_vs_320_gpu",
+      "k": 3,
+      "ticker": "ORCL",
+      "peers_a": [
+        "MSFT",
+        "WMT",
+        "CAT"
+      ],
+      "peers_b": [
+        "MSFT",
+        "WMT",
+        "BAC"
+      ],
+      "overlap": 0.6666666666666666,
+      "jaccard": 0.5,
+      "margin_a": 0.0005669159900610898,
+      "margin_b": 0.0016282132999341226
+    },
+    {
+      "comparison_id": "qwen_192_vs_320_gpu",
+      "k": 3,
+      "ticker": "JPM",
+      "peers_a": [
+        "BAC",
+        "CAT",
+        "ORCL"
+      ],
+      "peers_b": [
+        "BAC",
+        "CAT",
+        "ORCL"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.006447037067720762,
+      "margin_b": 0.0024437688869626273
+    },
+    {
+      "comparison_id": "qwen_192_vs_320_gpu",
+      "k": 3,
+      "ticker": "BAC",
+      "peers_a": [
+        "CAT",
+        "ORCL",
+        "WMT"
+      ],
+      "peers_b": [
+        "CAT",
+        "ORCL",
+        "WMT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.014428408814877391,
+      "margin_b": 0.01617411601459806
+    },
+    {
+      "comparison_id": "qwen_192_vs_320_gpu",
+      "k": 3,
+      "ticker": "XOM",
+      "peers_a": [
+        "CVX",
+        "CAT",
+        "DE"
+      ],
+      "peers_b": [
+        "CVX",
+        "CAT",
+        "DE"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.02501251602786969,
+      "margin_b": 0.02510993060432032
+    },
+    {
+      "comparison_id": "qwen_192_vs_320_gpu",
+      "k": 3,
+      "ticker": "CVX",
+      "peers_a": [
+        "XOM",
+        "CAT",
+        "DE"
+      ],
+      "peers_b": [
+        "XOM",
+        "CAT",
+        "DE"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.031532322656570466,
+      "margin_b": 0.039244878528603366
+    },
+    {
+      "comparison_id": "qwen_192_vs_320_gpu",
+      "k": 3,
+      "ticker": "JNJ",
+      "peers_a": [
+        "MRK",
+        "DE",
+        "WMT"
+      ],
+      "peers_b": [
+        "MRK",
+        "DE",
+        "WMT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.008972836757531244,
+      "margin_b": 0.004363653277109636
+    },
+    {
+      "comparison_id": "qwen_192_vs_320_gpu",
+      "k": 3,
+      "ticker": "MRK",
+      "peers_a": [
+        "JNJ",
+        "WMT",
+        "DE"
+      ],
+      "peers_b": [
+        "JNJ",
+        "WMT",
+        "DE"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.008744576251196956,
+      "margin_b": 0.005212341415277488
+    },
+    {
+      "comparison_id": "qwen_192_vs_320_gpu",
+      "k": 3,
+      "ticker": "CAT",
+      "peers_a": [
+        "DE",
+        "BAC",
+        "WMT"
+      ],
+      "peers_b": [
+        "DE",
+        "BAC",
+        "WMT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0020752953860965206,
+      "margin_b": 0.004405145024182877
+    },
+    {
+      "comparison_id": "qwen_192_vs_320_gpu",
+      "k": 3,
+      "ticker": "DE",
+      "peers_a": [
+        "CAT",
+        "JNJ",
+        "WMT"
+      ],
+      "peers_b": [
+        "CAT",
+        "JNJ",
+        "WMT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.001714288690682464,
+      "margin_b": 0.004294586512661791
+    },
+    {
+      "comparison_id": "qwen_192_vs_320_gpu",
+      "k": 3,
+      "ticker": "WMT",
+      "peers_a": [
+        "TGT",
+        "ORCL",
+        "JNJ"
+      ],
+      "peers_b": [
+        "TGT",
+        "ORCL",
+        "CAT"
+      ],
+      "overlap": 0.6666666666666666,
+      "jaccard": 0.5,
+      "margin_a": 0.0029174168001774303,
+      "margin_b": 0.008066057091475676
+    },
+    {
+      "comparison_id": "qwen_192_vs_320_gpu",
+      "k": 3,
+      "ticker": "TGT",
+      "peers_a": [
+        "WMT",
+        "DE",
+        "CAT"
+      ],
+      "peers_b": [
+        "WMT",
+        "CAT",
+        "DE"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.008304966274888193,
+      "margin_b": 0.00459592325180691
+    },
+    {
+      "comparison_id": "qwen_192_vs_320_gpu",
+      "k": 5,
+      "ticker": "MSFT",
+      "peers_a": [
+        "ORCL",
+        "WMT",
+        "DE",
+        "BAC",
+        "TGT"
+      ],
+      "peers_b": [
+        "ORCL",
+        "WMT",
+        "BAC",
+        "DE",
+        "TGT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.00016573407627462622,
+      "margin_b": 0.003086443130842942
+    },
+    {
+      "comparison_id": "qwen_192_vs_320_gpu",
+      "k": 5,
+      "ticker": "ORCL",
+      "peers_a": [
+        "MSFT",
+        "WMT",
+        "CAT",
+        "BAC",
+        "DE"
+      ],
+      "peers_b": [
+        "MSFT",
+        "WMT",
+        "BAC",
+        "CAT",
+        "JNJ"
+      ],
+      "overlap": 0.8,
+      "jaccard": 0.6666666666666666,
+      "margin_a": 0.004237672743657495,
+      "margin_b": 0.0061308915434608036
+    },
+    {
+      "comparison_id": "qwen_192_vs_320_gpu",
+      "k": 5,
+      "ticker": "JPM",
+      "peers_a": [
+        "BAC",
+        "CAT",
+        "ORCL",
+        "WMT",
+        "TGT"
+      ],
+      "peers_b": [
+        "BAC",
+        "CAT",
+        "ORCL",
+        "WMT",
+        "TGT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0013947758327715887,
+      "margin_b": 0.011630952474385725
+    },
+    {
+      "comparison_id": "qwen_192_vs_320_gpu",
+      "k": 5,
+      "ticker": "BAC",
+      "peers_a": [
+        "CAT",
+        "ORCL",
+        "WMT",
+        "DE",
+        "TGT"
+      ],
+      "peers_b": [
+        "CAT",
+        "ORCL",
+        "WMT",
+        "MSFT",
+        "TGT"
+      ],
+      "overlap": 0.8,
+      "jaccard": 0.6666666666666666,
+      "margin_a": 0.006286957739208177,
+      "margin_b": 0.007628161922176191
+    },
+    {
+      "comparison_id": "qwen_192_vs_320_gpu",
+      "k": 5,
+      "ticker": "XOM",
+      "peers_a": [
+        "CVX",
+        "CAT",
+        "DE",
+        "JNJ",
+        "BAC"
+      ],
+      "peers_b": [
+        "CVX",
+        "CAT",
+        "DE",
+        "BAC",
+        "JNJ"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.0007798188000472939,
+      "margin_b": 0.00802979873572518
+    },
+    {
+      "comparison_id": "qwen_192_vs_320_gpu",
+      "k": 5,
+      "ticker": "CVX",
+      "peers_a": [
+        "XOM",
+        "CAT",
+        "DE",
+        "JNJ",
+        "TGT"
+      ],
+      "peers_b": [
+        "XOM",
+        "CAT",
+        "DE",
+        "TGT",
+        "WMT"
+      ],
+      "overlap": 0.8,
+      "jaccard": 0.6666666666666666,
+      "margin_a": 0.005118888307295455,
+      "margin_b": 0.0028195323176198883
+    },
+    {
+      "comparison_id": "qwen_192_vs_320_gpu",
+      "k": 5,
+      "ticker": "JNJ",
+      "peers_a": [
+        "MRK",
+        "DE",
+        "WMT",
+        "CAT",
+        "ORCL"
+      ],
+      "peers_b": [
+        "MRK",
+        "DE",
+        "WMT",
+        "ORCL",
+        "CAT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.015361195445212306,
+      "margin_b": 0.027404854733443118
+    },
+    {
+      "comparison_id": "qwen_192_vs_320_gpu",
+      "k": 5,
+      "ticker": "MRK",
+      "peers_a": [
+        "JNJ",
+        "WMT",
+        "DE",
+        "ORCL",
+        "CAT"
+      ],
+      "peers_b": [
+        "JNJ",
+        "WMT",
+        "DE",
+        "ORCL",
+        "CAT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.010626351285677016,
+      "margin_b": 0.016873787998686995
+    },
+    {
+      "comparison_id": "qwen_192_vs_320_gpu",
+      "k": 5,
+      "ticker": "CAT",
+      "peers_a": [
+        "DE",
+        "BAC",
+        "WMT",
+        "ORCL",
+        "JNJ"
+      ],
+      "peers_b": [
+        "DE",
+        "BAC",
+        "WMT",
+        "ORCL",
+        "TGT"
+      ],
+      "overlap": 0.8,
+      "jaccard": 0.6666666666666666,
+      "margin_a": 0.001779427698979763,
+      "margin_b": 0.010902539216364304
+    },
+    {
+      "comparison_id": "qwen_192_vs_320_gpu",
+      "k": 5,
+      "ticker": "DE",
+      "peers_a": [
+        "CAT",
+        "JNJ",
+        "WMT",
+        "ORCL",
+        "TGT"
+      ],
+      "peers_b": [
+        "CAT",
+        "JNJ",
+        "WMT",
+        "ORCL",
+        "TGT"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.023650742260104107,
+      "margin_b": 0.01817266505042403
+    },
+    {
+      "comparison_id": "qwen_192_vs_320_gpu",
+      "k": 5,
+      "ticker": "WMT",
+      "peers_a": [
+        "TGT",
+        "ORCL",
+        "JNJ",
+        "CAT",
+        "DE"
+      ],
+      "peers_b": [
+        "TGT",
+        "ORCL",
+        "CAT",
+        "JNJ",
+        "DE"
+      ],
+      "overlap": 1.0,
+      "jaccard": 1.0,
+      "margin_a": 0.010956814955850214,
+      "margin_b": 0.0008935950229933542
+    },
+    {
+      "comparison_id": "qwen_192_vs_320_gpu",
+      "k": 5,
+      "ticker": "TGT",
+      "peers_a": [
+        "WMT",
+        "DE",
+        "CAT",
+        "ORCL",
+        "JNJ"
+      ],
+      "peers_b": [
+        "WMT",
+        "CAT",
+        "DE",
+        "ORCL",
+        "BAC"
+      ],
+      "overlap": 0.8,
+      "jaccard": 0.6666666666666666,
+      "margin_a": 0.0073764357777500456,
+      "margin_b": 0.007542606167030064
+    }
+  ]
+}

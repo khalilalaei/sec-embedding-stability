@@ -9,6 +9,8 @@ Independent research starter by Khalil Alaei. Built from an empty project: no ex
 The three neural-family comparisons retain 19–21 of 24 directed peer memberships despite rank correlations of 0.968–0.984. The 192-vs-320 contrasts change three companies' peer sets for E5, two for BGE and one for Qwen. These are descriptive findings for this deliberately selected sample. All three initial chunk contrasts are complete; financial outcomes remain untested.
 
 
+An additional [exploratory peer-count supplement](reports/peer_count_2026-11-03.md) checks k=1,2,3,5 from the frozen matrices. The original k=2 remains primary.
+
 ## Chosen starting design
 
 - Text: **10-K Item 1A Risk Factors**. One source-checked section per company; AI-assisted pilot review is explicitly distinguished from human review.

@@ -25,3 +25,7 @@ Complete-grid release: 26 offline tests passed. The upgraded auditor also reprod
 ## Financial preparation — 2026-11-03
 
 35 offline tests pass, including nine new financial-foundation tests. Tests use synthetic observations only and check duplicate/missing/sentinel returns, explicit security ordering and calendar coverage, disjoint past/future windows, no influence of future returns on the fitted baseline, timezone-aware filing eligibility, PSD rejection, marginal-variance preservation under text blending, hand-calculated portfolio variance and covariance error. Real WRDS/CRSP data, financial evaluation and portfolio optimization remain unrun. Input templates are empty schemas. See FINANCIAL_PILOT_PROTOCOL.md.
+
+## Exploratory peer-count supplement — 2026-11-03
+
+38 tests pass, including three exact combinatorial-reference checks. The frozen complete-pilot matrices reproduce all user-reported E5–Qwen summaries at k=1,2,3,5. A documented post hoc extension covers all three model-family and three chunk contrasts at those k values (24 summary rows, 288 company rows). Source evidence was checked against its existing hash receipt. No new embeddings, market data, significance test or financial outcome is involved; k=2 remains primary. See reports/peer_count_2026-11-03.md.
