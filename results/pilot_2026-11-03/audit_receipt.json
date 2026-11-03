@@ -1,0 +1,16 @@
+{
+  "audit_date": "2026-11-03",
+  "uploaded_archive_sha256": "1fce03c2fba647f58007e6b140aced483963d4fc84063723f048931b1beb492a",
+  "verified_evidence_sha256": "88271070b0c95adca14468b87b4403480a62c16a4fd0d3be9d33608688c2b624",
+  "auditor_source_sha256": "c718f0914cba63da151592911a49b41848a0d2ceed6c5878221324e039ecf69b",
+  "renderer_source_sha256": "a5b2b7854b9e19030cce47c34fd032ce0f8cfed8b64a28adb8d41c6a8bf52b74",
+  "inference_code_commit": "5026930dce1d579dd29dfed6f473339b0221b87d",
+  "offline_tests_passed": 25,
+  "independence": "Same-assistant offline artifact review; no independent inference rerun",
+  "outputs": {
+    "reports/pilot_stability_2026-11-03.md": "a7a5287ece67404207cbc36432c42a63a4c42712a34406910a653f23136c845b",
+    "reports/figures/pilot_stability_2026-11-03.svg": "0185e64b2637612ae4e58ac125f0534536edb096a1b176050f42399e513f206c",
+    "results/pilot_2026-11-03/comparison_summary.csv": "de3b952184810b8987598df11d1d894934dea167b3fd42bbaf2737265a7662b8",
+    "results/pilot_2026-11-03/company_peer_changes.csv": "fc38243b668bbbc6348581f309c0573066dd15eb7c080411bb911b523451c6ab"
+  }
+}

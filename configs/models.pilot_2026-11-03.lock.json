@@ -1,0 +1,33 @@
+{
+  "models": [
+    {
+      "key": "e5",
+      "model_id": "intfloat/e5-base-v2",
+      "prefix": "query: ",
+      "max_length": 512,
+      "role": "Primary encoder; symmetric semantic similarity convention",
+      "revision": "f52bf8ec8c7124536f0efb74aca902b2995e5bcd",
+      "training_cutoff": "unknown; independently review training and fine-tuning documentation"
+    },
+    {
+      "key": "bge",
+      "model_id": "BAAI/bge-base-en-v1.5",
+      "prefix": "",
+      "max_length": 512,
+      "role": "Independent English encoder comparator",
+      "revision": "a5beb1e3e68b9ab74eb54cfd186867f64f240e1a",
+      "training_cutoff": "unknown; independently review training and fine-tuning documentation"
+    },
+    {
+      "key": "qwen",
+      "model_id": "Qwen/Qwen3-Embedding-0.6B",
+      "prefix": "Instruct: Represent this SEC filing passage for comparing companies by business activities and risk exposures.\nQuery: ",
+      "max_length": 32768,
+      "role": "LLM-based instruction-aware embedding comparator; symmetric instruction is a study choice",
+      "revision": "97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3",
+      "training_cutoff": "unknown; independently review training and fine-tuning documentation"
+    }
+  ],
+  "locked_at": "2026-11-03T13:54:01.228284+00:00",
+  "source_config_sha256": "abd6c9b58a64cbc4b67a322b5d63b3b197caa7253053c64862c2f7a232187954"
+}

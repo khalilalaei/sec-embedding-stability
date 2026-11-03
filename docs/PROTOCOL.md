@@ -43,3 +43,5 @@ Before running, commit this protocol. Record any later edits with date, rational
 ## Amendment log
 
 2026-11-03, before neural or financial outcomes: user requested the assistant perform extraction rather than manual copying. Added versioned DOM extraction, same-assistant source/boundary review with a separate stdlib parser consistency check, logged page-artifact cleanup and visible-text/DOM source maps. Broadened the descriptive source gate to explicitly labeled AI-assisted review. No model, sample, primary metric or financial gate changed. Original manual files/corpus are preserved and the new corpus has its own version.
+
+2026-11-03, after initial CPU results: added an operational E5 CPU/GPU-environment diagnostic when the user configured a GPU. This was not a predeclared primary scientific contrast. PyTorch versions differ between environments; results must be labeled as a combined device/software check. The model-family and chunk contrasts are unchanged. Curated pilot evidence is frozen separately from future BGE/Qwen chunk arms; see the empirical report.

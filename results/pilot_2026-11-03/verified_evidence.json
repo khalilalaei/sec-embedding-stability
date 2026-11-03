@@ -1,0 +1,3642 @@
+{
+  "scope": "descriptive 12-company pilot; no finance/backtest/inference rerun",
+  "input_archive_sha256": "1fce03c2fba647f58007e6b140aced483963d4fc84063723f048931b1beb492a",
+  "corpus_sha256": "3f6aab6d23a7f408e013d52d4330630d3030c71983345b9a90b4a83e8f343b7e",
+  "model_lock_sha256": "8ca6713cd1afad7fad19c68cb12827bf25368e6e41d8e8c8a444ba7d8f74e336",
+  "models": {
+    "models": [
+      {
+        "key": "e5",
+        "model_id": "intfloat/e5-base-v2",
+        "prefix": "query: ",
+        "max_length": 512,
+        "role": "Primary encoder; symmetric semantic similarity convention",
+        "revision": "f52bf8ec8c7124536f0efb74aca902b2995e5bcd",
+        "training_cutoff": "unknown; independently review training and fine-tuning documentation"
+      },
+      {
+        "key": "bge",
+        "model_id": "BAAI/bge-base-en-v1.5",
+        "prefix": "",
+        "max_length": 512,
+        "role": "Independent English encoder comparator",
+        "revision": "a5beb1e3e68b9ab74eb54cfd186867f64f240e1a",
+        "training_cutoff": "unknown; independently review training and fine-tuning documentation"
+      },
+      {
+        "key": "qwen",
+        "model_id": "Qwen/Qwen3-Embedding-0.6B",
+        "prefix": "Instruct: Represent this SEC filing passage for comparing companies by business activities and risk exposures.\nQuery: ",
+        "max_length": 32768,
+        "role": "LLM-based instruction-aware embedding comparator; symmetric instruction is a study choice",
+        "revision": "97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3",
+        "training_cutoff": "unknown; independently review training and fine-tuning documentation"
+      }
+    ],
+    "locked_at": "2026-11-03T13:54:01.228284+00:00",
+    "source_config_sha256": "abd6c9b58a64cbc4b67a322b5d63b3b197caa7253053c64862c2f7a232187954"
+  },
+  "documents": [
+    {
+      "ticker": "MSFT",
+      "cik": "0000789019",
+      "document_id": "0001193125-26-323660",
+      "report_date": "2026-06-30",
+      "accepted_at": "2026-07-29T20:08:01.000Z",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+      "raw_sha256": "1794e4290cb6bb1c92eeb0d40d2f8cba113cb5afe717adbab2e043eaaaa08d56",
+      "text_sha256": "3e56f1d26cb8d38defd2c714a5ecd564a02ca9257730cf741d267340d42f6d26",
+      "source_map_sha256": "5fdad4192c627c4b9702d5d2ad951c01d19ccb9522f749265abdf8f6a2db3090"
+    },
+    {
+      "ticker": "ORCL",
+      "cik": "0001341439",
+      "document_id": "0001193125-26-277521",
+      "report_date": "2026-05-31",
+      "accepted_at": "2026-06-22T20:12:40.000Z",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+      "raw_sha256": "6901bd48b2f2f8d46b8859648c673c5103936abbc8943452ec08a5c1ce2c33b9",
+      "text_sha256": "1a92455f89e09245bd03be86ec201ebb947b6a89806cbd2099861cc88d96c123",
+      "source_map_sha256": "5e72d13bb759fdc4d33121eb71e503e56f35b3e59eddf1629b970e023d16e7bb"
+    },
+    {
+      "ticker": "JPM",
+      "cik": "0000019617",
+      "document_id": "0001628280-26-008131",
+      "report_date": "2025-12-31",
+      "accepted_at": "2026-02-13T21:20:00.000Z",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/19617/000162828026008131/jpm-20251231.htm",
+      "raw_sha256": "1ab1c0551cf4e950f0bea86e93f696af17b6ede58cb91d1c33e5e9be02d7e4ab",
+      "text_sha256": "746e044b490a639001349b28f076f0c434fa98c26413df4e1fa6ede554abf979",
+      "source_map_sha256": "ba2628e6250e6963e621922353673cd9f50f848d2307edb3aeee6b8582b53522"
+    },
+    {
+      "ticker": "BAC",
+      "cik": "0000070858",
+      "document_id": "0000070858-26-000157",
+      "report_date": "2025-12-31",
+      "accepted_at": "2026-02-25T22:01:44.000Z",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/70858/000007085826000157/bac-20251231.htm",
+      "raw_sha256": "94adda929d04fffaf8adece3dcb756ecde92546e32db9b62d296cdc61a311de8",
+      "text_sha256": "5c035a44b332a3c18f13a043d09936916c43e39ea57aa301cd085ededd7a9c13",
+      "source_map_sha256": "3d8b28301e50365e11f9d3e9a622506e78489f3a1b07307c83896e37aea5807b"
+    },
+    {
+      "ticker": "XOM",
+      "cik": "0000034088",
+      "document_id": "0000034088-26-000045",
+      "report_date": "2025-12-31",
+      "accepted_at": "2026-02-18T21:06:52.000Z",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/xom-20251231.htm",
+      "raw_sha256": "c5e99a99618fafe627c008186dc4a3aa0699b031642c038bd8d6157eda21d8d4",
+      "text_sha256": "1d05742a8204968bffbdc9e9e4bd13c9694bf9e0d4dcab39095925ff3e9faed9",
+      "source_map_sha256": "d8a00d980740493d80b2220df31833e1598ce18b305d382d5db72b20ba416930"
+    },
+    {
+      "ticker": "CVX",
+      "cik": "0000093410",
+      "document_id": "0000093410-26-000078",
+      "report_date": "2025-12-31",
+      "accepted_at": "2026-02-24T20:03:12.000Z",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341026000078/cvx-20251231.htm",
+      "raw_sha256": "c0e7b4f886de915ce818a48da5c502e437f99a41680a5c76221a1ff44751e330",
+      "text_sha256": "19b8820e13d19e9bb7f84824b4096767b1da138fe33ab6635713b956a441beb1",
+      "source_map_sha256": "bb3926de85c8387df46f6feb4470440df1c8693feffc224cf5ccdc184945a803"
+    },
+    {
+      "ticker": "JNJ",
+      "cik": "0000200406",
+      "document_id": "0000200406-26-000016",
+      "report_date": "2025-12-28",
+      "accepted_at": "2026-02-11T21:06:11.000Z",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/200406/000020040626000016/jnj-20251228.htm",
+      "raw_sha256": "50d32209b3844b270a96c31d7836e3c450bd2008a7f63616b99445e3e673f8d5",
+      "text_sha256": "4f1d3db038fce11e299cf5519b5da92a842ba9d0b1f77ff2f8b3d6a741f75307",
+      "source_map_sha256": "c9c38d235ac40d466642677dc5d90d8c9b1a4707c5d70773d96752885464689b"
+    },
+    {
+      "ticker": "MRK",
+      "cik": "0000310158",
+      "document_id": "0000310158-26-000063",
+      "report_date": "2025-12-31",
+      "accepted_at": "2026-02-24T21:15:30.000Z",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000063/mrk-20251231.htm",
+      "raw_sha256": "7edda1e2baf9e0d42919f59f8c81fa9842ac82c6ee3ebe11289f3d4afe9a57a0",
+      "text_sha256": "15d6f547365534af7a84e6c6a2580058033498cf453532baff12ae02336fdb8b",
+      "source_map_sha256": "c0a89090d275fc98b440d50140e2c98d423056de9ee152af8970794f7ec8c13a"
+    },
+    {
+      "ticker": "CAT",
+      "cik": "0000018230",
+      "document_id": "0000018230-26-000008",
+      "report_date": "2025-12-31",
+      "accepted_at": "2026-02-13T15:18:27.000Z",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/18230/000001823026000008/cat-20251231.htm",
+      "raw_sha256": "4fae23fd2c5487caf920e90cb34d90bbec8c9c94777949ee7c8513168c890a66",
+      "text_sha256": "d9e5103fccb3a6ec4834caada47deb9659df572fa435e9683c516a4411667b41",
+      "source_map_sha256": "68cdb8f2faeef2c60e4da70e23c30a03ec76fb6e55c4cbb66da6b7d35572d779"
+    },
+    {
+      "ticker": "DE",
+      "cik": "0000315189",
+      "document_id": "0001104659-25-122321",
+      "report_date": "2025-11-02",
+      "accepted_at": "2025-12-18T13:15:12.000Z",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/315189/000110465925122321/de-20251102x10k.htm",
+      "raw_sha256": "c0c73b7613dd12c170f01969907e298c662425dce6ce47a0ba1f10300bbefb8e",
+      "text_sha256": "43c44dbbf54ccc46fdb8ac321db37a9ea80ace42694395769d74db06b7ef3f3e",
+      "source_map_sha256": "fe4dc38699023d2f399b7035852c613eecd94e0875460d073ebe9381a45fb9bb"
+    },
+    {
+      "ticker": "WMT",
+      "cik": "0000104169",
+      "document_id": "0000104169-26-000055",
+      "report_date": "2026-01-31",
+      "accepted_at": "2026-03-13T20:06:24.000Z",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/104169/000010416926000055/wmt-20260131.htm",
+      "raw_sha256": "4d70187588c5f542a7d399ee62420cb9c6ef671d40f27eb187c27ec5a724ecec",
+      "text_sha256": "907d64705693d1e312949d26b937b0f5d1ab522b6ffb1f261daa5e81cd583c52",
+      "source_map_sha256": "51369c904f470c050b0c6fcd2579376daf6a6f703ed7f001a536d75f795c7bdf"
+    },
+    {
+      "ticker": "TGT",
+      "cik": "0000027419",
+      "document_id": "0000027419-26-000016",
+      "report_date": "2026-01-31",
+      "accepted_at": "2026-03-11T20:42:00.000Z",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/27419/000002741926000016/tgt-20260131.htm",
+      "raw_sha256": "3ee2f55d136a2d540cd24360466c61b0e5c6c5670681663e8ac26e0ae191533e",
+      "text_sha256": "1f3b39a59a899afe2a842eb8e0a4099210e0a4ca596941762ff78d1c417b6927",
+      "source_map_sha256": "0d3e639b7d45c2d0b88418ecd47537397c1b0dfc7968e08ae7bb94b00934f07c"
+    }
+  ],
+  "verification": {
+    "run_count": 6,
+    "comparison_count": 6,
+    "verified_output_hashes": 39,
+    "verified_source_artifacts": 49,
+    "source_checks_enabled": true,
+    "all_192_neural_chunk_records_identical": true,
+    "neural_inference_rerun": false,
+    "tokenizer_budget_recount": false,
+    "source_span_hashes_and_coverage_checked": true,
+    "tfidf_recomputed_from_source": true,
+    "independence": "Same assistant reviewed the saved runs; not an independent audit."
+  },
+  "runs": {
+    "pilot_bge_192": {
+      "run_id": "pilot_bge_192",
+      "git_commit": "5026930dce1d579dd29dfed6f473339b0221b87d",
+      "manifest_sha256": "08febe14009e94b724f11b39ce275450e23ed80a6fd1f0ee395f07598520caaf",
+      "outputs": {
+        "chunks.json": "3ad5cac532fa0e9ddf9878b98dd075a6d9417c9ba01b0d2bffea03c27f2b6570",
+        "corpus_snapshot.json": "c41c2df28596fe19de299c02785d187b39ee6c9b38851c0d8a906d29743ec627",
+        "embeddings.npy": "7c8c94379564a5807d1c603ac5c34f1fced71c08774351e8110b6d44a0e1c382",
+        "embedding_settings.json": "da5160b68a0df769518223fa7c5cf94437b097a180d8f7360b67e2148fafe767",
+        "models_snapshot.json": "8ca6713cd1afad7fad19c68cb12827bf25368e6e41d8e8c8a444ba7d8f74e336",
+        "peers.json": "c2a1a898338f7d4025a44ca78d4ff18f85b04dd91ad9e79129f47b83cfb8e1e2",
+        "similarity.npy": "ac9e334a0d8f414cbf9eac15047c574d91864717cc45c7f7bf195f15ee32dcfe"
+      },
+      "started_at": "2026-11-03T14:18:27.152238+00:00",
+      "completed_at": "2026-11-03T14:22:09.790581+00:00",
+      "packages": {
+        "numpy": "2.4.6",
+        "scikit-learn": "1.9.1",
+        "scipy": "1.17.1",
+        "sentence-transformers": "5.7.0",
+        "torch": "2.15.0",
+        "transformers": "4.57.6"
+      },
+      "git_tracked_changes": false,
+      "untracked_gpu_environment_recorded": false,
+      "document_count": 12,
+      "pair_count": 66,
+      "similarity_min_off_diagonal": 0.8221197812877977,
+      "similarity_max_off_diagonal": 0.980931660577398,
+      "settings": {
+        "model": {
+          "key": "bge",
+          "model_id": "BAAI/bge-base-en-v1.5",
+          "prefix": "",
+          "max_length": 512,
+          "role": "Independent English encoder comparator",
+          "revision": "a5beb1e3e68b9ab74eb54cfd186867f64f240e1a",
+          "training_cutoff": "unknown; independently review training and fine-tuning documentation"
+        },
+        "total_token_budget": 192,
+        "aggregation": "equal mean of normalized chunk vectors, then L2 normalize",
+        "device": "cpu",
+        "dtype": "torch.float32",
+        "pooling_modules": "SentenceTransformer(\n  (0): Transformer({'transformer_task': 'feature-extraction', 'modality_config': {'text': {'method': 'forward', 'method_output_name': 'last_hidden_state'}}, 'module_output_name': 'token_embeddings', 'architecture': 'BertModel'})\n  (1): Pooling({'embedding_dimension': 768, 'pooling_mode': 'cls', 'include_prompt': True})\n  (2): Normalize({})\n)",
+        "torch_version": "2.15.0+cpu",
+        "cuda_version": null,
+        "cuda_device": null,
+        "repeatability": "One fixed-weight inference; no independent training-seed experiment"
+      },
+      "batch_size": 8,
+      "vector_shape": [
+        12,
+        768
+      ],
+      "vector_storage_dtype": "float64",
+      "chunk_count": 890,
+      "chunk_count_by_ticker": {
+        "MSFT": 82,
+        "ORCL": 103,
+        "JPM": 122,
+        "BAC": 118,
+        "XOM": 37,
+        "CVX": 36,
+        "JNJ": 44,
+        "MRK": 82,
+        "CAT": 54,
+        "DE": 62,
+        "WMT": 94,
+        "TGT": 56
+      },
+      "gram_matrix_max_absolute_error": 8.881784197001252e-16
+    },
+    "pilot_e5_192": {
+      "run_id": "pilot_e5_192",
+      "git_commit": "5026930dce1d579dd29dfed6f473339b0221b87d",
+      "manifest_sha256": "05564022fba4499399f3b72190437dd93adbf5f8eb2db80373b40a10cf7038d0",
+      "outputs": {
+        "chunks.json": "3ad5cac532fa0e9ddf9878b98dd075a6d9417c9ba01b0d2bffea03c27f2b6570",
+        "corpus_snapshot.json": "c41c2df28596fe19de299c02785d187b39ee6c9b38851c0d8a906d29743ec627",
+        "embeddings.npy": "7a83f1b349e33d8c8ea6bf7c6fa57dbdc135223d9fe43077b323366089a3f083",
+        "embedding_settings.json": "1fea7ef0d577e3d4873a043cd5f4ed9f5d8e3cdd76216fd97e39381c3d20a52b",
+        "models_snapshot.json": "8ca6713cd1afad7fad19c68cb12827bf25368e6e41d8e8c8a444ba7d8f74e336",
+        "peers.json": "60c993b2871edf6642a0eff331a5b3d0841594329c5b3eaa8d31345e418831c5",
+        "similarity.npy": "49253530313d2ade1045e529a7cdd8b22a004775118f0048e2874499d8b41cdd"
+      },
+      "started_at": "2026-11-03T13:55:18.237921+00:00",
+      "completed_at": "2026-11-03T13:58:54.481024+00:00",
+      "packages": {
+        "numpy": "2.4.6",
+        "scikit-learn": "1.9.1",
+        "scipy": "1.17.1",
+        "sentence-transformers": "5.7.0",
+        "torch": "2.15.0",
+        "transformers": "4.57.6"
+      },
+      "git_tracked_changes": false,
+      "untracked_gpu_environment_recorded": false,
+      "document_count": 12,
+      "pair_count": 66,
+      "similarity_min_off_diagonal": 0.9383276281536033,
+      "similarity_max_off_diagonal": 0.992367410903253,
+      "settings": {
+        "model": {
+          "key": "e5",
+          "model_id": "intfloat/e5-base-v2",
+          "prefix": "query: ",
+          "max_length": 512,
+          "role": "Primary encoder; symmetric semantic similarity convention",
+          "revision": "f52bf8ec8c7124536f0efb74aca902b2995e5bcd",
+          "training_cutoff": "unknown; independently review training and fine-tuning documentation"
+        },
+        "total_token_budget": 192,
+        "aggregation": "equal mean of normalized chunk vectors, then L2 normalize",
+        "device": "cpu",
+        "dtype": "torch.float32",
+        "pooling_modules": "SentenceTransformer(\n  (0): Transformer({'transformer_task': 'feature-extraction', 'modality_config': {'text': {'method': 'forward', 'method_output_name': 'last_hidden_state'}}, 'module_output_name': 'token_embeddings', 'architecture': 'BertModel'})\n  (1): Pooling({'embedding_dimension': 768, 'pooling_mode': 'mean', 'include_prompt': True})\n  (2): Normalize({})\n)",
+        "torch_version": "2.15.0+cpu",
+        "cuda_version": null,
+        "cuda_device": null,
+        "repeatability": "One fixed-weight inference; no independent training-seed experiment"
+      },
+      "batch_size": 8,
+      "vector_shape": [
+        12,
+        768
+      ],
+      "vector_storage_dtype": "float64",
+      "chunk_count": 890,
+      "chunk_count_by_ticker": {
+        "MSFT": 82,
+        "ORCL": 103,
+        "JPM": 122,
+        "BAC": 118,
+        "XOM": 37,
+        "CVX": 36,
+        "JNJ": 44,
+        "MRK": 82,
+        "CAT": 54,
+        "DE": 62,
+        "WMT": 94,
+        "TGT": 56
+      },
+      "gram_matrix_max_absolute_error": 6.661338147750939e-16
+    },
+    "pilot_e5_192_gpu": {
+      "run_id": "pilot_e5_192_gpu",
+      "git_commit": "5026930dce1d579dd29dfed6f473339b0221b87d",
+      "manifest_sha256": "df0d65512e4426b4047eba7521d38b181556b86a38b677fcf9b98c45e8824610",
+      "outputs": {
+        "chunks.json": "3ad5cac532fa0e9ddf9878b98dd075a6d9417c9ba01b0d2bffea03c27f2b6570",
+        "corpus_snapshot.json": "c41c2df28596fe19de299c02785d187b39ee6c9b38851c0d8a906d29743ec627",
+        "embeddings.npy": "b9b2c32c143a23f5be06b73fb0a991cc06646ade7ad2f80b09bdcf9d01866798",
+        "embedding_settings.json": "6e1840737a3ab07f9192bf2184e7e3a124a20d3ed63096127cdab6865b7426bc",
+        "models_snapshot.json": "8ca6713cd1afad7fad19c68cb12827bf25368e6e41d8e8c8a444ba7d8f74e336",
+        "peers.json": "19b96dac5b544099ecc40cd188c2442a1c99c72b627bf2e67512fc4437051a12",
+        "similarity.npy": "b7663478ddfc18bc5d46c5f95d48da7e1b988b9c0f1fc2639fe271a71cd8776a"
+      },
+      "started_at": "2026-11-03T14:33:33.897357+00:00",
+      "completed_at": "2026-11-03T14:35:00.908183+00:00",
+      "packages": {
+        "numpy": "2.4.6",
+        "scikit-learn": "1.9.1",
+        "scipy": "1.17.1",
+        "sentence-transformers": "5.7.0",
+        "torch": "2.14.1+cu126",
+        "transformers": "4.57.6"
+      },
+      "git_tracked_changes": false,
+      "untracked_gpu_environment_recorded": true,
+      "document_count": 12,
+      "pair_count": 66,
+      "similarity_min_off_diagonal": 0.9383275376379199,
+      "similarity_max_off_diagonal": 0.9923674000974243,
+      "settings": {
+        "model": {
+          "key": "e5",
+          "model_id": "intfloat/e5-base-v2",
+          "prefix": "query: ",
+          "max_length": 512,
+          "role": "Primary encoder; symmetric semantic similarity convention",
+          "revision": "f52bf8ec8c7124536f0efb74aca902b2995e5bcd",
+          "training_cutoff": "unknown; independently review training and fine-tuning documentation"
+        },
+        "total_token_budget": 192,
+        "aggregation": "equal mean of normalized chunk vectors, then L2 normalize",
+        "device": "cuda",
+        "dtype": "torch.float32",
+        "pooling_modules": "SentenceTransformer(\n  (0): Transformer({'transformer_task': 'feature-extraction', 'modality_config': {'text': {'method': 'forward', 'method_output_name': 'last_hidden_state'}}, 'module_output_name': 'token_embeddings', 'architecture': 'BertModel'})\n  (1): Pooling({'embedding_dimension': 768, 'pooling_mode': 'mean', 'include_prompt': True})\n  (2): Normalize({})\n)",
+        "torch_version": "2.14.1+cu126",
+        "cuda_version": "12.6",
+        "cuda_device": "NVIDIA GeForce RTX 3050 Laptop GPU",
+        "repeatability": "One fixed-weight inference; no independent training-seed experiment"
+      },
+      "batch_size": 8,
+      "vector_shape": [
+        12,
+        768
+      ],
+      "vector_storage_dtype": "float64",
+      "chunk_count": 890,
+      "chunk_count_by_ticker": {
+        "MSFT": 82,
+        "ORCL": 103,
+        "JPM": 122,
+        "BAC": 118,
+        "XOM": 37,
+        "CVX": 36,
+        "JNJ": 44,
+        "MRK": 82,
+        "CAT": 54,
+        "DE": 62,
+        "WMT": 94,
+        "TGT": 56
+      },
+      "gram_matrix_max_absolute_error": 6.661338147750939e-16
+    },
+    "pilot_e5_320": {
+      "run_id": "pilot_e5_320",
+      "git_commit": "5026930dce1d579dd29dfed6f473339b0221b87d",
+      "manifest_sha256": "b77e8f8a68d4c6258471860943a85020469420420e6f7da95e641383fd75d36a",
+      "outputs": {
+        "chunks.json": "58dd48b11a785304b5e72b32a08a28db636215250e39ab7e4dce099951d6b734",
+        "corpus_snapshot.json": "c41c2df28596fe19de299c02785d187b39ee6c9b38851c0d8a906d29743ec627",
+        "embeddings.npy": "56987c3ecc4818966165eb247cdeefbd39f893acc17586673139a008ddfe9026",
+        "embedding_settings.json": "1a7a2d8ebd8fef982790bf7c423023efe05b2940d971a21bee43567e5d0d5d71",
+        "models_snapshot.json": "8ca6713cd1afad7fad19c68cb12827bf25368e6e41d8e8c8a444ba7d8f74e336",
+        "peers.json": "8d02022fd2b64c76ea49285ad57b2f4030d563c5a32f3ef2ae4a864742136bb3",
+        "similarity.npy": "587596e42a6479eef8ed57b4f653c7637705f42b130985de8d16bc2442b7dad1"
+      },
+      "started_at": "2026-11-03T14:01:49.808575+00:00",
+      "completed_at": "2026-11-03T14:05:44.914434+00:00",
+      "packages": {
+        "numpy": "2.4.6",
+        "scikit-learn": "1.9.1",
+        "scipy": "1.17.1",
+        "sentence-transformers": "5.7.0",
+        "torch": "2.15.0",
+        "transformers": "4.57.6"
+      },
+      "git_tracked_changes": false,
+      "untracked_gpu_environment_recorded": false,
+      "document_count": 12,
+      "pair_count": 66,
+      "similarity_min_off_diagonal": 0.9339219585613272,
+      "similarity_max_off_diagonal": 0.9913854512071805,
+      "settings": {
+        "model": {
+          "key": "e5",
+          "model_id": "intfloat/e5-base-v2",
+          "prefix": "query: ",
+          "max_length": 512,
+          "role": "Primary encoder; symmetric semantic similarity convention",
+          "revision": "f52bf8ec8c7124536f0efb74aca902b2995e5bcd",
+          "training_cutoff": "unknown; independently review training and fine-tuning documentation"
+        },
+        "total_token_budget": 320,
+        "aggregation": "equal mean of normalized chunk vectors, then L2 normalize",
+        "device": "cpu",
+        "dtype": "torch.float32",
+        "pooling_modules": "SentenceTransformer(\n  (0): Transformer({'transformer_task': 'feature-extraction', 'modality_config': {'text': {'method': 'forward', 'method_output_name': 'last_hidden_state'}}, 'module_output_name': 'token_embeddings', 'architecture': 'BertModel'})\n  (1): Pooling({'embedding_dimension': 768, 'pooling_mode': 'mean', 'include_prompt': True})\n  (2): Normalize({})\n)",
+        "torch_version": "2.15.0+cpu",
+        "cuda_version": null,
+        "cuda_device": null,
+        "repeatability": "One fixed-weight inference; no independent training-seed experiment"
+      },
+      "batch_size": 8,
+      "vector_shape": [
+        12,
+        768
+      ],
+      "vector_storage_dtype": "float64",
+      "chunk_count": 510,
+      "chunk_count_by_ticker": {
+        "MSFT": 47,
+        "ORCL": 59,
+        "JPM": 70,
+        "BAC": 68,
+        "XOM": 21,
+        "CVX": 21,
+        "JNJ": 25,
+        "MRK": 47,
+        "CAT": 31,
+        "DE": 35,
+        "WMT": 54,
+        "TGT": 32
+      },
+      "gram_matrix_max_absolute_error": 9.992007221626409e-16
+    },
+    "pilot_qwen_192_gpu": {
+      "run_id": "pilot_qwen_192_gpu",
+      "git_commit": "5026930dce1d579dd29dfed6f473339b0221b87d",
+      "manifest_sha256": "4849ebfc80c9b4ad1b47c6d24b83ba22562142cb8ed09436640a06bc02636e1b",
+      "outputs": {
+        "chunks.json": "3ad5cac532fa0e9ddf9878b98dd075a6d9417c9ba01b0d2bffea03c27f2b6570",
+        "corpus_snapshot.json": "c41c2df28596fe19de299c02785d187b39ee6c9b38851c0d8a906d29743ec627",
+        "embeddings.npy": "f4bf8d20dfa1d9a877300ea4c42a258643da0ecf638dfc00bd08895197a8b9ad",
+        "embedding_settings.json": "4be50c7a1023488dbf7fc7293433b423778f259fcf0828b919a7a2f5b069c1eb",
+        "models_snapshot.json": "8ca6713cd1afad7fad19c68cb12827bf25368e6e41d8e8c8a444ba7d8f74e336",
+        "peers.json": "24dd200b7688ca341345f92a72a506292135c347451eae8fcc7062ef95542019",
+        "similarity.npy": "799899b32924d30445d50270d91801d2691ffb563d8fed299b81808b0b5b3538"
+      },
+      "started_at": "2026-11-03T14:43:43.095273+00:00",
+      "completed_at": "2026-11-03T14:46:52.221412+00:00",
+      "packages": {
+        "numpy": "2.4.6",
+        "scikit-learn": "1.9.1",
+        "scipy": "1.17.1",
+        "sentence-transformers": "5.7.0",
+        "torch": "2.14.1+cu126",
+        "transformers": "4.57.6"
+      },
+      "git_tracked_changes": false,
+      "untracked_gpu_environment_recorded": true,
+      "document_count": 12,
+      "pair_count": 66,
+      "similarity_min_off_diagonal": 0.6610355079040635,
+      "similarity_max_off_diagonal": 0.9701310955205723,
+      "settings": {
+        "model": {
+          "key": "qwen",
+          "model_id": "Qwen/Qwen3-Embedding-0.6B",
+          "prefix": "Instruct: Represent this SEC filing passage for comparing companies by business activities and risk exposures.\nQuery: ",
+          "max_length": 32768,
+          "role": "LLM-based instruction-aware embedding comparator; symmetric instruction is a study choice",
+          "revision": "97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3",
+          "training_cutoff": "unknown; independently review training and fine-tuning documentation"
+        },
+        "total_token_budget": 192,
+        "aggregation": "equal mean of normalized chunk vectors, then L2 normalize",
+        "device": "cuda",
+        "dtype": "torch.float32",
+        "pooling_modules": "SentenceTransformer(\n  (0): Transformer({'transformer_task': 'feature-extraction', 'modality_config': {'text': {'method': 'forward', 'method_output_name': 'last_hidden_state'}}, 'module_output_name': 'token_embeddings', 'architecture': 'Qwen3Model'})\n  (1): Pooling({'embedding_dimension': 1024, 'pooling_mode': 'lasttoken', 'include_prompt': True})\n  (2): Normalize({})\n)",
+        "torch_version": "2.14.1+cu126",
+        "cuda_version": "12.6",
+        "cuda_device": "NVIDIA GeForce RTX 3050 Laptop GPU",
+        "repeatability": "One fixed-weight inference; no independent training-seed experiment"
+      },
+      "batch_size": 1,
+      "vector_shape": [
+        12,
+        1024
+      ],
+      "vector_storage_dtype": "float64",
+      "chunk_count": 890,
+      "chunk_count_by_ticker": {
+        "MSFT": 82,
+        "ORCL": 103,
+        "JPM": 122,
+        "BAC": 118,
+        "XOM": 37,
+        "CVX": 36,
+        "JNJ": 44,
+        "MRK": 82,
+        "CAT": 54,
+        "DE": 62,
+        "WMT": 94,
+        "TGT": 56
+      },
+      "gram_matrix_max_absolute_error": 6.661338147750939e-16
+    },
+    "pilot_tfidf": {
+      "run_id": "pilot_tfidf",
+      "git_commit": "5026930dce1d579dd29dfed6f473339b0221b87d",
+      "manifest_sha256": "ecb61097a472de48a25e8f7d9a5624f606f03919ba392aedc8f0b0bec9a2e5fd",
+      "outputs": {
+        "corpus_snapshot.json": "c41c2df28596fe19de299c02785d187b39ee6c9b38851c0d8a906d29743ec627",
+        "peers.json": "aeed15e0b47f583ec2a08fff01511e156521bbac3b3f03e463c50380d2d46999",
+        "similarity.npy": "4cc380576f95a7419d39dbcdca39c9f64781366a5982eee0ef7159876acc9fd2",
+        "tfidf.json": "69027fb88509df27958fde34ca8ed65c6a4fcd578268e76af881a17efee6919f"
+      },
+      "started_at": "2026-11-03T13:53:15.122546+00:00",
+      "completed_at": "2026-11-03T13:53:15.423645+00:00",
+      "packages": {
+        "numpy": "2.4.6",
+        "scikit-learn": "1.9.1",
+        "scipy": "1.17.1",
+        "sentence-transformers": "5.7.0",
+        "torch": "2.15.0",
+        "transformers": "4.57.6"
+      },
+      "git_tracked_changes": false,
+      "untracked_gpu_environment_recorded": false,
+      "document_count": 12,
+      "pair_count": 66,
+      "similarity_min_off_diagonal": 0.09325648399290673,
+      "similarity_max_off_diagonal": 0.21539519978328367,
+      "tfidf_recomputed_from_text": true,
+      "vocabulary_size": 51174,
+      "tfidf_max_absolute_error": 2.0083934515469082e-13
+    }
+  },
+  "similarities": {
+    "pilot_bge_192": [
+      [
+        1.0,
+        0.9766864987290889,
+        0.8454837437332767,
+        0.938040245143056,
+        0.8944404319294702,
+        0.8648055725032726,
+        0.9428000702531057,
+        0.9145627100328374,
+        0.931982206094003,
+        0.9562322152031772,
+        0.9642837405667577,
+        0.9500525558721036
+      ],
+      [
+        0.9766864987290889,
+        1.0,
+        0.8778972205703172,
+        0.9605805403458909,
+        0.9036251523370628,
+        0.8891566832116211,
+        0.962464135645651,
+        0.9354878597100157,
+        0.9655025193017089,
+        0.9712044342355995,
+        0.9747896639343299,
+        0.9672355254689147
+      ],
+      [
+        0.8454837437332767,
+        0.8778972205703172,
+        0.9999999999999999,
+        0.9092213641375109,
+        0.8298843067274453,
+        0.8221197812877977,
+        0.8587188455246568,
+        0.8336233348667361,
+        0.8905210638333478,
+        0.8641794679995649,
+        0.8743140689714906,
+        0.8697315045468303
+      ],
+      [
+        0.938040245143056,
+        0.9605805403458909,
+        0.9092213641375109,
+        1.0000000000000002,
+        0.8978403526348698,
+        0.8896746090536464,
+        0.937275724631084,
+        0.906022114410745,
+        0.9715438156395864,
+        0.9506636867248569,
+        0.9582318700627185,
+        0.9497470134721098
+      ],
+      [
+        0.8944404319294702,
+        0.9036251523370628,
+        0.8298843067274453,
+        0.8978403526348698,
+        1.0,
+        0.9442921799713149,
+        0.9056050276249686,
+        0.8846004099159606,
+        0.9137735733589899,
+        0.9249034261147366,
+        0.9006449139976866,
+        0.9044685982708129
+      ],
+      [
+        0.8648055725032726,
+        0.8891566832116211,
+        0.8221197812877977,
+        0.8896746090536464,
+        0.9442921799713149,
+        1.0,
+        0.8981867805171142,
+        0.8775300369590483,
+        0.9058515080628692,
+        0.8992831794730054,
+        0.8880494933626729,
+        0.8936220806371373
+      ],
+      [
+        0.9428000702531057,
+        0.962464135645651,
+        0.8587188455246568,
+        0.937275724631084,
+        0.9056050276249686,
+        0.8981867805171142,
+        1.0,
+        0.9805608729835023,
+        0.952604997809421,
+        0.9625167680990209,
+        0.96328885715394,
+        0.9560666563605583
+      ],
+      [
+        0.9145627100328374,
+        0.9354878597100157,
+        0.8336233348667361,
+        0.906022114410745,
+        0.8846004099159606,
+        0.8775300369590483,
+        0.9805608729835023,
+        1.0000000000000002,
+        0.923098402963011,
+        0.9389662189168205,
+        0.9359724731972057,
+        0.9291408410700351
+      ],
+      [
+        0.931982206094003,
+        0.9655025193017089,
+        0.8905210638333478,
+        0.9715438156395864,
+        0.9137735733589899,
+        0.9058515080628692,
+        0.952604997809421,
+        0.923098402963011,
+        1.0,
+        0.9708925862270863,
+        0.9648446522810308,
+        0.964337443968592
+      ],
+      [
+        0.9562322152031772,
+        0.9712044342355995,
+        0.8641794679995649,
+        0.9506636867248569,
+        0.9249034261147366,
+        0.8992831794730054,
+        0.9625167680990209,
+        0.9389662189168205,
+        0.9708925862270863,
+        1.0,
+        0.9718890531624156,
+        0.9735317828209608
+      ],
+      [
+        0.9642837405667577,
+        0.9747896639343299,
+        0.8743140689714906,
+        0.9582318700627185,
+        0.9006449139976866,
+        0.8880494933626729,
+        0.96328885715394,
+        0.9359724731972057,
+        0.9648446522810308,
+        0.9718890531624156,
+        1.0000000000000002,
+        0.980931660577398
+      ],
+      [
+        0.9500525558721036,
+        0.9672355254689147,
+        0.8697315045468303,
+        0.9497470134721098,
+        0.9044685982708129,
+        0.8936220806371373,
+        0.9560666563605583,
+        0.9291408410700351,
+        0.964337443968592,
+        0.9735317828209608,
+        0.980931660577398,
+        0.9999999999999999
+      ]
+    ],
+    "pilot_e5_192": [
+      [
+        1.0000000000000002,
+        0.992367410903253,
+        0.9432519682274945,
+        0.9791664615895729,
+        0.9630139077133475,
+        0.9490742424530869,
+        0.977191190888765,
+        0.9610545134515378,
+        0.976923141151363,
+        0.9857536092778346,
+        0.9872930945014337,
+        0.9832892147553529
+      ],
+      [
+        0.992367410903253,
+        0.9999999999999999,
+        0.9548554479042675,
+        0.9870449491688579,
+        0.9676956033327022,
+        0.9576844411587694,
+        0.9843970016713555,
+        0.9698575538657733,
+        0.9885860423349471,
+        0.9903750198458625,
+        0.991726882483932,
+        0.9879511889865253
+      ],
+      [
+        0.9432519682274945,
+        0.9548554479042675,
+        1.0,
+        0.9646935303071275,
+        0.9383276281536033,
+        0.9393542857290882,
+        0.9574616369419873,
+        0.9506727740933509,
+        0.9602129047494699,
+        0.9511151130207947,
+        0.9545254978021374,
+        0.9490407307035038
+      ],
+      [
+        0.9791664615895729,
+        0.9870449491688579,
+        0.9646935303071275,
+        1.0,
+        0.9654226777297401,
+        0.9578854521106848,
+        0.9762807948546406,
+        0.9601937135678251,
+        0.9883137881988826,
+        0.9826095259985939,
+        0.9857901424785376,
+        0.9811746945260584
+      ],
+      [
+        0.9630139077133475,
+        0.9676956033327022,
+        0.9383276281536033,
+        0.9654226777297401,
+        1.0,
+        0.9792169610090162,
+        0.9682984124804563,
+        0.9606921972916158,
+        0.9721113784527327,
+        0.9749528164661609,
+        0.9661338174852437,
+        0.9667999727524821
+      ],
+      [
+        0.9490742424530869,
+        0.9576844411587694,
+        0.9393542857290882,
+        0.9578854521106848,
+        0.9792169610090162,
+        0.9999999999999998,
+        0.9648426637048876,
+        0.9584795331994616,
+        0.9649453705449931,
+        0.9613937548473767,
+        0.9560972376929493,
+        0.9573790477692727
+      ],
+      [
+        0.977191190888765,
+        0.9843970016713555,
+        0.9574616369419873,
+        0.9762807948546406,
+        0.9682984124804563,
+        0.9648426637048876,
+        0.9999999999999998,
+        0.9906236571713258,
+        0.9837163340970727,
+        0.9839284467023015,
+        0.9846533803010745,
+        0.9812756674079761
+      ],
+      [
+        0.9610545134515378,
+        0.9698575538657733,
+        0.9506727740933509,
+        0.9601937135678251,
+        0.9606921972916158,
+        0.9584795331994616,
+        0.9906236571713258,
+        1.0,
+        0.9690891253130172,
+        0.9706732338039695,
+        0.969251602145526,
+        0.9656079890175522
+      ],
+      [
+        0.976923141151363,
+        0.9885860423349471,
+        0.9602129047494699,
+        0.9883137881988826,
+        0.9721113784527327,
+        0.9649453705449931,
+        0.9837163340970727,
+        0.9690891253130172,
+        1.0,
+        0.9891679121486511,
+        0.9871590877002251,
+        0.9854770522405552
+      ],
+      [
+        0.9857536092778346,
+        0.9903750198458625,
+        0.9511151130207947,
+        0.9826095259985939,
+        0.9749528164661609,
+        0.9613937548473767,
+        0.9839284467023015,
+        0.9706732338039695,
+        0.9891679121486511,
+        1.0,
+        0.9887351940193252,
+        0.9888310049708818
+      ],
+      [
+        0.9872930945014337,
+        0.991726882483932,
+        0.9545254978021374,
+        0.9857901424785376,
+        0.9661338174852437,
+        0.9560972376929493,
+        0.9846533803010745,
+        0.969251602145526,
+        0.9871590877002251,
+        0.9887351940193252,
+        1.0000000000000002,
+        0.9920871897610412
+      ],
+      [
+        0.9832892147553529,
+        0.9879511889865253,
+        0.9490407307035038,
+        0.9811746945260584,
+        0.9667999727524821,
+        0.9573790477692727,
+        0.9812756674079761,
+        0.9656079890175522,
+        0.9854770522405552,
+        0.9888310049708818,
+        0.9920871897610412,
+        1.0
+      ]
+    ],
+    "pilot_e5_192_gpu": [
+      [
+        0.9999999999999999,
+        0.9923674000974243,
+        0.9432518743163298,
+        0.9791664233553177,
+        0.9630138535565481,
+        0.9490741538261692,
+        0.9771911480263298,
+        0.961054439591441,
+        0.976923106755665,
+        0.9857535855768589,
+        0.987293071382339,
+        0.9832891828167103
+      ],
+      [
+        0.9923674000974243,
+        1.0,
+        0.954855378438766,
+        0.987044924313205,
+        0.9676955548188672,
+        0.9576843678764339,
+        0.9843969728578055,
+        0.9698574957309265,
+        0.988586022608142,
+        0.990375003548905,
+        0.9917268667684633,
+        0.9879511651435317
+      ],
+      [
+        0.9432518743163298,
+        0.954855378438766,
+        1.0000000000000002,
+        0.9646934706793673,
+        0.9383275376379199,
+        0.9393541818944613,
+        0.9574615697190444,
+        0.9506726962218068,
+        0.9602128340416504,
+        0.9511150302748802,
+        0.9545254202060519,
+        0.9490406465381696
+      ],
+      [
+        0.9791664233553177,
+        0.987044924313205,
+        0.9646934706793673,
+        1.0,
+        0.9654226202798919,
+        0.9578853750406857,
+        0.9762807459386289,
+        0.9601936371333916,
+        0.9883137662204804,
+        0.9826094931597256,
+        0.9857901150706294,
+        0.9811746589538834
+      ],
+      [
+        0.9630138535565481,
+        0.9676955548188672,
+        0.9383275376379199,
+        0.9654226202798919,
+        1.0000000000000002,
+        0.9792169114698099,
+        0.9682983567420942,
+        0.9606921256277964,
+        0.9721113320263981,
+        0.9749527698978537,
+        0.9661337647973236,
+        0.9667999160574223
+      ],
+      [
+        0.9490741538261692,
+        0.9576843678764339,
+        0.9393541818944613,
+        0.9578853750406857,
+        0.9792169114698099,
+        0.9999999999999999,
+        0.9648425884376524,
+        0.9584794439687789,
+        0.9649453062017973,
+        0.9613936773599071,
+        0.9560971591412359,
+        0.9573789708548677
+      ],
+      [
+        0.9771911480263298,
+        0.9843969728578055,
+        0.9574615697190444,
+        0.9762807459386289,
+        0.9682983567420942,
+        0.9648425884376524,
+        1.0,
+        0.9906236393429124,
+        0.9837163026585408,
+        0.9839284140539627,
+        0.9846533455834299,
+        0.981275626472804
+      ],
+      [
+        0.961054439591441,
+        0.9698574957309265,
+        0.9506726962218068,
+        0.9601936371333916,
+        0.9606921256277964,
+        0.9584794439687789,
+        0.9906236393429124,
+        0.9999999999999999,
+        0.969089068056767,
+        0.9706731759247649,
+        0.9692515397425536,
+        0.9656079244532544
+      ],
+      [
+        0.976923106755665,
+        0.988586022608142,
+        0.9602128340416504,
+        0.9883137662204804,
+        0.9721113320263981,
+        0.9649453062017973,
+        0.9837163026585408,
+        0.969089068056767,
+        1.0,
+        0.9891678930583157,
+        0.9871590637251331,
+        0.98547702566115
+      ],
+      [
+        0.9857535855768589,
+        0.990375003548905,
+        0.9511150302748802,
+        0.9826094931597256,
+        0.9749527698978537,
+        0.9613936773599071,
+        0.9839284140539627,
+        0.9706731759247649,
+        0.9891678930583157,
+        1.0000000000000002,
+        0.9887351717100705,
+        0.9888309805616915
+      ],
+      [
+        0.987293071382339,
+        0.9917268667684633,
+        0.9545254202060519,
+        0.9857901150706294,
+        0.9661337647973236,
+        0.9560971591412359,
+        0.9846533455834299,
+        0.9692515397425536,
+        0.9871590637251331,
+        0.9887351717100705,
+        0.9999999999999999,
+        0.9920871713067113
+      ],
+      [
+        0.9832891828167103,
+        0.9879511651435317,
+        0.9490406465381696,
+        0.9811746589538834,
+        0.9667999160574223,
+        0.9573789708548677,
+        0.981275626472804,
+        0.9656079244532544,
+        0.98547702566115,
+        0.9888309805616915,
+        0.9920871713067113,
+        1.0000000000000002
+      ]
+    ],
+    "pilot_e5_320": [
+      [
+        1.0000000000000002,
+        0.9913854512071805,
+        0.939402991699217,
+        0.977197638096851,
+        0.9578979771819934,
+        0.9470684921843098,
+        0.9738749622624968,
+        0.9548884347669984,
+        0.9745266328294971,
+        0.9820979688751481,
+        0.9840444462698681,
+        0.9800635285029745
+      ],
+      [
+        0.9913854512071805,
+        1.0000000000000002,
+        0.9521158165351918,
+        0.9848319743210783,
+        0.962594182526381,
+        0.9565044048456459,
+        0.9818204606438525,
+        0.9652617939661039,
+        0.9860133953375988,
+        0.987074988492499,
+        0.9887978063020727,
+        0.9846192745678531
+      ],
+      [
+        0.939402991699217,
+        0.9521158165351918,
+        1.0,
+        0.9627348805128867,
+        0.9339219585613272,
+        0.9363418263803907,
+        0.953845041675506,
+        0.9466230971798696,
+        0.9574740224534433,
+        0.9465369799296728,
+        0.951096766406049,
+        0.9458667422184189
+      ],
+      [
+        0.977197638096851,
+        0.9848319743210783,
+        0.9627348805128867,
+        0.9999999999999998,
+        0.9613188301474586,
+        0.9565352819087074,
+        0.9736005762208871,
+        0.9559438555848556,
+        0.9867848722794235,
+        0.9790017770285248,
+        0.982354930423193,
+        0.9777122834916862
+      ],
+      [
+        0.9578979771819934,
+        0.962594182526381,
+        0.9339219585613272,
+        0.9613188301474586,
+        1.0000000000000002,
+        0.9750889928742414,
+        0.9637507881492144,
+        0.9550519543806968,
+        0.969147245992501,
+        0.9697077604547369,
+        0.9607858264800226,
+        0.9597753477237176
+      ],
+      [
+        0.9470684921843098,
+        0.9565044048456459,
+        0.9363418263803907,
+        0.9565352819087074,
+        0.9750889928742414,
+        1.0000000000000004,
+        0.962300344389399,
+        0.9549086463531525,
+        0.9646340522273882,
+        0.9589950685144787,
+        0.9538818665048676,
+        0.9548109872128646
+      ],
+      [
+        0.9738749622624968,
+        0.9818204606438525,
+        0.953845041675506,
+        0.9736005762208871,
+        0.9637507881492144,
+        0.962300344389399,
+        0.9999999999999999,
+        0.988498318689455,
+        0.9799833086937964,
+        0.9797082690604322,
+        0.9814776612194485,
+        0.977217981372634
+      ],
+      [
+        0.9548884347669984,
+        0.9652617939661039,
+        0.9466230971798696,
+        0.9559438555848556,
+        0.9550519543806968,
+        0.9549086463531525,
+        0.988498318689455,
+        1.0000000000000004,
+        0.9642167896411915,
+        0.9656282496498486,
+        0.9646042169848973,
+        0.9592877367182636
+      ],
+      [
+        0.9745266328294971,
+        0.9860133953375988,
+        0.9574740224534433,
+        0.9867848722794235,
+        0.969147245992501,
+        0.9646340522273882,
+        0.9799833086937964,
+        0.9642167896411915,
+        1.0,
+        0.9866523285672455,
+        0.9846365277877818,
+        0.9826673725807981
+      ],
+      [
+        0.9820979688751481,
+        0.987074988492499,
+        0.9465369799296728,
+        0.9790017770285248,
+        0.9697077604547369,
+        0.9589950685144787,
+        0.9797082690604322,
+        0.9656282496498486,
+        0.9866523285672455,
+        1.0000000000000002,
+        0.984463388967228,
+        0.9839333495763928
+      ],
+      [
+        0.9840444462698681,
+        0.9887978063020727,
+        0.951096766406049,
+        0.982354930423193,
+        0.9607858264800226,
+        0.9538818665048676,
+        0.9814776612194485,
+        0.9646042169848973,
+        0.9846365277877818,
+        0.984463388967228,
+        1.0,
+        0.9892736718830692
+      ],
+      [
+        0.9800635285029745,
+        0.9846192745678531,
+        0.9458667422184189,
+        0.9777122834916862,
+        0.9597753477237176,
+        0.9548109872128646,
+        0.977217981372634,
+        0.9592877367182636,
+        0.9826673725807981,
+        0.9839333495763928,
+        0.9892736718830692,
+        1.0
+      ]
+    ],
+    "pilot_qwen_192_gpu": [
+      [
+        0.9999999999999997,
+        0.9701310955205723,
+        0.7062034679546441,
+        0.8996864267786724,
+        0.7849499213836653,
+        0.7143643902437361,
+        0.898374405650148,
+        0.8416098661786878,
+        0.8888581462716387,
+        0.9084351602036893,
+        0.9191107302778995,
+        0.8985401397264227
+      ],
+      [
+        0.9701310955205723,
+        0.9999999999999999,
+        0.7487429564906986,
+        0.9331675007567339,
+        0.8156018910099215,
+        0.7580665934184074,
+        0.9287110157408429,
+        0.877081131443037,
+        0.933734416746795,
+        0.9329486884845004,
+        0.9393707643886025,
+        0.9196698982016698
+      ],
+      [
+        0.7062034679546441,
+        0.7487429564906986,
+        1.0,
+        0.8323507306319915,
+        0.6784362373984251,
+        0.6645833827342713,
+        0.6965637847187982,
+        0.6610355079040635,
+        0.7747507968615858,
+        0.7260492028365244,
+        0.7422959194229778,
+        0.727443978669296
+      ],
+      [
+        0.8996864267786724,
+        0.9331675007567339,
+        0.8323507306319915,
+        0.9999999999999999,
+        0.8163817098099688,
+        0.757548188695264,
+        0.8942470670315319,
+        0.8492175730913625,
+        0.9446443263368145,
+        0.9092777534044553,
+        0.9237061622193327,
+        0.9059733845178806
+      ],
+      [
+        0.7849499213836653,
+        0.8156018910099215,
+        0.6784362373984251,
+        0.8163817098099688,
+        0.9999999999999997,
+        0.891389533199826,
+        0.824833792219143,
+        0.7885069519287948,
+        0.8532814895071875,
+        0.8498463082470127,
+        0.8072198598358555,
+        0.806469135572387
+      ],
+      [
+        0.7143643902437361,
+        0.7580665934184074,
+        0.6645833827342713,
+        0.757548188695264,
+        0.891389533199826,
+        1.0,
+        0.7694990974536631,
+        0.7350698728570764,
+        0.8091403054855232,
+        0.8010314201102335,
+        0.7610728584723674,
+        0.7661917467796628
+      ],
+      [
+        0.898374405650148,
+        0.9287110157408429,
+        0.6965637847187982,
+        0.8942470670315319,
+        0.824833792219143,
+        0.7694990974536631,
+        1.0000000000000004,
+        0.9670385049791606,
+        0.9297542921755377,
+        0.9390743196364577,
+        0.938727128933069,
+        0.9133498202956306
+      ],
+      [
+        0.8416098661786878,
+        0.877081131443037,
+        0.6610355079040635,
+        0.8492175730913625,
+        0.7885069519287948,
+        0.7350698728570764,
+        0.9670385049791606,
+        1.0000000000000004,
+        0.8736593189367293,
+        0.885825707694234,
+        0.895371318763302,
+        0.8630329676510523
+      ],
+      [
+        0.8888581462716387,
+        0.933734416746795,
+        0.7747507968615858,
+        0.9446443263368145,
+        0.8532814895071875,
+        0.8091403054855232,
+        0.9297542921755377,
+        0.8736593189367293,
+        0.9999999999999999,
+        0.9576315180721081,
+        0.9358097121328915,
+        0.927974864476558
+      ],
+      [
+        0.9084351602036893,
+        0.9329486884845004,
+        0.7260492028365244,
+        0.9092777534044553,
+        0.8498463082470127,
+        0.8010314201102335,
+        0.9390743196364577,
+        0.885825707694234,
+        0.9576315180721081,
+        1.0,
+        0.9346629771751829,
+        0.9329284956645594
+      ],
+      [
+        0.9191107302778995,
+        0.9393707643886025,
+        0.7422959194229778,
+        0.9237061622193327,
+        0.8072198598358555,
+        0.7610728584723674,
+        0.938727128933069,
+        0.895371318763302,
+        0.9358097121328915,
+        0.9346629771751829,
+        1.0,
+        0.9695996359907413
+      ],
+      [
+        0.8985401397264227,
+        0.9196698982016698,
+        0.727443978669296,
+        0.9059733845178806,
+        0.806469135572387,
+        0.7661917467796628,
+        0.9133498202956306,
+        0.8630329676510523,
+        0.927974864476558,
+        0.9329284956645594,
+        0.9695996359907413,
+        1.0
+      ]
+    ],
+    "pilot_tfidf": [
+      [
+        0.999999999999948,
+        0.18613640046658053,
+        0.13465875207103484,
+        0.14017113646914836,
+        0.11053157598756706,
+        0.11203959726371647,
+        0.1399077586646005,
+        0.1149567256407248,
+        0.13404473581007692,
+        0.14946585024126394,
+        0.15341124039066775,
+        0.12711246302887366
+      ],
+      [
+        0.18613640046658053,
+        0.9999999999997539,
+        0.13268721125356897,
+        0.14987975343882606,
+        0.10717975869209373,
+        0.11860961800423445,
+        0.1513363058204347,
+        0.1248837358462934,
+        0.14577863402778177,
+        0.15359452552510375,
+        0.16199535660590117,
+        0.1293172341327688
+      ],
+      [
+        0.13465875207103484,
+        0.13268721125356897,
+        1.0000000000000393,
+        0.21539519978328367,
+        0.10320620367151231,
+        0.10488260997408543,
+        0.11280297439255806,
+        0.09769535551605465,
+        0.1273895474669717,
+        0.11913245119693824,
+        0.1340530150480012,
+        0.11255948681902873
+      ],
+      [
+        0.14017113646914836,
+        0.14987975343882606,
+        0.21539519978328367,
+        0.9999999999999056,
+        0.10378731806642778,
+        0.11096230285525223,
+        0.1241880918906455,
+        0.109009286548357,
+        0.13923112603966262,
+        0.13330953726793882,
+        0.14402413925339552,
+        0.1268451095930191
+      ],
+      [
+        0.11053157598756706,
+        0.10717975869209373,
+        0.10320620367151231,
+        0.10378731806642778,
+        1.000000000000034,
+        0.14648007599963483,
+        0.10599796583945836,
+        0.09415819717881552,
+        0.11120218690888428,
+        0.11252440205102554,
+        0.10231564473126478,
+        0.09325648399290673
+      ],
+      [
+        0.11203959726371647,
+        0.11860961800423445,
+        0.10488260997408543,
+        0.11096230285525223,
+        0.14648007599963483,
+        0.9999999999999645,
+        0.12295633903385533,
+        0.11707145552511004,
+        0.11955809513558348,
+        0.12103166856501774,
+        0.11611724444914075,
+        0.10237238560587536
+      ],
+      [
+        0.1399077586646005,
+        0.1513363058204347,
+        0.11280297439255806,
+        0.1241880918906455,
+        0.10599796583945836,
+        0.12295633903385533,
+        1.0000000000000357,
+        0.19537563849867692,
+        0.14711574243923234,
+        0.13620329671944037,
+        0.14166566579608378,
+        0.114706986214579
+      ],
+      [
+        0.1149567256407248,
+        0.1248837358462934,
+        0.09769535551605465,
+        0.109009286548357,
+        0.09415819717881552,
+        0.11707145552511004,
+        0.19537563849867692,
+        0.9999999999999607,
+        0.12379569198880422,
+        0.12391947160926436,
+        0.12843777596123776,
+        0.10486444635555855
+      ],
+      [
+        0.13404473581007692,
+        0.14577863402778177,
+        0.1273895474669717,
+        0.13923112603966262,
+        0.11120218690888428,
+        0.11955809513558348,
+        0.14711574243923234,
+        0.12379569198880422,
+        0.9999999999999384,
+        0.19402792218296327,
+        0.14901742563880713,
+        0.11810268366090344
+      ],
+      [
+        0.14946585024126394,
+        0.15359452552510375,
+        0.11913245119693824,
+        0.13330953726793882,
+        0.11252440205102554,
+        0.12103166856501774,
+        0.13620329671944037,
+        0.12391947160926436,
+        0.19402792218296327,
+        0.9999999999999492,
+        0.1532231946357057,
+        0.143809722998994
+      ],
+      [
+        0.15341124039066775,
+        0.16199535660590117,
+        0.1340530150480012,
+        0.14402413925339552,
+        0.10231564473126478,
+        0.11611724444914075,
+        0.14166566579608378,
+        0.12843777596123776,
+        0.14901742563880713,
+        0.1532231946357057,
+        0.9999999999998793,
+        0.17808247056160711
+      ],
+      [
+        0.12711246302887366,
+        0.1293172341327688,
+        0.11255948681902873,
+        0.1268451095930191,
+        0.09325648399290673,
+        0.10237238560587536,
+        0.114706986214579,
+        0.10486444635555855,
+        0.11810268366090344,
+        0.143809722998994,
+        0.17808247056160711,
+        0.999999999999841
+      ]
+    ]
+  },
+  "comparisons": [
+    {
+      "spearman_pair_similarity": 0.9839265212399542,
+      "mean_top_k_overlap": 0.7916666666666666,
+      "mean_top_k_jaccard": 0.75,
+      "mean_absolute_similarity_change": 0.0736397554212439,
+      "companies": [
+        {
+          "document_id": "0001193125-26-323660",
+          "overlap": 1.0,
+          "jaccard": 1.0,
+          "margin_a": 0.008051525363580447,
+          "margin_b": 0.010675570074210161,
+          "peers_a": [
+            "0001193125-26-277521",
+            "0000104169-26-000055"
+          ],
+          "peers_b": [
+            "0001193125-26-277521",
+            "0000104169-26-000055"
+          ],
+          "ticker": "MSFT",
+          "peers_a_tickers": [
+            "ORCL",
+            "WMT"
+          ],
+          "peers_b_tickers": [
+            "ORCL",
+            "WMT"
+          ],
+          "set_changed": false,
+          "order_changed": false,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0001193125-26-277521",
+          "overlap": 1.0,
+          "jaccard": 1.0,
+          "margin_a": 0.003585229698730319,
+          "margin_b": 0.0056363476418074265,
+          "peers_a": [
+            "0001193125-26-323660",
+            "0000104169-26-000055"
+          ],
+          "peers_b": [
+            "0001193125-26-323660",
+            "0000104169-26-000055"
+          ],
+          "ticker": "ORCL",
+          "peers_a_tickers": [
+            "MSFT",
+            "WMT"
+          ],
+          "peers_b_tickers": [
+            "MSFT",
+            "WMT"
+          ],
+          "set_changed": false,
+          "order_changed": false,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0001628280-26-008131",
+          "overlap": 1.0,
+          "jaccard": 1.0,
+          "margin_a": 0.012623843263030676,
+          "margin_b": 0.026007840370887214,
+          "peers_a": [
+            "0000070858-26-000157",
+            "0000018230-26-000008"
+          ],
+          "peers_b": [
+            "0000070858-26-000157",
+            "0000018230-26-000008"
+          ],
+          "ticker": "JPM",
+          "peers_a_tickers": [
+            "BAC",
+            "CAT"
+          ],
+          "peers_b_tickers": [
+            "BAC",
+            "CAT"
+          ],
+          "set_changed": false,
+          "order_changed": false,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0000070858-26-000157",
+          "overlap": 1.0,
+          "jaccard": 1.0,
+          "margin_a": 0.002348670283172427,
+          "margin_b": 0.009461338537401276,
+          "peers_a": [
+            "0000018230-26-000008",
+            "0001193125-26-277521"
+          ],
+          "peers_b": [
+            "0000018230-26-000008",
+            "0001193125-26-277521"
+          ],
+          "ticker": "BAC",
+          "peers_a_tickers": [
+            "CAT",
+            "ORCL"
+          ],
+          "peers_b_tickers": [
+            "CAT",
+            "ORCL"
+          ],
+          "set_changed": false,
+          "order_changed": false,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0000034088-26-000045",
+          "overlap": 0.5,
+          "jaccard": 0.3333333333333333,
+          "margin_a": 0.011129852755746739,
+          "margin_b": 0.0034351812601748355,
+          "peers_a": [
+            "0000093410-26-000078",
+            "0001104659-25-122321"
+          ],
+          "peers_b": [
+            "0000093410-26-000078",
+            "0000018230-26-000008"
+          ],
+          "ticker": "XOM",
+          "peers_a_tickers": [
+            "CVX",
+            "DE"
+          ],
+          "peers_b_tickers": [
+            "CVX",
+            "CAT"
+          ],
+          "set_changed": true,
+          "order_changed": true,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0000093410-26-000078",
+          "overlap": 1.0,
+          "jaccard": 1.0,
+          "margin_a": 0.006568328589863781,
+          "margin_b": 0.008108885375289643,
+          "peers_a": [
+            "0000034088-26-000045",
+            "0000018230-26-000008"
+          ],
+          "peers_b": [
+            "0000034088-26-000045",
+            "0000018230-26-000008"
+          ],
+          "ticker": "CVX",
+          "peers_a_tickers": [
+            "XOM",
+            "CAT"
+          ],
+          "peers_b_tickers": [
+            "XOM",
+            "CAT"
+          ],
+          "set_changed": false,
+          "order_changed": false,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0000200406-26-000016",
+          "overlap": 0.5,
+          "jaccard": 0.3333333333333333,
+          "margin_a": 0.0007720890549191006,
+          "margin_b": 0.00034719070338873337,
+          "peers_a": [
+            "0000310158-26-000063",
+            "0000104169-26-000055"
+          ],
+          "peers_b": [
+            "0000310158-26-000063",
+            "0001104659-25-122321"
+          ],
+          "ticker": "JNJ",
+          "peers_a_tickers": [
+            "MRK",
+            "WMT"
+          ],
+          "peers_b_tickers": [
+            "MRK",
+            "DE"
+          ],
+          "set_changed": true,
+          "order_changed": true,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0000310158-26-000063",
+          "overlap": 0.5,
+          "jaccard": 0.3333333333333333,
+          "margin_a": 0.00299374571961486,
+          "margin_b": 0.009545611069068038,
+          "peers_a": [
+            "0000200406-26-000016",
+            "0001104659-25-122321"
+          ],
+          "peers_b": [
+            "0000200406-26-000016",
+            "0000104169-26-000055"
+          ],
+          "ticker": "MRK",
+          "peers_a_tickers": [
+            "JNJ",
+            "DE"
+          ],
+          "peers_b_tickers": [
+            "JNJ",
+            "WMT"
+          ],
+          "set_changed": true,
+          "order_changed": true,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0000018230-26-000008",
+          "overlap": 1.0,
+          "jaccard": 1.0,
+          "margin_a": 0.005390066925377357,
+          "margin_b": 0.008834614203922952,
+          "peers_a": [
+            "0000070858-26-000157",
+            "0001104659-25-122321"
+          ],
+          "peers_b": [
+            "0001104659-25-122321",
+            "0000070858-26-000157"
+          ],
+          "ticker": "CAT",
+          "peers_a_tickers": [
+            "BAC",
+            "DE"
+          ],
+          "peers_b_tickers": [
+            "DE",
+            "BAC"
+          ],
+          "set_changed": false,
+          "order_changed": true,
+          "closest_peer_changed": true
+        },
+        {
+          "document_id": "0001104659-25-122321",
+          "overlap": 0.0,
+          "jaccard": 0.0,
+          "margin_a": 0.0006846189268160385,
+          "margin_b": 0.004411342461274836,
+          "peers_a": [
+            "0000027419-26-000016",
+            "0000104169-26-000055"
+          ],
+          "peers_b": [
+            "0000018230-26-000008",
+            "0000200406-26-000016"
+          ],
+          "ticker": "DE",
+          "peers_a_tickers": [
+            "TGT",
+            "WMT"
+          ],
+          "peers_b_tickers": [
+            "CAT",
+            "JNJ"
+          ],
+          "set_changed": true,
+          "order_changed": true,
+          "closest_peer_changed": true
+        },
+        {
+          "document_id": "0000104169-26-000055",
+          "overlap": 1.0,
+          "jaccard": 1.0,
+          "margin_a": 0.0029006107719142804,
+          "margin_b": 0.0006436354555334756,
+          "peers_a": [
+            "0000027419-26-000016",
+            "0001193125-26-277521"
+          ],
+          "peers_b": [
+            "0000027419-26-000016",
+            "0001193125-26-277521"
+          ],
+          "ticker": "WMT",
+          "peers_a_tickers": [
+            "TGT",
+            "ORCL"
+          ],
+          "peers_b_tickers": [
+            "TGT",
+            "ORCL"
+          ],
+          "set_changed": false,
+          "order_changed": false,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0000027419-26-000016",
+          "overlap": 1.0,
+          "jaccard": 1.0,
+          "margin_a": 0.006296257352046086,
+          "margin_b": 0.004953631188001406,
+          "peers_a": [
+            "0000104169-26-000055",
+            "0001104659-25-122321"
+          ],
+          "peers_b": [
+            "0000104169-26-000055",
+            "0001104659-25-122321"
+          ],
+          "ticker": "TGT",
+          "peers_a_tickers": [
+            "WMT",
+            "DE"
+          ],
+          "peers_b_tickers": [
+            "WMT",
+            "DE"
+          ],
+          "set_changed": false,
+          "order_changed": false,
+          "closest_peer_changed": false
+        }
+      ],
+      "comparison_id": "bge_vs_qwen_192",
+      "run_a": "pilot_bge_192",
+      "run_b": "pilot_qwen_192_gpu",
+      "changed_peer_sets": 4,
+      "changed_closest_peers": 2,
+      "changed_peer_orders": 5,
+      "retained_memberships": 19,
+      "comparison_sha256": "a855e7b6a00466d1a4fadd7610d805704639194c104c066a781cf35e145dabdb"
+    },
+    {
+      "spearman_pair_similarity": 0.9915666423129111,
+      "mean_top_k_overlap": 0.875,
+      "mean_top_k_jaccard": 0.8333333333333334,
+      "mean_absolute_similarity_change": 0.0034603548585201223,
+      "companies": [
+        {
+          "document_id": "0001193125-26-323660",
+          "overlap": 1.0,
+          "jaccard": 1.0,
+          "margin_a": 0.0015394852235990353,
+          "margin_b": 0.001946477394719981,
+          "peers_a": [
+            "0001193125-26-277521",
+            "0000104169-26-000055"
+          ],
+          "peers_b": [
+            "0001193125-26-277521",
+            "0000104169-26-000055"
+          ],
+          "ticker": "MSFT",
+          "peers_a_tickers": [
+            "ORCL",
+            "WMT"
+          ],
+          "peers_b_tickers": [
+            "ORCL",
+            "WMT"
+          ],
+          "set_changed": false,
+          "order_changed": false,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0001193125-26-277521",
+          "overlap": 1.0,
+          "jaccard": 1.0,
+          "margin_a": 0.0013518626380695231,
+          "margin_b": 0.001722817809573729,
+          "peers_a": [
+            "0001193125-26-323660",
+            "0000104169-26-000055"
+          ],
+          "peers_b": [
+            "0001193125-26-323660",
+            "0000104169-26-000055"
+          ],
+          "ticker": "ORCL",
+          "peers_a_tickers": [
+            "MSFT",
+            "WMT"
+          ],
+          "peers_b_tickers": [
+            "MSFT",
+            "WMT"
+          ],
+          "set_changed": false,
+          "order_changed": false,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0001628280-26-008131",
+          "overlap": 1.0,
+          "jaccard": 1.0,
+          "margin_a": 0.0027512678074825825,
+          "margin_b": 0.003628980777937274,
+          "peers_a": [
+            "0000070858-26-000157",
+            "0000018230-26-000008"
+          ],
+          "peers_b": [
+            "0000070858-26-000157",
+            "0000018230-26-000008"
+          ],
+          "ticker": "JPM",
+          "peers_a_tickers": [
+            "BAC",
+            "CAT"
+          ],
+          "peers_b_tickers": [
+            "BAC",
+            "CAT"
+          ],
+          "set_changed": false,
+          "order_changed": false,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0000070858-26-000157",
+          "overlap": 1.0,
+          "jaccard": 1.0,
+          "margin_a": 0.0012548066903202981,
+          "margin_b": 0.0024770438978852782,
+          "peers_a": [
+            "0000018230-26-000008",
+            "0001193125-26-277521"
+          ],
+          "peers_b": [
+            "0000018230-26-000008",
+            "0001193125-26-277521"
+          ],
+          "ticker": "BAC",
+          "peers_a_tickers": [
+            "CAT",
+            "ORCL"
+          ],
+          "peers_b_tickers": [
+            "CAT",
+            "ORCL"
+          ],
+          "set_changed": false,
+          "order_changed": false,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0000034088-26-000045",
+          "overlap": 1.0,
+          "jaccard": 1.0,
+          "margin_a": 0.002841438013428288,
+          "margin_b": 0.0005605144622359282,
+          "peers_a": [
+            "0000093410-26-000078",
+            "0001104659-25-122321"
+          ],
+          "peers_b": [
+            "0000093410-26-000078",
+            "0001104659-25-122321"
+          ],
+          "ticker": "XOM",
+          "peers_a_tickers": [
+            "CVX",
+            "DE"
+          ],
+          "peers_b_tickers": [
+            "CVX",
+            "DE"
+          ],
+          "set_changed": false,
+          "order_changed": false,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0000093410-26-000078",
+          "overlap": 1.0,
+          "jaccard": 1.0,
+          "margin_a": 0.00010270684010549314,
+          "margin_b": 0.0023337078379891407,
+          "peers_a": [
+            "0000034088-26-000045",
+            "0000018230-26-000008"
+          ],
+          "peers_b": [
+            "0000034088-26-000045",
+            "0000018230-26-000008"
+          ],
+          "ticker": "CVX",
+          "peers_a_tickers": [
+            "XOM",
+            "CAT"
+          ],
+          "peers_b_tickers": [
+            "XOM",
+            "CAT"
+          ],
+          "set_changed": false,
+          "order_changed": false,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0000200406-26-000016",
+          "overlap": 0.5,
+          "jaccard": 0.3333333333333333,
+          "margin_a": 0.00025637862971905623,
+          "margin_b": 0.0003427994244040722,
+          "peers_a": [
+            "0000310158-26-000063",
+            "0000104169-26-000055"
+          ],
+          "peers_b": [
+            "0000310158-26-000063",
+            "0001193125-26-277521"
+          ],
+          "ticker": "JNJ",
+          "peers_a_tickers": [
+            "MRK",
+            "WMT"
+          ],
+          "peers_b_tickers": [
+            "MRK",
+            "ORCL"
+          ],
+          "set_changed": true,
+          "order_changed": true,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0000310158-26-000063",
+          "overlap": 1.0,
+          "jaccard": 1.0,
+          "margin_a": 0.000815679938196201,
+          "margin_b": 0.00036645568374471527,
+          "peers_a": [
+            "0000200406-26-000016",
+            "0001104659-25-122321"
+          ],
+          "peers_b": [
+            "0000200406-26-000016",
+            "0001104659-25-122321"
+          ],
+          "ticker": "MRK",
+          "peers_a_tickers": [
+            "JNJ",
+            "DE"
+          ],
+          "peers_b_tickers": [
+            "JNJ",
+            "DE"
+          ],
+          "set_changed": false,
+          "order_changed": false,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0000018230-26-000008",
+          "overlap": 0.5,
+          "jaccard": 0.3333333333333333,
+          "margin_a": 0.0002722541360644648,
+          "margin_b": 0.0006389332296466987,
+          "peers_a": [
+            "0001104659-25-122321",
+            "0001193125-26-277521"
+          ],
+          "peers_b": [
+            "0000070858-26-000157",
+            "0001104659-25-122321"
+          ],
+          "ticker": "CAT",
+          "peers_a_tickers": [
+            "DE",
+            "ORCL"
+          ],
+          "peers_b_tickers": [
+            "BAC",
+            "DE"
+          ],
+          "set_changed": true,
+          "order_changed": true,
+          "closest_peer_changed": true
+        },
+        {
+          "document_id": "0001104659-25-122321",
+          "overlap": 1.0,
+          "jaccard": 1.0,
+          "margin_a": 0.00033690717776924117,
+          "margin_b": 0.0021889396000175365,
+          "peers_a": [
+            "0001193125-26-277521",
+            "0000018230-26-000008"
+          ],
+          "peers_b": [
+            "0001193125-26-277521",
+            "0000018230-26-000008"
+          ],
+          "ticker": "DE",
+          "peers_a_tickers": [
+            "ORCL",
+            "CAT"
+          ],
+          "peers_b_tickers": [
+            "ORCL",
+            "CAT"
+          ],
+          "set_changed": false,
+          "order_changed": false,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0000104169-26-000055",
+          "overlap": 1.0,
+          "jaccard": 1.0,
+          "margin_a": 0.0029916884646068453,
+          "margin_b": 0.004161278514290934,
+          "peers_a": [
+            "0000027419-26-000016",
+            "0001193125-26-277521"
+          ],
+          "peers_b": [
+            "0000027419-26-000016",
+            "0001193125-26-277521"
+          ],
+          "ticker": "WMT",
+          "peers_a_tickers": [
+            "TGT",
+            "ORCL"
+          ],
+          "peers_b_tickers": [
+            "TGT",
+            "ORCL"
+          ],
+          "set_changed": false,
+          "order_changed": false,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0000027419-26-000016",
+          "overlap": 0.5,
+          "jaccard": 0.3333333333333333,
+          "margin_a": 0.0008798159843564912,
+          "margin_b": 0.0006859249914603627,
+          "peers_a": [
+            "0000104169-26-000055",
+            "0001104659-25-122321"
+          ],
+          "peers_b": [
+            "0000104169-26-000055",
+            "0001193125-26-277521"
+          ],
+          "ticker": "TGT",
+          "peers_a_tickers": [
+            "WMT",
+            "DE"
+          ],
+          "peers_b_tickers": [
+            "WMT",
+            "ORCL"
+          ],
+          "set_changed": true,
+          "order_changed": true,
+          "closest_peer_changed": false
+        }
+      ],
+      "comparison_id": "e5_192_vs_320",
+      "run_a": "pilot_e5_192",
+      "run_b": "pilot_e5_320",
+      "changed_peer_sets": 3,
+      "changed_closest_peers": 1,
+      "changed_peer_orders": 3,
+      "retained_memberships": 21,
+      "comparison_sha256": "6c4844f267260e569448482654362e160577893e461f900f6b1cfd32f41226d7"
+    },
+    {
+      "spearman_pair_similarity": 1.0,
+      "mean_top_k_overlap": 1.0,
+      "mean_top_k_jaccard": 1.0,
+      "mean_absolute_similarity_change": 5.093662662365843e-08,
+      "companies": [
+        {
+          "document_id": "0001193125-26-323660",
+          "overlap": 1.0,
+          "jaccard": 1.0,
+          "margin_a": 0.0015394852235990353,
+          "margin_b": 0.0015394858054801341,
+          "peers_a": [
+            "0001193125-26-277521",
+            "0000104169-26-000055"
+          ],
+          "peers_b": [
+            "0001193125-26-277521",
+            "0000104169-26-000055"
+          ],
+          "ticker": "MSFT",
+          "peers_a_tickers": [
+            "ORCL",
+            "WMT"
+          ],
+          "peers_b_tickers": [
+            "ORCL",
+            "WMT"
+          ],
+          "set_changed": false,
+          "order_changed": false,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0001193125-26-277521",
+          "overlap": 1.0,
+          "jaccard": 1.0,
+          "margin_a": 0.0013518626380695231,
+          "margin_b": 0.0013518632195583802,
+          "peers_a": [
+            "0001193125-26-323660",
+            "0000104169-26-000055"
+          ],
+          "peers_b": [
+            "0001193125-26-323660",
+            "0000104169-26-000055"
+          ],
+          "ticker": "ORCL",
+          "peers_a_tickers": [
+            "MSFT",
+            "WMT"
+          ],
+          "peers_b_tickers": [
+            "MSFT",
+            "WMT"
+          ],
+          "set_changed": false,
+          "order_changed": false,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0001628280-26-008131",
+          "overlap": 1.0,
+          "jaccard": 1.0,
+          "margin_a": 0.0027512678074825825,
+          "margin_b": 0.002751264322605973,
+          "peers_a": [
+            "0000070858-26-000157",
+            "0000018230-26-000008"
+          ],
+          "peers_b": [
+            "0000070858-26-000157",
+            "0000018230-26-000008"
+          ],
+          "ticker": "JPM",
+          "peers_a_tickers": [
+            "BAC",
+            "CAT"
+          ],
+          "peers_b_tickers": [
+            "BAC",
+            "CAT"
+          ],
+          "set_changed": false,
+          "order_changed": false,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0000070858-26-000157",
+          "overlap": 1.0,
+          "jaccard": 1.0,
+          "margin_a": 0.0012548066903202981,
+          "margin_b": 0.0012548092425755941,
+          "peers_a": [
+            "0000018230-26-000008",
+            "0001193125-26-277521"
+          ],
+          "peers_b": [
+            "0000018230-26-000008",
+            "0001193125-26-277521"
+          ],
+          "ticker": "BAC",
+          "peers_a_tickers": [
+            "CAT",
+            "ORCL"
+          ],
+          "peers_b_tickers": [
+            "CAT",
+            "ORCL"
+          ],
+          "set_changed": false,
+          "order_changed": false,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0000034088-26-000045",
+          "overlap": 1.0,
+          "jaccard": 1.0,
+          "margin_a": 0.002841438013428288,
+          "margin_b": 0.002841437871455632,
+          "peers_a": [
+            "0000093410-26-000078",
+            "0001104659-25-122321"
+          ],
+          "peers_b": [
+            "0000093410-26-000078",
+            "0001104659-25-122321"
+          ],
+          "ticker": "XOM",
+          "peers_a_tickers": [
+            "CVX",
+            "DE"
+          ],
+          "peers_b_tickers": [
+            "CVX",
+            "DE"
+          ],
+          "set_changed": false,
+          "order_changed": false,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0000093410-26-000078",
+          "overlap": 1.0,
+          "jaccard": 1.0,
+          "margin_a": 0.00010270684010549314,
+          "margin_b": 0.00010271776414494393,
+          "peers_a": [
+            "0000034088-26-000045",
+            "0000018230-26-000008"
+          ],
+          "peers_b": [
+            "0000034088-26-000045",
+            "0000018230-26-000008"
+          ],
+          "ticker": "CVX",
+          "peers_a_tickers": [
+            "XOM",
+            "CAT"
+          ],
+          "peers_b_tickers": [
+            "XOM",
+            "CAT"
+          ],
+          "set_changed": false,
+          "order_changed": false,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0000200406-26-000016",
+          "overlap": 1.0,
+          "jaccard": 1.0,
+          "margin_a": 0.00025637862971905623,
+          "margin_b": 0.0002563727256243986,
+          "peers_a": [
+            "0000310158-26-000063",
+            "0000104169-26-000055"
+          ],
+          "peers_b": [
+            "0000310158-26-000063",
+            "0000104169-26-000055"
+          ],
+          "ticker": "JNJ",
+          "peers_a_tickers": [
+            "MRK",
+            "WMT"
+          ],
+          "peers_b_tickers": [
+            "MRK",
+            "WMT"
+          ],
+          "set_changed": false,
+          "order_changed": false,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0000310158-26-000063",
+          "overlap": 1.0,
+          "jaccard": 1.0,
+          "margin_a": 0.000815679938196201,
+          "margin_b": 0.0008156801938383751,
+          "peers_a": [
+            "0000200406-26-000016",
+            "0001104659-25-122321"
+          ],
+          "peers_b": [
+            "0000200406-26-000016",
+            "0001104659-25-122321"
+          ],
+          "ticker": "MRK",
+          "peers_a_tickers": [
+            "JNJ",
+            "DE"
+          ],
+          "peers_b_tickers": [
+            "JNJ",
+            "DE"
+          ],
+          "set_changed": false,
+          "order_changed": false,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0000018230-26-000008",
+          "overlap": 1.0,
+          "jaccard": 1.0,
+          "margin_a": 0.0002722541360644648,
+          "margin_b": 0.00027225638766159577,
+          "peers_a": [
+            "0001104659-25-122321",
+            "0001193125-26-277521"
+          ],
+          "peers_b": [
+            "0001104659-25-122321",
+            "0001193125-26-277521"
+          ],
+          "ticker": "CAT",
+          "peers_a_tickers": [
+            "DE",
+            "ORCL"
+          ],
+          "peers_b_tickers": [
+            "DE",
+            "ORCL"
+          ],
+          "set_changed": false,
+          "order_changed": false,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0001104659-25-122321",
+          "overlap": 1.0,
+          "jaccard": 1.0,
+          "margin_a": 0.00033690717776924117,
+          "margin_b": 0.00033691249662415323,
+          "peers_a": [
+            "0001193125-26-277521",
+            "0000018230-26-000008"
+          ],
+          "peers_b": [
+            "0001193125-26-277521",
+            "0000018230-26-000008"
+          ],
+          "ticker": "DE",
+          "peers_a_tickers": [
+            "ORCL",
+            "CAT"
+          ],
+          "peers_b_tickers": [
+            "ORCL",
+            "CAT"
+          ],
+          "set_changed": false,
+          "order_changed": false,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0000104169-26-000055",
+          "overlap": 1.0,
+          "jaccard": 1.0,
+          "margin_a": 0.0029916884646068453,
+          "margin_b": 0.002991695058392807,
+          "peers_a": [
+            "0000027419-26-000016",
+            "0001193125-26-277521"
+          ],
+          "peers_b": [
+            "0000027419-26-000016",
+            "0001193125-26-277521"
+          ],
+          "ticker": "WMT",
+          "peers_a_tickers": [
+            "TGT",
+            "ORCL"
+          ],
+          "peers_b_tickers": [
+            "TGT",
+            "ORCL"
+          ],
+          "set_changed": false,
+          "order_changed": false,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0000027419-26-000016",
+          "overlap": 1.0,
+          "jaccard": 1.0,
+          "margin_a": 0.0008798159843564912,
+          "margin_b": 0.0008798154181598461,
+          "peers_a": [
+            "0000104169-26-000055",
+            "0001104659-25-122321"
+          ],
+          "peers_b": [
+            "0000104169-26-000055",
+            "0001104659-25-122321"
+          ],
+          "ticker": "TGT",
+          "peers_a_tickers": [
+            "WMT",
+            "DE"
+          ],
+          "peers_b_tickers": [
+            "WMT",
+            "DE"
+          ],
+          "set_changed": false,
+          "order_changed": false,
+          "closest_peer_changed": false
+        }
+      ],
+      "comparison_id": "e5_cpu_vs_gpu_192",
+      "run_a": "pilot_e5_192",
+      "run_b": "pilot_e5_192_gpu",
+      "changed_peer_sets": 0,
+      "changed_closest_peers": 0,
+      "changed_peer_orders": 0,
+      "retained_memberships": 24,
+      "comparison_sha256": "812f33012fc1cd7354c687be076826cc67dfa0bbc6c023281f40f6d91dd64758"
+    },
+    {
+      "spearman_pair_similarity": 0.9798768395783324,
+      "mean_top_k_overlap": 0.875,
+      "mean_top_k_jaccard": 0.8611111111111112,
+      "mean_absolute_similarity_change": 0.04868434381705501,
+      "companies": [
+        {
+          "document_id": "0001193125-26-323660",
+          "overlap": 1.0,
+          "jaccard": 1.0,
+          "margin_a": 0.0015394852235990353,
+          "margin_b": 0.008051525363580447,
+          "peers_a": [
+            "0001193125-26-277521",
+            "0000104169-26-000055"
+          ],
+          "peers_b": [
+            "0001193125-26-277521",
+            "0000104169-26-000055"
+          ],
+          "ticker": "MSFT",
+          "peers_a_tickers": [
+            "ORCL",
+            "WMT"
+          ],
+          "peers_b_tickers": [
+            "ORCL",
+            "WMT"
+          ],
+          "set_changed": false,
+          "order_changed": false,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0001193125-26-277521",
+          "overlap": 1.0,
+          "jaccard": 1.0,
+          "margin_a": 0.0013518626380695231,
+          "margin_b": 0.003585229698730319,
+          "peers_a": [
+            "0001193125-26-323660",
+            "0000104169-26-000055"
+          ],
+          "peers_b": [
+            "0001193125-26-323660",
+            "0000104169-26-000055"
+          ],
+          "ticker": "ORCL",
+          "peers_a_tickers": [
+            "MSFT",
+            "WMT"
+          ],
+          "peers_b_tickers": [
+            "MSFT",
+            "WMT"
+          ],
+          "set_changed": false,
+          "order_changed": false,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0001628280-26-008131",
+          "overlap": 1.0,
+          "jaccard": 1.0,
+          "margin_a": 0.0027512678074825825,
+          "margin_b": 0.012623843263030676,
+          "peers_a": [
+            "0000070858-26-000157",
+            "0000018230-26-000008"
+          ],
+          "peers_b": [
+            "0000070858-26-000157",
+            "0000018230-26-000008"
+          ],
+          "ticker": "JPM",
+          "peers_a_tickers": [
+            "BAC",
+            "CAT"
+          ],
+          "peers_b_tickers": [
+            "BAC",
+            "CAT"
+          ],
+          "set_changed": false,
+          "order_changed": false,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0000070858-26-000157",
+          "overlap": 1.0,
+          "jaccard": 1.0,
+          "margin_a": 0.0012548066903202981,
+          "margin_b": 0.002348670283172427,
+          "peers_a": [
+            "0000018230-26-000008",
+            "0001193125-26-277521"
+          ],
+          "peers_b": [
+            "0000018230-26-000008",
+            "0001193125-26-277521"
+          ],
+          "ticker": "BAC",
+          "peers_a_tickers": [
+            "CAT",
+            "ORCL"
+          ],
+          "peers_b_tickers": [
+            "CAT",
+            "ORCL"
+          ],
+          "set_changed": false,
+          "order_changed": false,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0000034088-26-000045",
+          "overlap": 1.0,
+          "jaccard": 1.0,
+          "margin_a": 0.002841438013428288,
+          "margin_b": 0.011129852755746739,
+          "peers_a": [
+            "0000093410-26-000078",
+            "0001104659-25-122321"
+          ],
+          "peers_b": [
+            "0000093410-26-000078",
+            "0001104659-25-122321"
+          ],
+          "ticker": "XOM",
+          "peers_a_tickers": [
+            "CVX",
+            "DE"
+          ],
+          "peers_b_tickers": [
+            "CVX",
+            "DE"
+          ],
+          "set_changed": false,
+          "order_changed": false,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0000093410-26-000078",
+          "overlap": 1.0,
+          "jaccard": 1.0,
+          "margin_a": 0.00010270684010549314,
+          "margin_b": 0.006568328589863781,
+          "peers_a": [
+            "0000034088-26-000045",
+            "0000018230-26-000008"
+          ],
+          "peers_b": [
+            "0000034088-26-000045",
+            "0000018230-26-000008"
+          ],
+          "ticker": "CVX",
+          "peers_a_tickers": [
+            "XOM",
+            "CAT"
+          ],
+          "peers_b_tickers": [
+            "XOM",
+            "CAT"
+          ],
+          "set_changed": false,
+          "order_changed": false,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0000200406-26-000016",
+          "overlap": 1.0,
+          "jaccard": 1.0,
+          "margin_a": 0.00025637862971905623,
+          "margin_b": 0.0007720890549191006,
+          "peers_a": [
+            "0000310158-26-000063",
+            "0000104169-26-000055"
+          ],
+          "peers_b": [
+            "0000310158-26-000063",
+            "0000104169-26-000055"
+          ],
+          "ticker": "JNJ",
+          "peers_a_tickers": [
+            "MRK",
+            "WMT"
+          ],
+          "peers_b_tickers": [
+            "MRK",
+            "WMT"
+          ],
+          "set_changed": false,
+          "order_changed": false,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0000310158-26-000063",
+          "overlap": 1.0,
+          "jaccard": 1.0,
+          "margin_a": 0.000815679938196201,
+          "margin_b": 0.00299374571961486,
+          "peers_a": [
+            "0000200406-26-000016",
+            "0001104659-25-122321"
+          ],
+          "peers_b": [
+            "0000200406-26-000016",
+            "0001104659-25-122321"
+          ],
+          "ticker": "MRK",
+          "peers_a_tickers": [
+            "JNJ",
+            "DE"
+          ],
+          "peers_b_tickers": [
+            "JNJ",
+            "DE"
+          ],
+          "set_changed": false,
+          "order_changed": false,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0000018230-26-000008",
+          "overlap": 0.5,
+          "jaccard": 0.3333333333333333,
+          "margin_a": 0.0002722541360644648,
+          "margin_b": 0.005390066925377357,
+          "peers_a": [
+            "0001104659-25-122321",
+            "0001193125-26-277521"
+          ],
+          "peers_b": [
+            "0000070858-26-000157",
+            "0001104659-25-122321"
+          ],
+          "ticker": "CAT",
+          "peers_a_tickers": [
+            "DE",
+            "ORCL"
+          ],
+          "peers_b_tickers": [
+            "BAC",
+            "DE"
+          ],
+          "set_changed": true,
+          "order_changed": true,
+          "closest_peer_changed": true
+        },
+        {
+          "document_id": "0001104659-25-122321",
+          "overlap": 0.0,
+          "jaccard": 0.0,
+          "margin_a": 0.00033690717776924117,
+          "margin_b": 0.0006846189268160385,
+          "peers_a": [
+            "0001193125-26-277521",
+            "0000018230-26-000008"
+          ],
+          "peers_b": [
+            "0000027419-26-000016",
+            "0000104169-26-000055"
+          ],
+          "ticker": "DE",
+          "peers_a_tickers": [
+            "ORCL",
+            "CAT"
+          ],
+          "peers_b_tickers": [
+            "TGT",
+            "WMT"
+          ],
+          "set_changed": true,
+          "order_changed": true,
+          "closest_peer_changed": true
+        },
+        {
+          "document_id": "0000104169-26-000055",
+          "overlap": 1.0,
+          "jaccard": 1.0,
+          "margin_a": 0.0029916884646068453,
+          "margin_b": 0.0029006107719142804,
+          "peers_a": [
+            "0000027419-26-000016",
+            "0001193125-26-277521"
+          ],
+          "peers_b": [
+            "0000027419-26-000016",
+            "0001193125-26-277521"
+          ],
+          "ticker": "WMT",
+          "peers_a_tickers": [
+            "TGT",
+            "ORCL"
+          ],
+          "peers_b_tickers": [
+            "TGT",
+            "ORCL"
+          ],
+          "set_changed": false,
+          "order_changed": false,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0000027419-26-000016",
+          "overlap": 1.0,
+          "jaccard": 1.0,
+          "margin_a": 0.0008798159843564912,
+          "margin_b": 0.006296257352046086,
+          "peers_a": [
+            "0000104169-26-000055",
+            "0001104659-25-122321"
+          ],
+          "peers_b": [
+            "0000104169-26-000055",
+            "0001104659-25-122321"
+          ],
+          "ticker": "TGT",
+          "peers_a_tickers": [
+            "WMT",
+            "DE"
+          ],
+          "peers_b_tickers": [
+            "WMT",
+            "DE"
+          ],
+          "set_changed": false,
+          "order_changed": false,
+          "closest_peer_changed": false
+        }
+      ],
+      "comparison_id": "e5_vs_bge_192",
+      "run_a": "pilot_e5_192",
+      "run_b": "pilot_bge_192",
+      "changed_peer_sets": 2,
+      "changed_closest_peers": 2,
+      "changed_peer_orders": 2,
+      "retained_memberships": 21,
+      "comparison_sha256": "2a558f00fd4f8491cf066f45c28fe1bbd16aab05d5396cbe47159534acfbb98a"
+    },
+    {
+      "spearman_pair_similarity": 0.9682705354347146,
+      "mean_top_k_overlap": 0.7916666666666666,
+      "mean_top_k_jaccard": 0.7222222222222222,
+      "mean_absolute_similarity_change": 0.12232404830167228,
+      "companies": [
+        {
+          "document_id": "0001193125-26-323660",
+          "overlap": 1.0,
+          "jaccard": 1.0,
+          "margin_a": 0.0015394858054801341,
+          "margin_b": 0.010675570074210161,
+          "peers_a": [
+            "0001193125-26-277521",
+            "0000104169-26-000055"
+          ],
+          "peers_b": [
+            "0001193125-26-277521",
+            "0000104169-26-000055"
+          ],
+          "ticker": "MSFT",
+          "peers_a_tickers": [
+            "ORCL",
+            "WMT"
+          ],
+          "peers_b_tickers": [
+            "ORCL",
+            "WMT"
+          ],
+          "set_changed": false,
+          "order_changed": false,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0001193125-26-277521",
+          "overlap": 1.0,
+          "jaccard": 1.0,
+          "margin_a": 0.0013518632195583802,
+          "margin_b": 0.0056363476418074265,
+          "peers_a": [
+            "0001193125-26-323660",
+            "0000104169-26-000055"
+          ],
+          "peers_b": [
+            "0001193125-26-323660",
+            "0000104169-26-000055"
+          ],
+          "ticker": "ORCL",
+          "peers_a_tickers": [
+            "MSFT",
+            "WMT"
+          ],
+          "peers_b_tickers": [
+            "MSFT",
+            "WMT"
+          ],
+          "set_changed": false,
+          "order_changed": false,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0001628280-26-008131",
+          "overlap": 1.0,
+          "jaccard": 1.0,
+          "margin_a": 0.002751264322605973,
+          "margin_b": 0.026007840370887214,
+          "peers_a": [
+            "0000070858-26-000157",
+            "0000018230-26-000008"
+          ],
+          "peers_b": [
+            "0000070858-26-000157",
+            "0000018230-26-000008"
+          ],
+          "ticker": "JPM",
+          "peers_a_tickers": [
+            "BAC",
+            "CAT"
+          ],
+          "peers_b_tickers": [
+            "BAC",
+            "CAT"
+          ],
+          "set_changed": false,
+          "order_changed": false,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0000070858-26-000157",
+          "overlap": 1.0,
+          "jaccard": 1.0,
+          "margin_a": 0.0012548092425755941,
+          "margin_b": 0.009461338537401276,
+          "peers_a": [
+            "0000018230-26-000008",
+            "0001193125-26-277521"
+          ],
+          "peers_b": [
+            "0000018230-26-000008",
+            "0001193125-26-277521"
+          ],
+          "ticker": "BAC",
+          "peers_a_tickers": [
+            "CAT",
+            "ORCL"
+          ],
+          "peers_b_tickers": [
+            "CAT",
+            "ORCL"
+          ],
+          "set_changed": false,
+          "order_changed": false,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0000034088-26-000045",
+          "overlap": 0.5,
+          "jaccard": 0.3333333333333333,
+          "margin_a": 0.002841437871455632,
+          "margin_b": 0.0034351812601748355,
+          "peers_a": [
+            "0000093410-26-000078",
+            "0001104659-25-122321"
+          ],
+          "peers_b": [
+            "0000093410-26-000078",
+            "0000018230-26-000008"
+          ],
+          "ticker": "XOM",
+          "peers_a_tickers": [
+            "CVX",
+            "DE"
+          ],
+          "peers_b_tickers": [
+            "CVX",
+            "CAT"
+          ],
+          "set_changed": true,
+          "order_changed": true,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0000093410-26-000078",
+          "overlap": 1.0,
+          "jaccard": 1.0,
+          "margin_a": 0.00010271776414494393,
+          "margin_b": 0.008108885375289643,
+          "peers_a": [
+            "0000034088-26-000045",
+            "0000018230-26-000008"
+          ],
+          "peers_b": [
+            "0000034088-26-000045",
+            "0000018230-26-000008"
+          ],
+          "ticker": "CVX",
+          "peers_a_tickers": [
+            "XOM",
+            "CAT"
+          ],
+          "peers_b_tickers": [
+            "XOM",
+            "CAT"
+          ],
+          "set_changed": false,
+          "order_changed": false,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0000200406-26-000016",
+          "overlap": 0.5,
+          "jaccard": 0.3333333333333333,
+          "margin_a": 0.0002563727256243986,
+          "margin_b": 0.00034719070338873337,
+          "peers_a": [
+            "0000310158-26-000063",
+            "0000104169-26-000055"
+          ],
+          "peers_b": [
+            "0000310158-26-000063",
+            "0001104659-25-122321"
+          ],
+          "ticker": "JNJ",
+          "peers_a_tickers": [
+            "MRK",
+            "WMT"
+          ],
+          "peers_b_tickers": [
+            "MRK",
+            "DE"
+          ],
+          "set_changed": true,
+          "order_changed": true,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0000310158-26-000063",
+          "overlap": 0.5,
+          "jaccard": 0.3333333333333333,
+          "margin_a": 0.0008156801938383751,
+          "margin_b": 0.009545611069068038,
+          "peers_a": [
+            "0000200406-26-000016",
+            "0001104659-25-122321"
+          ],
+          "peers_b": [
+            "0000200406-26-000016",
+            "0000104169-26-000055"
+          ],
+          "ticker": "MRK",
+          "peers_a_tickers": [
+            "JNJ",
+            "DE"
+          ],
+          "peers_b_tickers": [
+            "JNJ",
+            "WMT"
+          ],
+          "set_changed": true,
+          "order_changed": true,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0000018230-26-000008",
+          "overlap": 0.5,
+          "jaccard": 0.3333333333333333,
+          "margin_a": 0.00027225638766159577,
+          "margin_b": 0.008834614203922952,
+          "peers_a": [
+            "0001104659-25-122321",
+            "0001193125-26-277521"
+          ],
+          "peers_b": [
+            "0001104659-25-122321",
+            "0000070858-26-000157"
+          ],
+          "ticker": "CAT",
+          "peers_a_tickers": [
+            "DE",
+            "ORCL"
+          ],
+          "peers_b_tickers": [
+            "DE",
+            "BAC"
+          ],
+          "set_changed": true,
+          "order_changed": true,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0001104659-25-122321",
+          "overlap": 0.5,
+          "jaccard": 0.3333333333333333,
+          "margin_a": 0.00033691249662415323,
+          "margin_b": 0.004411342461274836,
+          "peers_a": [
+            "0001193125-26-277521",
+            "0000018230-26-000008"
+          ],
+          "peers_b": [
+            "0000018230-26-000008",
+            "0000200406-26-000016"
+          ],
+          "ticker": "DE",
+          "peers_a_tickers": [
+            "ORCL",
+            "CAT"
+          ],
+          "peers_b_tickers": [
+            "CAT",
+            "JNJ"
+          ],
+          "set_changed": true,
+          "order_changed": true,
+          "closest_peer_changed": true
+        },
+        {
+          "document_id": "0000104169-26-000055",
+          "overlap": 1.0,
+          "jaccard": 1.0,
+          "margin_a": 0.002991695058392807,
+          "margin_b": 0.0006436354555334756,
+          "peers_a": [
+            "0000027419-26-000016",
+            "0001193125-26-277521"
+          ],
+          "peers_b": [
+            "0000027419-26-000016",
+            "0001193125-26-277521"
+          ],
+          "ticker": "WMT",
+          "peers_a_tickers": [
+            "TGT",
+            "ORCL"
+          ],
+          "peers_b_tickers": [
+            "TGT",
+            "ORCL"
+          ],
+          "set_changed": false,
+          "order_changed": false,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0000027419-26-000016",
+          "overlap": 1.0,
+          "jaccard": 1.0,
+          "margin_a": 0.0008798154181598461,
+          "margin_b": 0.004953631188001406,
+          "peers_a": [
+            "0000104169-26-000055",
+            "0001104659-25-122321"
+          ],
+          "peers_b": [
+            "0000104169-26-000055",
+            "0001104659-25-122321"
+          ],
+          "ticker": "TGT",
+          "peers_a_tickers": [
+            "WMT",
+            "DE"
+          ],
+          "peers_b_tickers": [
+            "WMT",
+            "DE"
+          ],
+          "set_changed": false,
+          "order_changed": false,
+          "closest_peer_changed": false
+        }
+      ],
+      "comparison_id": "e5_vs_qwen_192_gpu",
+      "run_a": "pilot_e5_192_gpu",
+      "run_b": "pilot_qwen_192_gpu",
+      "changed_peer_sets": 5,
+      "changed_closest_peers": 1,
+      "changed_peer_orders": 5,
+      "retained_memberships": 19,
+      "comparison_sha256": "976c0c2b584080bd51b26d72d8676f346cc9070b079a484b401ddba4fcb77660"
+    },
+    {
+      "spearman_pair_similarity": 0.7175242667779983,
+      "mean_top_k_overlap": 0.75,
+      "mean_top_k_jaccard": 0.6666666666666666,
+      "mean_absolute_similarity_change": 0.8410558395770663,
+      "companies": [
+        {
+          "document_id": "0001193125-26-323660",
+          "overlap": 1.0,
+          "jaccard": 1.0,
+          "margin_a": 0.003945390149403816,
+          "margin_b": 0.0015394852235990353,
+          "peers_a": [
+            "0001193125-26-277521",
+            "0000104169-26-000055"
+          ],
+          "peers_b": [
+            "0001193125-26-277521",
+            "0000104169-26-000055"
+          ],
+          "ticker": "MSFT",
+          "peers_a_tickers": [
+            "ORCL",
+            "WMT"
+          ],
+          "peers_b_tickers": [
+            "ORCL",
+            "WMT"
+          ],
+          "set_changed": false,
+          "order_changed": false,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0001193125-26-277521",
+          "overlap": 1.0,
+          "jaccard": 1.0,
+          "margin_a": 0.008400831080797422,
+          "margin_b": 0.0013518626380695231,
+          "peers_a": [
+            "0001193125-26-323660",
+            "0000104169-26-000055"
+          ],
+          "peers_b": [
+            "0001193125-26-323660",
+            "0000104169-26-000055"
+          ],
+          "ticker": "ORCL",
+          "peers_a_tickers": [
+            "MSFT",
+            "WMT"
+          ],
+          "peers_b_tickers": [
+            "MSFT",
+            "WMT"
+          ],
+          "set_changed": false,
+          "order_changed": false,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0001628280-26-008131",
+          "overlap": 0.5,
+          "jaccard": 0.3333333333333333,
+          "margin_a": 0.0006057370230336256,
+          "margin_b": 0.0027512678074825825,
+          "peers_a": [
+            "0000070858-26-000157",
+            "0001193125-26-323660"
+          ],
+          "peers_b": [
+            "0000070858-26-000157",
+            "0000018230-26-000008"
+          ],
+          "ticker": "JPM",
+          "peers_a_tickers": [
+            "BAC",
+            "MSFT"
+          ],
+          "peers_b_tickers": [
+            "BAC",
+            "CAT"
+          ],
+          "set_changed": true,
+          "order_changed": true,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0000070858-26-000157",
+          "overlap": 0.5,
+          "jaccard": 0.3333333333333333,
+          "margin_a": 0.005855614185430541,
+          "margin_b": 0.0012548066903202981,
+          "peers_a": [
+            "0001628280-26-008131",
+            "0001193125-26-277521"
+          ],
+          "peers_b": [
+            "0000018230-26-000008",
+            "0001193125-26-277521"
+          ],
+          "ticker": "BAC",
+          "peers_a_tickers": [
+            "JPM",
+            "ORCL"
+          ],
+          "peers_b_tickers": [
+            "CAT",
+            "ORCL"
+          ],
+          "set_changed": true,
+          "order_changed": true,
+          "closest_peer_changed": true
+        },
+        {
+          "document_id": "0000034088-26-000045",
+          "overlap": 1.0,
+          "jaccard": 1.0,
+          "margin_a": 0.0013222151421412587,
+          "margin_b": 0.002841438013428288,
+          "peers_a": [
+            "0000093410-26-000078",
+            "0001104659-25-122321"
+          ],
+          "peers_b": [
+            "0000093410-26-000078",
+            "0001104659-25-122321"
+          ],
+          "ticker": "XOM",
+          "peers_a_tickers": [
+            "CVX",
+            "DE"
+          ],
+          "peers_b_tickers": [
+            "CVX",
+            "DE"
+          ],
+          "set_changed": false,
+          "order_changed": false,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0000093410-26-000078",
+          "overlap": 0.5,
+          "jaccard": 0.3333333333333333,
+          "margin_a": 0.001924670468837597,
+          "margin_b": 0.00010270684010549314,
+          "peers_a": [
+            "0000034088-26-000045",
+            "0000200406-26-000016"
+          ],
+          "peers_b": [
+            "0000034088-26-000045",
+            "0000018230-26-000008"
+          ],
+          "ticker": "CVX",
+          "peers_a_tickers": [
+            "XOM",
+            "JNJ"
+          ],
+          "peers_b_tickers": [
+            "XOM",
+            "CAT"
+          ],
+          "set_changed": true,
+          "order_changed": true,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0000200406-26-000016",
+          "overlap": 0.5,
+          "jaccard": 0.3333333333333333,
+          "margin_a": 0.004220563381202358,
+          "margin_b": 0.00025637862971905623,
+          "peers_a": [
+            "0000310158-26-000063",
+            "0001193125-26-277521"
+          ],
+          "peers_b": [
+            "0000310158-26-000063",
+            "0000104169-26-000055"
+          ],
+          "ticker": "JNJ",
+          "peers_a_tickers": [
+            "MRK",
+            "ORCL"
+          ],
+          "peers_b_tickers": [
+            "MRK",
+            "WMT"
+          ],
+          "set_changed": true,
+          "order_changed": true,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0000310158-26-000063",
+          "overlap": 0.5,
+          "jaccard": 0.3333333333333333,
+          "margin_a": 0.003554040114944354,
+          "margin_b": 0.000815679938196201,
+          "peers_a": [
+            "0000200406-26-000016",
+            "0000104169-26-000055"
+          ],
+          "peers_b": [
+            "0000200406-26-000016",
+            "0001104659-25-122321"
+          ],
+          "ticker": "MRK",
+          "peers_a_tickers": [
+            "JNJ",
+            "WMT"
+          ],
+          "peers_b_tickers": [
+            "JNJ",
+            "DE"
+          ],
+          "set_changed": true,
+          "order_changed": true,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0000018230-26-000008",
+          "overlap": 0.5,
+          "jaccard": 0.3333333333333333,
+          "margin_a": 0.0019016831995747885,
+          "margin_b": 0.0002722541360644648,
+          "peers_a": [
+            "0001104659-25-122321",
+            "0000104169-26-000055"
+          ],
+          "peers_b": [
+            "0001104659-25-122321",
+            "0001193125-26-277521"
+          ],
+          "ticker": "CAT",
+          "peers_a_tickers": [
+            "DE",
+            "WMT"
+          ],
+          "peers_b_tickers": [
+            "DE",
+            "ORCL"
+          ],
+          "set_changed": true,
+          "order_changed": true,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0001104659-25-122321",
+          "overlap": 1.0,
+          "jaccard": 1.0,
+          "margin_a": 0.00037133088939805825,
+          "margin_b": 0.00033690717776924117,
+          "peers_a": [
+            "0000018230-26-000008",
+            "0001193125-26-277521"
+          ],
+          "peers_b": [
+            "0001193125-26-277521",
+            "0000018230-26-000008"
+          ],
+          "ticker": "DE",
+          "peers_a_tickers": [
+            "CAT",
+            "ORCL"
+          ],
+          "peers_b_tickers": [
+            "ORCL",
+            "CAT"
+          ],
+          "set_changed": false,
+          "order_changed": true,
+          "closest_peer_changed": true
+        },
+        {
+          "document_id": "0000104169-26-000055",
+          "overlap": 1.0,
+          "jaccard": 1.0,
+          "margin_a": 0.008584116215233417,
+          "margin_b": 0.0029916884646068453,
+          "peers_a": [
+            "0000027419-26-000016",
+            "0001193125-26-277521"
+          ],
+          "peers_b": [
+            "0000027419-26-000016",
+            "0001193125-26-277521"
+          ],
+          "ticker": "WMT",
+          "peers_a_tickers": [
+            "TGT",
+            "ORCL"
+          ],
+          "peers_b_tickers": [
+            "TGT",
+            "ORCL"
+          ],
+          "set_changed": false,
+          "order_changed": false,
+          "closest_peer_changed": false
+        },
+        {
+          "document_id": "0000027419-26-000016",
+          "overlap": 1.0,
+          "jaccard": 1.0,
+          "margin_a": 0.0144924888662252,
+          "margin_b": 0.0008798159843564912,
+          "peers_a": [
+            "0000104169-26-000055",
+            "0001104659-25-122321"
+          ],
+          "peers_b": [
+            "0000104169-26-000055",
+            "0001104659-25-122321"
+          ],
+          "ticker": "TGT",
+          "peers_a_tickers": [
+            "WMT",
+            "DE"
+          ],
+          "peers_b_tickers": [
+            "WMT",
+            "DE"
+          ],
+          "set_changed": false,
+          "order_changed": false,
+          "closest_peer_changed": false
+        }
+      ],
+      "comparison_id": "tfidf_vs_e5_192",
+      "run_a": "pilot_tfidf",
+      "run_b": "pilot_e5_192",
+      "changed_peer_sets": 6,
+      "changed_closest_peers": 2,
+      "changed_peer_orders": 7,
+      "retained_memberships": 18,
+      "comparison_sha256": "d044d70424b14e5cde2a17e3e5c1d8411bbd3f61325c21283055d76208ba56ec"
+    }
+  ]
+}
