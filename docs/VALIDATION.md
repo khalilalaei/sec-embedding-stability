@@ -21,3 +21,7 @@ The complete eight-run/eight-comparison upload preserves all 53 files in the ini
 A new regression check accepts the intended budget change, rejects changes in device/precision/Python and logs project-distribution metadata changes. Neural inference and tokenizer counts were not rerun during the audit.
 
 Complete-grid release: 26 offline tests passed. The upgraded auditor also reproduces the original six-run/six-comparison archive. The latest SVG was rendered and inspected, and report links/counts were checked. Exact audit receipts and source-code identity checks are in results/pilot_2026-11-03_complete/audit_receipt.json.
+
+## Financial preparation — 2026-11-03
+
+35 offline tests pass, including nine new financial-foundation tests. Tests use synthetic observations only and check duplicate/missing/sentinel returns, explicit security ordering and calendar coverage, disjoint past/future windows, no influence of future returns on the fitted baseline, timezone-aware filing eligibility, PSD rejection, marginal-variance preservation under text blending, hand-calculated portfolio variance and covariance error. Real WRDS/CRSP data, financial evaluation and portfolio optimization remain unrun. Input templates are empty schemas. See FINANCIAL_PILOT_PROTOCOL.md.

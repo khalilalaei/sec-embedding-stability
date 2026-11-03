@@ -1,6 +1,6 @@
-# Financial phase — design proposals, not implemented
+# Financial phase — roadmap
 
-The first package implements fixed-text descriptive stability. It contains no market data, fitted financial forecasts, portfolio backtests or measured financial improvement.
+The first stability pilot is complete. Numerical financial foundations and schemas are now implemented; see [financial pilot protocol draft](FINANCIAL_PILOT_PROTOCOL.md). Real market data, historical links, financial evaluation and portfolio optimization remain unrun. The remaining sections are broader design proposals; the first draft preserves baseline marginal variances when adding text.
 
 ## 1. Data and timing gate
 

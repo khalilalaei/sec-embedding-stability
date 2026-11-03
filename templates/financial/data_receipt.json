@@ -1,0 +1,15 @@
+{
+  "status": "pending_real_data_and_review",
+  "source_database_and_release": null,
+  "extracted_at": null,
+  "raw_file_sha256": {},
+  "return_definition_and_units": null,
+  "dividend_treatment": null,
+  "delisting_treatment": null,
+  "security_link_source_and_review": null,
+  "exchange_calendar_and_timezone": null,
+  "filing_eligibility_and_execution_rule": null,
+  "model_timing_limitations": "Current model training/fine-tuning cutoffs unknown; historical analysis is retrospective unless resolved.",
+  "exclusions": [],
+  "data_use_terms_reviewed": false
+}
