@@ -11,6 +11,8 @@ The three neural-family comparisons retain 19–21 of 24 directed peer membershi
 
 An additional [exploratory peer-count supplement](reports/peer_count_2026-11-03.md) checks k=1,2,3,5 from the frozen matrices. The original k=2 remains primary.
 
+While WRDS access is pending, a [Yahoo adjusted-price proxy collector](docs/YAHOO_PILOT.md) provides an exploratory path for the same 12-company pilot. It preserves parsed source tables and hashes, checks trading dates and keeps vendor identity links pending for review. No alternative-provider financial results have been run yet.
+
 ## Chosen starting design
 
 - Text: **10-K Item 1A Risk Factors**. One source-checked section per company; AI-assisted pilot review is explicitly distinguished from human review.

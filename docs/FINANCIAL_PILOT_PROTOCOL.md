@@ -2,6 +2,10 @@
 
 Status: numerical foundations and input-format checks implemented; real return import, historical linking, financial evaluation and portfolio optimization **not run**. WRDS account requested; source-specific CRSP query/export instructions will be finalized after the user's actual entitlements and dataset format are known. This draft is a research design, not a validated forecasting method.
 
+## Alternative-data amendment — 2026-11-13
+
+With WRDS still pending, the user requested a way to continue. A separately versioned Yahoo adjusted-price proxy path is now available: [collection instructions and limitations](YAHOO_PILOT.md). This changes the initial data-source option, not the financial estimand, frozen text contrasts or proposed primary text weight. It uses vendor-scoped YF:TICKER aliases, not permanent IDs, and requires identity/availability review. Yahoo-based financial results must remain labeled exploratory and retrospective. No alternative data or outcomes were inspected before this amendment; the collector was tested with synthetic fixtures only.
+
 ## First question
 
 For the same 12 companies, return window and portfolio weights, does changing the text representation materially change estimated covariance and portfolio variance? Subsequently: does adding text reduce variance-estimation error against a price-only baseline? Keep sensitivity separate from incremental predictive value.

@@ -29,3 +29,7 @@ Complete-grid release: 26 offline tests passed. The upgraded auditor also reprod
 ## Exploratory peer-count supplement — 2026-11-03
 
 38 tests pass, including three exact combinatorial-reference checks. The frozen complete-pilot matrices reproduce all user-reported E5–Qwen summaries at k=1,2,3,5. A documented post hoc extension covers all three model-family and three chunk contrasts at those k values (24 summary rows, 288 company rows). Source evidence was checked against its existing hash receipt. No new embeddings, market data, significance test or financial outcome is involved; k=2 remains primary. See reports/peer_count_2026-11-03.md.
+
+## Alternative price-data preparation — 2026-11-13
+
+45 offline tests pass, including seven synthetic Yahoo-proxy tests for split-adjusted returns, avoiding dividend double-counting, required adjusted-close fields, missing/nonpositive prices, exact calendar coverage, currency/symbol validation and ordered multi-security assembly. No live Yahoo request was made in the test runtime, and no real alternative-provider financial outcome was evaluated. Partial failure and no-overwrite behavior are implemented; live network/provider schema behavior is the user's next integration check. See docs/YAHOO_PILOT.md.
