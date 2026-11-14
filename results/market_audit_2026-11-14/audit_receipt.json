@@ -1,0 +1,167 @@
+{
+  "status": "numerical_and_lineage_checks_passed_not_identity_or_forecast_approval",
+  "manifest_sha256": "51745c19fbe5e24984919fee3e4afba01c92c70e046c5996ead712aabc1a0012",
+  "corpus_sha256": "3f6aab6d23a7f408e013d52d4330630d3030c71983345b9a90b4a83e8f343b7e",
+  "evidence_sha256": "eeee2707fba9245266990308eb3bb55eace0fc58d360ef0af4a4dfda11b08323",
+  "checked_artifact_count": 29,
+  "security_count": 12,
+  "return_dates": 711,
+  "observations": 8532,
+  "first_return_date": "2024-01-03",
+  "last_return_date": "2026-11-02",
+  "maximum_reconstruction_error": 0.0,
+  "missing_panel_cells": 0,
+  "calendar_audit_version": "4.13.2",
+  "identities": [
+    {
+      "ticker": "MSFT",
+      "sec_name": "MICROSOFT CORP",
+      "provider_name": "Microsoft Corporation",
+      "sec_ticker_membership": true,
+      "price_rows": 712,
+      "return_rows": 711,
+      "dividend_event_count": 11,
+      "splits": [],
+      "minimum_daily_proxy_return": -0.09993152265519933,
+      "maximum_daily_proxy_return": 0.15506739165511707
+    },
+    {
+      "ticker": "ORCL",
+      "sec_name": "ORACLE CORP",
+      "provider_name": "Oracle Corporation",
+      "sec_ticker_membership": true,
+      "price_rows": 712,
+      "return_rows": 711,
+      "dividend_event_count": 12,
+      "splits": [],
+      "minimum_daily_proxy_return": -0.13790837661106792,
+      "maximum_daily_proxy_return": 0.3594882823844272
+    },
+    {
+      "ticker": "JPM",
+      "sec_name": "JPMORGAN CHASE & CO",
+      "provider_name": "JPMorgan Chase & Co.",
+      "sec_ticker_membership": true,
+      "price_rows": 712,
+      "return_rows": 711,
+      "dividend_event_count": 12,
+      "splits": [],
+      "minimum_daily_proxy_return": -0.07483838357039652,
+      "maximum_daily_proxy_return": 0.11544542108015876
+    },
+    {
+      "ticker": "BAC",
+      "sec_name": "BANK OF AMERICA CORP /DE/",
+      "provider_name": "Bank of America Corporation",
+      "sec_ticker_membership": true,
+      "price_rows": 712,
+      "return_rows": 711,
+      "dividend_event_count": 11,
+      "splits": [],
+      "minimum_daily_proxy_return": -0.11063296657973754,
+      "maximum_daily_proxy_return": 0.08428836989372712
+    },
+    {
+      "ticker": "XOM",
+      "sec_name": "EXXON MOBIL CORP",
+      "provider_name": "ExxonMobil Holdings Corporation",
+      "sec_ticker_membership": false,
+      "price_rows": 712,
+      "return_rows": 711,
+      "dividend_event_count": 11,
+      "splits": [],
+      "minimum_daily_proxy_return": -0.07195595563329638,
+      "maximum_daily_proxy_return": 0.04991567402887842
+    },
+    {
+      "ticker": "CVX",
+      "sec_name": "CHEVRON CORP",
+      "provider_name": "Chevron Corporation",
+      "sec_ticker_membership": true,
+      "price_rows": 712,
+      "return_rows": 711,
+      "dividend_event_count": 11,
+      "splits": [],
+      "minimum_daily_proxy_return": -0.08224444566437017,
+      "maximum_daily_proxy_return": 0.06645732953019223
+    },
+    {
+      "ticker": "JNJ",
+      "sec_name": "JOHNSON & JOHNSON",
+      "provider_name": "Johnson & Johnson",
+      "sec_ticker_membership": true,
+      "price_rows": 712,
+      "return_rows": 711,
+      "dividend_event_count": 11,
+      "splits": [],
+      "minimum_daily_proxy_return": -0.07591651587233239,
+      "maximum_daily_proxy_return": 0.061932098168320904
+    },
+    {
+      "ticker": "MRK",
+      "sec_name": "Merck & Co., Inc.",
+      "provider_name": "Merck & Co., Inc.",
+      "sec_ticker_membership": true,
+      "price_rows": 712,
+      "return_rows": 711,
+      "dividend_event_count": 11,
+      "splits": [],
+      "minimum_daily_proxy_return": -0.09805908866687851,
+      "maximum_daily_proxy_return": 0.12598952276030095
+    },
+    {
+      "ticker": "CAT",
+      "sec_name": "CATERPILLAR INC",
+      "provider_name": "Caterpillar Inc.",
+      "sec_ticker_membership": true,
+      "price_rows": 712,
+      "return_rows": 711,
+      "dividend_event_count": 12,
+      "splits": [],
+      "minimum_daily_proxy_return": -0.09250327985463402,
+      "maximum_daily_proxy_return": 0.11634606582273732
+    },
+    {
+      "ticker": "DE",
+      "sec_name": "DEERE & CO",
+      "provider_name": "Deere & Company",
+      "sec_ticker_membership": true,
+      "price_rows": 712,
+      "return_rows": 711,
+      "dividend_event_count": 11,
+      "splits": [],
+      "minimum_daily_proxy_return": -0.06757012031171172,
+      "maximum_daily_proxy_return": 0.11584936976090443
+    },
+    {
+      "ticker": "WMT",
+      "sec_name": "Walmart Inc.",
+      "provider_name": "Walmart Inc.",
+      "sec_ticker_membership": true,
+      "price_rows": 712,
+      "return_rows": 711,
+      "dividend_event_count": 11,
+      "splits": [
+        {
+          "date": "2024-02-26",
+          "ratio": 3.0
+        }
+      ],
+      "minimum_daily_proxy_return": -0.09151364100162251,
+      "maximum_daily_proxy_return": 0.09548862309847439
+    },
+    {
+      "ticker": "TGT",
+      "sec_name": "TARGET CORP",
+      "provider_name": "Target Corporation",
+      "sec_ticker_membership": true,
+      "price_rows": 712,
+      "return_rows": 711,
+      "dividend_event_count": 11,
+      "splits": [],
+      "minimum_daily_proxy_return": -0.21410119384247772,
+      "maximum_daily_proxy_return": 0.12020717057600949
+    }
+  ],
+  "scope": "AI-assisted numerical audit; no independent human/security-master review; no historical implementability approval"
+}

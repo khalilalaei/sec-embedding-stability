@@ -18,3 +18,5 @@ sec-filings.zip
 pilot-results*.zip
 audit_check.json
 data/market/
+market-pilot*.zip
+market_audit_local*.json

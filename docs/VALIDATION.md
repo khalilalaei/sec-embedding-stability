@@ -37,3 +37,7 @@ Complete-grid release: 26 offline tests passed. The upgraded auditor also reprod
 ## Yahoo lazy-metadata repair — 2026-11-13
 
 50 tests pass. The observed live AttributeError arose when the collector serialized yfinance's lazy Mapping as a string. The repair handles mappings recursively while skipping lazy intraday tradingPeriods, rejects malformed metadata explicitly, uses the current exception-policy configuration with restoration, and preserves an older-version fallback. Five new regression tests include an end-to-end mocked 12-security collection and no-overwrite check. Symbol/currency/type/timezone validation is retained. The live retry remains to be verified on the user's computer, using a new versioned collection directory.
+
+## Uploaded Yahoo collection audit — 2026-11-14
+
+53 offline tests pass. Three additional synthetic audit cases cover a valid 12-security panel, changed source bytes, rehashed incorrect returns and a rehashed omitted calendar date. The actual frozen upload also passed its artifact hashes, corpus lineage, exact session coverage, OHLC/action sanity checks and adjusted-price return reconstruction. See reports/market_audit_2026-11-14.md for the receipt, issuer-successor exception and limitations. This milestone does not run covariance/portfolio outcome evaluation or approve forecast eligibility.
