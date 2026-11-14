@@ -1,0 +1,78 @@
+{
+  "scope": "AI-assisted filing-calendar coverage review; not a certification of fiscal corpus completeness",
+  "filing_cutoff": "2026-11-02",
+  "zero_cell": {
+    "ticker": "DE",
+    "filing_calendar_year": 2026
+  },
+  "observed_deere_filings": [
+    {
+      "accession": "0001047469-15-009300",
+      "filing_date": "2015-12-18",
+      "report_date": "2015-10-31",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/315189/000104746915009300/a2226814z10-k.htm"
+    },
+    {
+      "accession": "0001047469-16-017244",
+      "filing_date": "2016-12-19",
+      "report_date": "2016-10-31",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/315189/000104746916017244/a2230400z10-k.htm"
+    },
+    {
+      "accession": "0001047469-17-007719",
+      "filing_date": "2017-12-18",
+      "report_date": "2017-10-29",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/315189/000104746917007719/a2233505z10-k.htm"
+    },
+    {
+      "accession": "0001047469-18-007694",
+      "filing_date": "2018-12-17",
+      "report_date": "2018-10-28",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/315189/000104746918007694/a2236950z10-k.htm"
+    },
+    {
+      "accession": "0001558370-19-011614",
+      "filing_date": "2019-12-19",
+      "report_date": "2019-11-03",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/315189/000155837019011614/de-20191103x10k.htm"
+    },
+    {
+      "accession": "0001558370-20-014436",
+      "filing_date": "2020-12-17",
+      "report_date": "2020-11-01",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/315189/000155837020014436/de-20201101x10k.htm"
+    },
+    {
+      "accession": "0001558370-21-016864",
+      "filing_date": "2021-12-16",
+      "report_date": "2021-10-31",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/315189/000155837021016864/de-20211031x10k.htm"
+    },
+    {
+      "accession": "0001558370-22-018703",
+      "filing_date": "2022-12-15",
+      "report_date": "2022-10-30",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/315189/000155837022018703/de-20221030x10k.htm"
+    },
+    {
+      "accession": "0001558370-23-019812",
+      "filing_date": "2023-12-15",
+      "report_date": "2023-10-29",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/315189/000155837023019812/de-20231029x10k.htm"
+    },
+    {
+      "accession": "0001558370-24-016169",
+      "filing_date": "2024-12-12",
+      "report_date": "2024-10-27",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/315189/000155837024016169/de-20241027x10k.htm"
+    },
+    {
+      "accession": "0001104659-25-122321",
+      "filing_date": "2025-12-18",
+      "report_date": "2025-11-02",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/315189/000110465925122321/de-20251102x10k.htm"
+    }
+  ],
+  "assessment": "The sole zero cell is consistent with a cutoff before the December filing pattern observed in all 11 prior requested years; no missing linked metadata page was detected. Do not manufacture a 2026 record.",
+  "latest_source_header_checked_url": "https://www.sec.gov/Archives/edgar/data/315189/000110465925122321/0001104659-25-122321-index-headers.html"
+}

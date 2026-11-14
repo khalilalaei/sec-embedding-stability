@@ -15,7 +15,7 @@ While WRDS access is pending, a [Yahoo adjusted-price proxy collector](docs/YAHO
 
 The [training-only calibration extension](reports/risk_calibration_2026-11-14.md) is also complete. Calibration reduces raw-blend errors, but a text-free diagonal-shrinkage control has lower aggregate portfolio and covariance error than every calibrated text setting in the same three inspected blocks. This is exploratory development, not independent validation.
 
-The next data phase is a [2015–2026 original-10-K metadata inventory](docs/HISTORICAL_INVENTORY.md) for the same 12 requested CIKs. The collector follows SEC historical pages and preserves provenance; live historical collection, text admission and expanded financial evaluation are not yet completed.
+The next data phase is a [2015–2026 original-10-K metadata inventory](docs/HISTORICAL_INVENTORY.md) for the same 12 requested CIKs. The [uploaded inventory audit](reports/history_inventory_audit_2026-11-14.md) verifies 143 records across 99 saved SEC metadata pages. The [header evidence collector](docs/HISTORICAL_HEADERS.md) is the next source check; expanded text admission and financial evaluation are not yet completed.
 
 ## Chosen starting design
 

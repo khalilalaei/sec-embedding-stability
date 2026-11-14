@@ -1,0 +1,104 @@
+{
+  "status": "inventory_hashes_pagination_and_row_lineage_passed_not_timing_or_text_approval",
+  "manifest_sha256": "6917e8de7c9a965ee57cb7e3cc6faae3d04b03fcd939be7d38695df61cef487f",
+  "inventory_sha256": "36c3767245b22fcd2b3358fbef2317d9e7695a5b2690b9fd89c23a5c9db15f04",
+  "audit_code_sha256": "4dbcf2b0a1135bc1ceeb821b4a1f4901adfde00e4352ff1769af3b09b1ac0bef",
+  "replay_code_sha256": "eba8fce6cb3fbc82c3816d2ddd89584768c111027b493757d8d8805712535e5b",
+  "collection_code_sha256_reported": {
+    "history_inventory.py": "c2f6e9dc798385eede533e1ac35cb6e38307712d43ff83ba729350bac401fb84",
+    "cli.py": "174df21a12700842c35071855537c8e819b86d90aa75bc9fc446ea19a7dde2f1"
+  },
+  "reported_input_config_sha256": "cd107ed1ddfa1abecd44dbefe37a945d028cc20a0818e5a32cf39b6404ec9bcc",
+  "reported_input_universe_sha256": "daea37671c4e31ef4022da0ecf3b0faa1a26ddf6623ec804e04782c84e57e8e2",
+  "config_snapshot_sha256": "cd107ed1ddfa1abecd44dbefe37a945d028cc20a0818e5a32cf39b6404ec9bcc",
+  "universe_snapshot_sha256": "daea37671c4e31ef4022da0ecf3b0faa1a26ddf6623ec804e04782c84e57e8e2",
+  "reference_config_values_checked": true,
+  "reference_universe_values_checked": true,
+  "source_files_checked": 99,
+  "main_pages": 12,
+  "historical_pages": 87,
+  "skipped_archives_rechecked": 24,
+  "output_hashes_checked": 4,
+  "company_count": 12,
+  "original_10k_records": 143,
+  "missing_api_acceptance_values": 0,
+  "conflicting_api_timestamp_records": 0,
+  "missing_primary_document_records": 0,
+  "zero_filing_calendar_year_cells": 1,
+  "multiple_filing_calendar_year_cells": 0,
+  "company_counts": [
+    {
+      "ticker": "MSFT",
+      "cik": "0000789019",
+      "original_10k_count": 12
+    },
+    {
+      "ticker": "ORCL",
+      "cik": "0001341439",
+      "original_10k_count": 12
+    },
+    {
+      "ticker": "JPM",
+      "cik": "0000019617",
+      "original_10k_count": 12
+    },
+    {
+      "ticker": "BAC",
+      "cik": "0000070858",
+      "original_10k_count": 12
+    },
+    {
+      "ticker": "XOM",
+      "cik": "0000034088",
+      "original_10k_count": 12
+    },
+    {
+      "ticker": "CVX",
+      "cik": "0000093410",
+      "original_10k_count": 12
+    },
+    {
+      "ticker": "JNJ",
+      "cik": "0000200406",
+      "original_10k_count": 12
+    },
+    {
+      "ticker": "MRK",
+      "cik": "0000310158",
+      "original_10k_count": 12
+    },
+    {
+      "ticker": "CAT",
+      "cik": "0000018230",
+      "original_10k_count": 12
+    },
+    {
+      "ticker": "DE",
+      "cik": "0000315189",
+      "original_10k_count": 11
+    },
+    {
+      "ticker": "WMT",
+      "cik": "0000104169",
+      "original_10k_count": 12
+    },
+    {
+      "ticker": "TGT",
+      "cik": "0000027419",
+      "original_10k_count": 12
+    }
+  ],
+  "flagged_coverage": [
+    {
+      "ticker": "DE",
+      "cik": "0000315189",
+      "filing_calendar_year": 2026,
+      "original_10k_count": 0,
+      "coverage_flag": "zero_original_review_needed",
+      "note": "Filing-calendar coverage only; not proof of a complete fiscal-year corpus or security history"
+    }
+  ],
+  "main_recent_records": 80,
+  "historical_page_records": 63,
+  "scope": "same-assistant offline replay plus direct source-row checks; no independent source authentication, availability or historical security approval"
+}

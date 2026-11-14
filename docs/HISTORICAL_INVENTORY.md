@@ -56,3 +56,7 @@ Official SEC references checked for this collector:
 
 - Submissions API and linked historical file structure: https://www.sec.gov/search-filings/edgar-application-programming-interfaces
 - Access rules, declared User-Agent, request rates, CIKs, archival paths and public dissemination limits: https://www.sec.gov/search-filings/edgar-search-assistance/accessing-edgar-data
+
+## Uploaded collection audit completed
+
+The actual 143-record collection has passed the [offline inventory audit](../reports/history_inventory_audit_2026-11-14.md). Deere’s sole zero filing-calendar-year cell is consistent with the November cutoff and observed December filing pattern. The original pending statuses remain unchanged. Continue with [source-header evidence collection](HISTORICAL_HEADERS.md) before text extraction and timing approval.
