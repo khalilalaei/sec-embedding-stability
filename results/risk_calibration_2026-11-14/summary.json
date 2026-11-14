@@ -1,0 +1,26 @@
+{
+  "scope": "exploratory retrospective training-only shrinkage calibration; extension designed after inspecting raw-blend losses",
+  "windows": 3,
+  "evaluation_return_dates": 63,
+  "primary_text_weight": 0.25,
+  "primary_representations": 7,
+  "primary_with_lower_portfolio_error_vs_price_only": 0,
+  "primary_with_lower_portfolio_error_vs_diagonal_target": 0,
+  "primary_with_lower_portfolio_error_vs_price_constant_correlation": 0,
+  "primary_with_lower_portfolio_error_vs_paired_level_control": 0,
+  "primary_with_lower_covariance_error_vs_price_only": 7,
+  "primary_with_lower_covariance_error_vs_diagonal_target": 0,
+  "primary_with_lower_covariance_error_vs_price_constant_correlation": 7,
+  "primary_with_lower_covariance_error_vs_paired_level_control": 7,
+  "excluded_candidates": [
+    {
+      "candidate_month_end": "2026-10-31",
+      "decision_date": "2026-10-30",
+      "decision_close": "2026-10-30T20:00:00+00:00",
+      "reason": "incomplete_fixed_window",
+      "available_trailing_returns": 710,
+      "available_subsequent_returns": 1
+    }
+  ],
+  "inference": "exploratory method development on already-inspected windows; no fresh validation or financial superiority claim"
+}

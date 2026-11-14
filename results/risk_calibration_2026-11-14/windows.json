@@ -1,0 +1,35 @@
+[
+  {
+    "candidate_month_end": "2026-07-31",
+    "decision_date": "2026-07-31",
+    "decision_close": "2026-07-31T20:00:00+00:00",
+    "train_start": "2025-07-31",
+    "train_end": "2026-07-31",
+    "test_start": "2026-08-03",
+    "test_end": "2026-08-31",
+    "train_days": 252,
+    "test_days": 21
+  },
+  {
+    "candidate_month_end": "2026-08-31",
+    "decision_date": "2026-08-31",
+    "decision_close": "2026-08-31T20:00:00+00:00",
+    "train_start": "2025-08-29",
+    "train_end": "2026-08-31",
+    "test_start": "2026-09-01",
+    "test_end": "2026-09-30",
+    "train_days": 252,
+    "test_days": 21
+  },
+  {
+    "candidate_month_end": "2026-09-30",
+    "decision_date": "2026-09-30",
+    "decision_close": "2026-09-30T20:00:00+00:00",
+    "train_start": "2025-09-30",
+    "train_end": "2026-09-30",
+    "test_start": "2026-10-01",
+    "test_end": "2026-10-29",
+    "train_days": 252,
+    "test_days": 21
+  }
+]

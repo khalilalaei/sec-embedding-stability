@@ -13,6 +13,8 @@ An additional [exploratory peer-count supplement](reports/peer_count_2026-11-03.
 
 While WRDS access is pending, a [Yahoo adjusted-price proxy collector](docs/YAHOO_PILOT.md) provides an exploratory path for the same 12-company pilot. It preserves parsed source tables and hashes, checks trading dates and keeps vendor identity links pending for review. The [market audit](reports/market_audit_2026-11-14.md) and first [mechanical risk snapshot](reports/risk_snapshot_2026-11-14.md) are complete, followed by a [three-window retrospective risk-loss diagnostic](reports/risk_accuracy_2026-11-14.md).
 
+The [training-only calibration extension](reports/risk_calibration_2026-11-14.md) is also complete. Calibration reduces raw-blend errors, but a text-free diagonal-shrinkage control has lower aggregate portfolio and covariance error than every calibrated text setting in the same three inspected blocks. This is exploratory development, not independent validation.
+
 ## Chosen starting design
 
 - Text: **10-K Item 1A Risk Factors**. One source-checked section per company; AI-assisted pilot review is explicitly distinguished from human review.

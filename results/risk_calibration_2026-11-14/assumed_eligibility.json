@@ -1,0 +1,110 @@
+[
+  {
+    "document_id": "0001193125-26-323660",
+    "ticker": "MSFT",
+    "accepted_at": "2026-07-29T20:08:01+00:00",
+    "assumed_eligible_from": "2026-07-30T20:00:00+00:00",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+    "review_status": "assumption_only_not_independently_approved",
+    "rule": "first XNYS session close strictly after acceptance local date"
+  },
+  {
+    "document_id": "0001193125-26-277521",
+    "ticker": "ORCL",
+    "accepted_at": "2026-06-22T20:12:40+00:00",
+    "assumed_eligible_from": "2026-06-23T20:00:00+00:00",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+    "review_status": "assumption_only_not_independently_approved",
+    "rule": "first XNYS session close strictly after acceptance local date"
+  },
+  {
+    "document_id": "0001628280-26-008131",
+    "ticker": "JPM",
+    "accepted_at": "2026-02-13T21:20:00+00:00",
+    "assumed_eligible_from": "2026-02-17T21:00:00+00:00",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/19617/000162828026008131/jpm-20251231.htm",
+    "review_status": "assumption_only_not_independently_approved",
+    "rule": "first XNYS session close strictly after acceptance local date"
+  },
+  {
+    "document_id": "0000070858-26-000157",
+    "ticker": "BAC",
+    "accepted_at": "2026-02-25T22:01:44+00:00",
+    "assumed_eligible_from": "2026-02-26T21:00:00+00:00",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/70858/000007085826000157/bac-20251231.htm",
+    "review_status": "assumption_only_not_independently_approved",
+    "rule": "first XNYS session close strictly after acceptance local date"
+  },
+  {
+    "document_id": "0000034088-26-000045",
+    "ticker": "XOM",
+    "accepted_at": "2026-02-18T21:06:52+00:00",
+    "assumed_eligible_from": "2026-02-19T21:00:00+00:00",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/xom-20251231.htm",
+    "review_status": "assumption_only_not_independently_approved",
+    "rule": "first XNYS session close strictly after acceptance local date"
+  },
+  {
+    "document_id": "0000093410-26-000078",
+    "ticker": "CVX",
+    "accepted_at": "2026-02-24T20:03:12+00:00",
+    "assumed_eligible_from": "2026-02-25T21:00:00+00:00",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341026000078/cvx-20251231.htm",
+    "review_status": "assumption_only_not_independently_approved",
+    "rule": "first XNYS session close strictly after acceptance local date"
+  },
+  {
+    "document_id": "0000200406-26-000016",
+    "ticker": "JNJ",
+    "accepted_at": "2026-02-11T21:06:11+00:00",
+    "assumed_eligible_from": "2026-02-12T21:00:00+00:00",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/200406/000020040626000016/jnj-20251228.htm",
+    "review_status": "assumption_only_not_independently_approved",
+    "rule": "first XNYS session close strictly after acceptance local date"
+  },
+  {
+    "document_id": "0000310158-26-000063",
+    "ticker": "MRK",
+    "accepted_at": "2026-02-24T21:15:30+00:00",
+    "assumed_eligible_from": "2026-02-25T21:00:00+00:00",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000063/mrk-20251231.htm",
+    "review_status": "assumption_only_not_independently_approved",
+    "rule": "first XNYS session close strictly after acceptance local date"
+  },
+  {
+    "document_id": "0000018230-26-000008",
+    "ticker": "CAT",
+    "accepted_at": "2026-02-13T15:18:27+00:00",
+    "assumed_eligible_from": "2026-02-17T21:00:00+00:00",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/18230/000001823026000008/cat-20251231.htm",
+    "review_status": "assumption_only_not_independently_approved",
+    "rule": "first XNYS session close strictly after acceptance local date"
+  },
+  {
+    "document_id": "0001104659-25-122321",
+    "ticker": "DE",
+    "accepted_at": "2025-12-18T13:15:12+00:00",
+    "assumed_eligible_from": "2025-12-19T21:00:00+00:00",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/315189/000110465925122321/de-20251102x10k.htm",
+    "review_status": "assumption_only_not_independently_approved",
+    "rule": "first XNYS session close strictly after acceptance local date"
+  },
+  {
+    "document_id": "0000104169-26-000055",
+    "ticker": "WMT",
+    "accepted_at": "2026-03-13T20:06:24+00:00",
+    "assumed_eligible_from": "2026-03-16T20:00:00+00:00",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/104169/000010416926000055/wmt-20260131.htm",
+    "review_status": "assumption_only_not_independently_approved",
+    "rule": "first XNYS session close strictly after acceptance local date"
+  },
+  {
+    "document_id": "0000027419-26-000016",
+    "ticker": "TGT",
+    "accepted_at": "2026-03-11T20:42:00+00:00",
+    "assumed_eligible_from": "2026-03-12T20:00:00+00:00",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/27419/000002741926000016/tgt-20260131.htm",
+    "review_status": "assumption_only_not_independently_approved",
+    "rule": "first XNYS session close strictly after acceptance local date"
+  }
+]

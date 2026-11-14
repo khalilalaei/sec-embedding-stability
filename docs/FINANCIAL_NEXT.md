@@ -35,3 +35,7 @@ For each configuration, Delta=baseline loss - augmented loss. Report average Del
 ## 6. Publication evidence
 
 Before making any financial claim, link every table row to source versions, point-in-time records, security mapping, model revision, commit, config, fitted period, test period, prediction file, metric implementation, costs and exclusions. Preserve null results and failures. New code and numerical tests for financial tasks must be implemented and verified before this design becomes an empirical result.
+
+## Calibration extension completed
+
+The [past-only shrinkage-calibration study](../reports/risk_calibration_2026-11-14.md) reuses the original three inspected blocks and includes diagonal and past-price constant-correlation controls. No calibrated text arm beats the diagonal control on either aggregate loss. Its small covariance gain versus the original baseline does not establish incremental text value. Independent/prospective evaluation and sample expansion remain outstanding; these reused blocks are development data.
