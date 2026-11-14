@@ -18,27 +18,37 @@ def atomic_json(path,obj):
 
 def parse_header(raw,record):
     text=html.unescape(raw.decode('utf-8-sig',errors='replace'))
-    header=re.search(r'<SEC-HEADER>.*?</SEC-HEADER>',text,re.S|re.I)
-    if not header:raise ValueError('Response has no SEC-HEADER block: '+record['document_id'])
-    block=header.group(0)
-    def field(pattern):
-        matches=re.findall(pattern,block,re.I)
-        if len(matches)!=1:raise ValueError('Missing/ambiguous filing-header field: '+pattern)
-        return matches[0]
-    accession=field(r'ACCESSION NUMBER:\s*([0-9-]+)')
-    form=field(r'CONFORMED SUBMISSION TYPE:\s*([^\s<]+)')
-    clock=field(r'<ACCEPTANCE-DATETIME>\s*(\d{14})(?!\d)')
-    datetime.strptime(clock,'%Y%m%d%H%M%S')
-    filed=field(r'FILED AS OF DATE:\s*(\d{8})(?!\d)');filed_date=datetime.strptime(filed,'%Y%m%d').date().isoformat()
-    ciks={str(int(x)).zfill(10) for x in re.findall(r'CENTRAL INDEX KEY:\s*(\d+)',block,re.I)}
-    if accession!=record['accession'] or form!=record['form'] or str(record['cik']).zfill(10) not in ciks:
-        raise ValueError('Header accession/form/CIK differs from inventory')
-    if filed_date!=record['filing_date']:raise ValueError('Header filing date differs from inventory')
-    periods=re.findall(r'CONFORMED PERIOD OF REPORT:\s*(\d{8})(?!\d)',block,re.I)
-    period=datetime.strptime(periods[0],'%Y%m%d').date().isoformat() if len(periods)==1 else None
-    if record.get('report_date') and period!=record['report_date']:raise ValueError('Header report period differs from inventory')
-    return {'document_id':accession,'ticker':record['ticker'],'cik':record['cik'],'form':form,'filing_date':filed_date,
-        'report_date':period,'accepted_at_api':record.get('accepted_at_api'),'acceptance_clock_unzoned':clock,
+    blocks=re.findall(r'<SEC-HEADER>.*?</SEC-HEADER>',text,re.S|re.I)
+    if not blocks:raise ValueError('Response has no SEC-HEADER block: '+record['document_id'])
+    parsed=[];formats=set()
+    for block in blocks:
+        def field(patterns,required=True):
+            values={value for pattern in patterns for value in re.findall(pattern,block,re.I)}
+            if not values and not required:return None
+            if len(values)!=1:raise ValueError('Missing/ambiguous filing-header field: '+patterns[0])
+            return next(iter(values))
+        accession=field([r'ACCESSION NUMBER:\s*([0-9-]+)',r'<ACCESSION-NUMBER>\s*([0-9-]+)'])
+        form=field([r'CONFORMED SUBMISSION TYPE:\s*([^\s<]+)',r'<TYPE>\s*([^\s<]+)'])
+        clock=field([r'<ACCEPTANCE-DATETIME>\s*(\d{14})(?!\d)'])
+        datetime.strptime(clock,'%Y%m%d%H%M%S')
+        filed=field([r'FILED AS OF DATE:\s*(\d{8})(?!\d)',r'<FILING-DATE>\s*(\d{8})(?!\d)'])
+        filed_date=datetime.strptime(filed,'%Y%m%d').date().isoformat()
+        ciks={str(int(x)).zfill(10) for pattern in [r'CENTRAL INDEX KEY:\s*(\d+)',r'<CIK>\s*(\d+)'] for x in re.findall(pattern,block,re.I)}
+        if accession!=record['accession'] or form!=record['form'] or str(record['cik']).zfill(10) not in ciks:
+            raise ValueError('Header accession/form/CIK differs from inventory')
+        if filed_date!=record['filing_date']:raise ValueError('Header filing date differs from inventory')
+        period_raw=field([r'CONFORMED PERIOD OF REPORT:\s*(\d{8})(?!\d)',r'<PERIOD>\s*(\d{8})(?!\d)'],required=False)
+        period=datetime.strptime(period_raw,'%Y%m%d').date().isoformat() if period_raw else None
+        if record.get('report_date') and period!=record['report_date']:raise ValueError('Header report period differs from inventory')
+        if re.search(r'<ACCESSION-NUMBER>',block,re.I):formats.add('tag_fields')
+        if re.search(r'ACCESSION NUMBER:',block,re.I):formats.add('colon_fields')
+        parsed.append({'accession':accession,'form':form,'clock':clock,'filed_date':filed_date,'period':period,'filer_ciks':sorted(ciks)})
+    if any(value!=parsed[0] for value in parsed[1:]):
+        raise ValueError('Conflicting SEC-HEADER copies; preserve response for review')
+    matched=parsed[0]
+    return {'document_id':matched['accession'],'ticker':record['ticker'],'cik':record['cik'],'form':matched['form'],'filing_date':matched['filed_date'],
+        'report_date':matched['period'],'accepted_at_api':record.get('accepted_at_api'),'acceptance_clock_unzoned':matched['clock'],
+        'source_header_block_count':len(blocks),'header_field_formats':sorted(formats),'header_copies_consistent':True,
         'source_url':record['filing_header_url'],'review_status':'header_identity_fields_matched_not_availability_approved',
         'timing_status':'raw_header_clock_preserved_pending_timezone_and_public_availability_review'}
 

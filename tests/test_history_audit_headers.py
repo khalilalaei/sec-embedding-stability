@@ -29,6 +29,18 @@ def synthetic_header(record,clock='20260201160000'):
         f'CENTRAL INDEX KEY: {record["cik"]}\n</SEC-HEADER>').encode()
 
 
+def tagged_header(record,clock='20260201160000'):
+    period=(record.get('report_date') or '2025-12-31').replace('-','')
+    return (f'<SEC-HEADER>synthetic.hdr.sgml\n<ACCEPTANCE-DATETIME>{clock}\n'
+        f'<ACCESSION-NUMBER>{record["accession"]}\n<TYPE>{record["form"]}\n'
+        f'<PERIOD>{period}\n<FILING-DATE>{record["filing_date"].replace("-", "")}\n'
+        f'<FILER><COMPANY-DATA><CIK>{record["cik"]}\n</COMPANY-DATA></FILER>\n</SEC-HEADER>').encode()
+
+
+def dual_header(record,clock='20260201160000',visible_clock='20260201160000'):
+    return b'<html><head><!--'+tagged_header(record,clock)+b'--></head><body><pre>'+html.escape(synthetic_header(record,visible_clock).decode()).encode()+b'</pre></body></html>'
+
+
 class InventoryAuditTests(unittest.TestCase):
     def test_valid_replay_and_cross_platform_reference_json(self):
         with tempfile.TemporaryDirectory() as t:
@@ -80,6 +92,45 @@ class HistoryHeaderTests(unittest.TestCase):
         self.assertEqual(parsed,escaped);self.assertEqual(parsed['acceptance_clock_unzoned'],'20260201160000')
         self.assertNotIn('eligible_from',parsed);self.assertNotIn('accepted_at',parsed)
         self.assertEqual(parsed['review_status'],'header_identity_fields_matched_not_availability_approved')
+
+    def test_tag_style_fields_are_supported(self):
+        parsed=parse_header(tagged_header(self.record()),self.record())
+        self.assertEqual(parsed['header_field_formats'],['tag_fields'])
+        self.assertEqual(parsed['source_header_block_count'],1)
+        self.assertEqual(parsed['acceptance_clock_unzoned'],'20260201160000')
+
+    def test_comment_tag_copy_and_visible_colon_copy_must_agree(self):
+        parsed=parse_header(dual_header(self.record()),self.record())
+        self.assertEqual(parsed['source_header_block_count'],2)
+        self.assertEqual(parsed['header_field_formats'],['colon_fields','tag_fields'])
+        self.assertTrue(parsed['header_copies_consistent'])
+        self.assertEqual(parsed['document_id'],self.record()['accession'])
+
+    def test_conflicting_header_clocks_rejected(self):
+        with self.assertRaisesRegex(ValueError,'Conflicting SEC-HEADER copies'):
+            parse_header(dual_header(self.record(),visible_clock='20260201170000'),self.record())
+
+    def test_tagged_identity_checks_not_bypassed_by_matching_visible_copy(self):
+        record=self.record();changed=copy.deepcopy(record);changed['cik']='0000000999'
+        response=b'<!--'+tagged_header(changed)+b'--><pre>'+html.escape(synthetic_header(record).decode()).encode()+b'</pre>'
+        with self.assertRaisesRegex(ValueError,'CIK differs'):parse_header(response,record)
+
+    def test_parser_failure_reuses_saved_header_after_repair(self):
+        with tempfile.TemporaryDirectory() as t:
+            root=Path(t);args,_,_=self.setup_collection(root)
+            _,records=audit_inventory(args.inventory);mapping={r['filing_header_url']:r for r in records};calls=[]
+            def fetch(url,ua):calls.append(url);return dual_header(mapping[url])
+            with patch.dict('os.environ',{'SEC_USER_AGENT':'Synthetic Research contact@example.invalid'}),redirect_stdout(io.StringIO()):
+                with patch('secstab.history_headers.parse_header',side_effect=ValueError('original colon-only parser failure')):
+                    with self.assertRaisesRegex(ValueError,'colon-only'):collect_headers(args,fetcher=fetch)
+                manifest=json.loads((root/'headers/manifest.json').read_text())
+                self.assertEqual(manifest['completed_records'],0);self.assertEqual(len(manifest['source_files']),1)
+                name=next(iter(manifest['source_files']));before=(root/'headers'/name).read_bytes()
+                args.resume=True;collect_headers(args,fetcher=fetch)
+            self.assertEqual(len(calls),3);self.assertEqual(calls.count(calls[0]),1)
+            self.assertEqual((root/'headers'/name).read_bytes(),before)
+            final=json.loads((root/'headers/manifest.json').read_text())
+            self.assertEqual(final['header_count'],3);self.assertEqual(len(final['failures']),1)
 
     def test_header_identity_and_period_mismatches_rejected(self):
         record=self.record()

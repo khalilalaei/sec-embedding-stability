@@ -1,0 +1,601 @@
+{
+  "scope": "repair validation: exact failing BAC response plus deliberately limited live source probe; not a complete 143-header collection",
+  "verified_at_utc": "2026-11-14T13:04:48.187094+00:00",
+  "offline_tests_passed": 105,
+  "live_source_headers_replayed": 47,
+  "companies_checked": [
+    "BAC",
+    "CAT",
+    "CVX",
+    "DE"
+  ],
+  "original_bac_response_sha256": "6cffe4959c73ee14e0d65cd9de5e593c03d557b2ca11a152c8b1041bf4b15976",
+  "original_bac_repaired_parse": {
+    "document_id": "0000070858-15-000008",
+    "ticker": "BAC",
+    "cik": "0000070858",
+    "form": "10-K",
+    "filing_date": "2015-02-25",
+    "report_date": "2014-12-31",
+    "accepted_at_api": "2015-02-25T21:06:24.000Z",
+    "acceptance_clock_unzoned": "20150225160624",
+    "source_header_block_count": 2,
+    "header_field_formats": [
+      "colon_fields",
+      "tag_fields"
+    ],
+    "header_copies_consistent": true,
+    "source_url": "https://www.sec.gov/Archives/edgar/data/70858/000007085815000008/0000070858-15-000008-index-headers.html",
+    "review_status": "header_identity_fields_matched_not_availability_approved",
+    "timing_status": "raw_header_clock_preserved_pending_timezone_and_public_availability_review"
+  },
+  "parser_code_sha256": "28ee4892f5b2a8e4fdd64773df36bda618e8c0737963b889f6cbe17c9deaffda",
+  "probe_status": "deliberately stopped after sufficient multi-company live regression checks; source bytes and partial ledger retained",
+  "source_checks": [
+    {
+      "path": "headers/0000070858/0000070858-15-000008.html",
+      "sha256": "6cffe4959c73ee14e0d65cd9de5e593c03d557b2ca11a152c8b1041bf4b15976",
+      "url": "https://www.sec.gov/Archives/edgar/data/70858/000007085815000008/0000070858-15-000008-index-headers.html",
+      "ticker": "BAC",
+      "document_id": "0000070858-15-000008",
+      "source_header_block_count": 2,
+      "header_field_formats": [
+        "colon_fields",
+        "tag_fields"
+      ]
+    },
+    {
+      "path": "headers/0000070858/0000070858-16-000137.html",
+      "sha256": "d1fb615fafc5ced68d22ef5cd442a309e07fae5d2d0f583e345dd53ba2c04bda",
+      "url": "https://www.sec.gov/Archives/edgar/data/70858/000007085816000137/0000070858-16-000137-index-headers.html",
+      "ticker": "BAC",
+      "document_id": "0000070858-16-000137",
+      "source_header_block_count": 2,
+      "header_field_formats": [
+        "colon_fields",
+        "tag_fields"
+      ]
+    },
+    {
+      "path": "headers/0000070858/0000070858-17-000013.html",
+      "sha256": "05db02443966dac7bdb079b831351e1c71fdf8ebcbcfa0c8a690850b6bc466bd",
+      "url": "https://www.sec.gov/Archives/edgar/data/70858/000007085817000013/0000070858-17-000013-index-headers.html",
+      "ticker": "BAC",
+      "document_id": "0000070858-17-000013",
+      "source_header_block_count": 2,
+      "header_field_formats": [
+        "colon_fields",
+        "tag_fields"
+      ]
+    },
+    {
+      "path": "headers/0000070858/0000070858-18-000009.html",
+      "sha256": "181acffbd2d3f75d6cd39a06993758f7adaa51196abdfd89216b5c66eba6df54",
+      "url": "https://www.sec.gov/Archives/edgar/data/70858/000007085818000009/0000070858-18-000009-index-headers.html",
+      "ticker": "BAC",
+      "document_id": "0000070858-18-000009",
+      "source_header_block_count": 2,
+      "header_field_formats": [
+        "colon_fields",
+        "tag_fields"
+      ]
+    },
+    {
+      "path": "headers/0000070858/0000070858-19-000012.html",
+      "sha256": "cc073799bc30033603165721f1e3038cc361791559c662169612f9219df030c5",
+      "url": "https://www.sec.gov/Archives/edgar/data/70858/000007085819000012/0000070858-19-000012-index-headers.html",
+      "ticker": "BAC",
+      "document_id": "0000070858-19-000012",
+      "source_header_block_count": 2,
+      "header_field_formats": [
+        "colon_fields",
+        "tag_fields"
+      ]
+    },
+    {
+      "path": "headers/0000070858/0000070858-20-000011.html",
+      "sha256": "6f997c6dba3c219c9f96409237fd05a63cc4882eef8e9f8fab32e82412c0897a",
+      "url": "https://www.sec.gov/Archives/edgar/data/70858/000007085820000011/0000070858-20-000011-index-headers.html",
+      "ticker": "BAC",
+      "document_id": "0000070858-20-000011",
+      "source_header_block_count": 2,
+      "header_field_formats": [
+        "colon_fields",
+        "tag_fields"
+      ]
+    },
+    {
+      "path": "headers/0000070858/0000070858-21-000023.html",
+      "sha256": "a13e8ba60bc56502b075793bb97673a3e9bfdecee5a090599b0b3954ffc6d01b",
+      "url": "https://www.sec.gov/Archives/edgar/data/70858/000007085821000023/0000070858-21-000023-index-headers.html",
+      "ticker": "BAC",
+      "document_id": "0000070858-21-000023",
+      "source_header_block_count": 2,
+      "header_field_formats": [
+        "colon_fields",
+        "tag_fields"
+      ]
+    },
+    {
+      "path": "headers/0000070858/0000070858-22-000062.html",
+      "sha256": "ff8a024c72540aeabf716516698b49103a1a8837d177d5c6a6dd118f28d1789f",
+      "url": "https://www.sec.gov/Archives/edgar/data/70858/000007085822000062/0000070858-22-000062-index-headers.html",
+      "ticker": "BAC",
+      "document_id": "0000070858-22-000062",
+      "source_header_block_count": 2,
+      "header_field_formats": [
+        "colon_fields",
+        "tag_fields"
+      ]
+    },
+    {
+      "path": "headers/0000070858/0000070858-23-000092.html",
+      "sha256": "8a89ed004d0260a34fd19b570ba3a0995d8c412b7b64a07b1519294b58d9f164",
+      "url": "https://www.sec.gov/Archives/edgar/data/70858/000007085823000092/0000070858-23-000092-index-headers.html",
+      "ticker": "BAC",
+      "document_id": "0000070858-23-000092",
+      "source_header_block_count": 2,
+      "header_field_formats": [
+        "colon_fields",
+        "tag_fields"
+      ]
+    },
+    {
+      "path": "headers/0000070858/0000070858-24-000122.html",
+      "sha256": "ba603f82821345cee0311e7387a3719641424589c0c53d309bafe433c062a869",
+      "url": "https://www.sec.gov/Archives/edgar/data/70858/000007085824000122/0000070858-24-000122-index-headers.html",
+      "ticker": "BAC",
+      "document_id": "0000070858-24-000122",
+      "source_header_block_count": 2,
+      "header_field_formats": [
+        "colon_fields",
+        "tag_fields"
+      ]
+    },
+    {
+      "path": "headers/0000070858/0000070858-25-000139.html",
+      "sha256": "a70bb8ee51b93ceefea0fc11a10cfcfa03b8421c5fa55af35568d66241068e9f",
+      "url": "https://www.sec.gov/Archives/edgar/data/70858/000007085825000139/0000070858-25-000139-index-headers.html",
+      "ticker": "BAC",
+      "document_id": "0000070858-25-000139",
+      "source_header_block_count": 2,
+      "header_field_formats": [
+        "colon_fields",
+        "tag_fields"
+      ]
+    },
+    {
+      "path": "headers/0000070858/0000070858-26-000157.html",
+      "sha256": "b3a1910f5b82a6c576911d45cbbc4d886d5e6d44e188ce8959d31027a2c6fdd4",
+      "url": "https://www.sec.gov/Archives/edgar/data/70858/000007085826000157/0000070858-26-000157-index-headers.html",
+      "ticker": "BAC",
+      "document_id": "0000070858-26-000157",
+      "source_header_block_count": 2,
+      "header_field_formats": [
+        "colon_fields",
+        "tag_fields"
+      ]
+    },
+    {
+      "path": "headers/0000018230/0000018230-15-000061.html",
+      "sha256": "88069be5605c15047f06fc8674657afb356568b1bc6237077227559c30c45ec2",
+      "url": "https://www.sec.gov/Archives/edgar/data/18230/000001823015000061/0000018230-15-000061-index-headers.html",
+      "ticker": "CAT",
+      "document_id": "0000018230-15-000061",
+      "source_header_block_count": 2,
+      "header_field_formats": [
+        "colon_fields",
+        "tag_fields"
+      ]
+    },
+    {
+      "path": "headers/0000018230/0000018230-16-000410.html",
+      "sha256": "fb0a51ac9e718aa9161247050a445e5f963666bc54f8fda1064f8c9f708852db",
+      "url": "https://www.sec.gov/Archives/edgar/data/18230/000001823016000410/0000018230-16-000410-index-headers.html",
+      "ticker": "CAT",
+      "document_id": "0000018230-16-000410",
+      "source_header_block_count": 2,
+      "header_field_formats": [
+        "colon_fields",
+        "tag_fields"
+      ]
+    },
+    {
+      "path": "headers/0000018230/0000018230-17-000041.html",
+      "sha256": "e00667a2145884c4e3195f486f0f212abf618e0919bd72da29cb488f3697a7ed",
+      "url": "https://www.sec.gov/Archives/edgar/data/18230/000001823017000041/0000018230-17-000041-index-headers.html",
+      "ticker": "CAT",
+      "document_id": "0000018230-17-000041",
+      "source_header_block_count": 2,
+      "header_field_formats": [
+        "colon_fields",
+        "tag_fields"
+      ]
+    },
+    {
+      "path": "headers/0000018230/0000018230-18-000042.html",
+      "sha256": "01a4ade67d41cf1d977fe6be4316bf8fd722e6ad261af5c9bb164b86444f2aba",
+      "url": "https://www.sec.gov/Archives/edgar/data/18230/000001823018000042/0000018230-18-000042-index-headers.html",
+      "ticker": "CAT",
+      "document_id": "0000018230-18-000042",
+      "source_header_block_count": 2,
+      "header_field_formats": [
+        "colon_fields",
+        "tag_fields"
+      ]
+    },
+    {
+      "path": "headers/0000018230/0000018230-19-000034.html",
+      "sha256": "23d731871e98da1612fd82846ebec4e7401254b8a339260848fa0a97c7ca42d9",
+      "url": "https://www.sec.gov/Archives/edgar/data/18230/000001823019000034/0000018230-19-000034-index-headers.html",
+      "ticker": "CAT",
+      "document_id": "0000018230-19-000034",
+      "source_header_block_count": 2,
+      "header_field_formats": [
+        "colon_fields",
+        "tag_fields"
+      ]
+    },
+    {
+      "path": "headers/0000018230/0000018230-20-000056.html",
+      "sha256": "40e3f76a2e4791355406adb9b04c51bdb659f4963ea0531970577261c3a73cf6",
+      "url": "https://www.sec.gov/Archives/edgar/data/18230/000001823020000056/0000018230-20-000056-index-headers.html",
+      "ticker": "CAT",
+      "document_id": "0000018230-20-000056",
+      "source_header_block_count": 2,
+      "header_field_formats": [
+        "colon_fields",
+        "tag_fields"
+      ]
+    },
+    {
+      "path": "headers/0000018230/0000018230-21-000063.html",
+      "sha256": "e3ffe6d24a7076535f0e3a47ab46467ea0f9d0d4741dea332b505f4580215d36",
+      "url": "https://www.sec.gov/Archives/edgar/data/18230/000001823021000063/0000018230-21-000063-index-headers.html",
+      "ticker": "CAT",
+      "document_id": "0000018230-21-000063",
+      "source_header_block_count": 2,
+      "header_field_formats": [
+        "colon_fields",
+        "tag_fields"
+      ]
+    },
+    {
+      "path": "headers/0000018230/0000018230-22-000050.html",
+      "sha256": "113502fd466e1d9877f374cc93b708ee5379dc46a06e756fb34f76dc96658428",
+      "url": "https://www.sec.gov/Archives/edgar/data/18230/000001823022000050/0000018230-22-000050-index-headers.html",
+      "ticker": "CAT",
+      "document_id": "0000018230-22-000050",
+      "source_header_block_count": 2,
+      "header_field_formats": [
+        "colon_fields",
+        "tag_fields"
+      ]
+    },
+    {
+      "path": "headers/0000018230/0000018230-23-000011.html",
+      "sha256": "cb31e6ded5158dc75e8098c4aae0726126501305ff12303e827033930e0ee8df",
+      "url": "https://www.sec.gov/Archives/edgar/data/18230/000001823023000011/0000018230-23-000011-index-headers.html",
+      "ticker": "CAT",
+      "document_id": "0000018230-23-000011",
+      "source_header_block_count": 2,
+      "header_field_formats": [
+        "colon_fields",
+        "tag_fields"
+      ]
+    },
+    {
+      "path": "headers/0000018230/0000018230-24-000009.html",
+      "sha256": "ec03bbd66cc9c249fe90f77e6806b03472131bdf1015c73990f5acf0e514cb0f",
+      "url": "https://www.sec.gov/Archives/edgar/data/18230/000001823024000009/0000018230-24-000009-index-headers.html",
+      "ticker": "CAT",
+      "document_id": "0000018230-24-000009",
+      "source_header_block_count": 2,
+      "header_field_formats": [
+        "colon_fields",
+        "tag_fields"
+      ]
+    },
+    {
+      "path": "headers/0000018230/0000018230-25-000008.html",
+      "sha256": "e2ed03b68cc88af17662e7b0d7089ff72b2104c7fff9a8529f4fe1538d22d2c0",
+      "url": "https://www.sec.gov/Archives/edgar/data/18230/000001823025000008/0000018230-25-000008-index-headers.html",
+      "ticker": "CAT",
+      "document_id": "0000018230-25-000008",
+      "source_header_block_count": 2,
+      "header_field_formats": [
+        "colon_fields",
+        "tag_fields"
+      ]
+    },
+    {
+      "path": "headers/0000018230/0000018230-26-000008.html",
+      "sha256": "01f100810a3462e97de536bb3322d2412057c068e098211cb22b57eb9f9ce73e",
+      "url": "https://www.sec.gov/Archives/edgar/data/18230/000001823026000008/0000018230-26-000008-index-headers.html",
+      "ticker": "CAT",
+      "document_id": "0000018230-26-000008",
+      "source_header_block_count": 2,
+      "header_field_formats": [
+        "colon_fields",
+        "tag_fields"
+      ]
+    },
+    {
+      "path": "headers/0000093410/0000093410-15-000010.html",
+      "sha256": "ccd205bcab1859f90ab820db1ad59440e2ba27c2acd794811f610c8dc381b1a6",
+      "url": "https://www.sec.gov/Archives/edgar/data/93410/000009341015000010/0000093410-15-000010-index-headers.html",
+      "ticker": "CVX",
+      "document_id": "0000093410-15-000010",
+      "source_header_block_count": 2,
+      "header_field_formats": [
+        "colon_fields",
+        "tag_fields"
+      ]
+    },
+    {
+      "path": "headers/0000093410/0000093410-16-000049.html",
+      "sha256": "24d2810df97e5020bb54dd5b3699d74b18ac01d15c5568130fe6c4bfdeb50f2a",
+      "url": "https://www.sec.gov/Archives/edgar/data/93410/000009341016000049/0000093410-16-000049-index-headers.html",
+      "ticker": "CVX",
+      "document_id": "0000093410-16-000049",
+      "source_header_block_count": 2,
+      "header_field_formats": [
+        "colon_fields",
+        "tag_fields"
+      ]
+    },
+    {
+      "path": "headers/0000093410/0000093410-17-000013.html",
+      "sha256": "1fba33cd6859cdc49ddafcb3f8fe7d03bef71faebb1d8dfcad14f883ab5762e9",
+      "url": "https://www.sec.gov/Archives/edgar/data/93410/000009341017000013/0000093410-17-000013-index-headers.html",
+      "ticker": "CVX",
+      "document_id": "0000093410-17-000013",
+      "source_header_block_count": 2,
+      "header_field_formats": [
+        "colon_fields",
+        "tag_fields"
+      ]
+    },
+    {
+      "path": "headers/0000093410/0000093410-18-000010.html",
+      "sha256": "4efd70b2aad1f05e0b609faa1fd06fd0e6d1468a206031811f77a0434ebefeaf",
+      "url": "https://www.sec.gov/Archives/edgar/data/93410/000009341018000010/0000093410-18-000010-index-headers.html",
+      "ticker": "CVX",
+      "document_id": "0000093410-18-000010",
+      "source_header_block_count": 2,
+      "header_field_formats": [
+        "colon_fields",
+        "tag_fields"
+      ]
+    },
+    {
+      "path": "headers/0000093410/0000093410-19-000008.html",
+      "sha256": "a2ca838d506b4f55fce4b27481679383f336f6423e913e16649aa47f3a396dce",
+      "url": "https://www.sec.gov/Archives/edgar/data/93410/000009341019000008/0000093410-19-000008-index-headers.html",
+      "ticker": "CVX",
+      "document_id": "0000093410-19-000008",
+      "source_header_block_count": 2,
+      "header_field_formats": [
+        "colon_fields",
+        "tag_fields"
+      ]
+    },
+    {
+      "path": "headers/0000093410/0000093410-20-000010.html",
+      "sha256": "eb6a067fdf87ff47d50d5f84fe990f3834145a3938cec75b416aedf767048e77",
+      "url": "https://www.sec.gov/Archives/edgar/data/93410/000009341020000010/0000093410-20-000010-index-headers.html",
+      "ticker": "CVX",
+      "document_id": "0000093410-20-000010",
+      "source_header_block_count": 2,
+      "header_field_formats": [
+        "colon_fields",
+        "tag_fields"
+      ]
+    },
+    {
+      "path": "headers/0000093410/0000093410-21-000009.html",
+      "sha256": "71088116e733acdbe1acf4b4d8837ad952b64f8ff8bb945a4978215595a8de4a",
+      "url": "https://www.sec.gov/Archives/edgar/data/93410/000009341021000009/0000093410-21-000009-index-headers.html",
+      "ticker": "CVX",
+      "document_id": "0000093410-21-000009",
+      "source_header_block_count": 2,
+      "header_field_formats": [
+        "colon_fields",
+        "tag_fields"
+      ]
+    },
+    {
+      "path": "headers/0000093410/0000093410-22-000019.html",
+      "sha256": "d18f607dfd7f5eb26959913b21a6bd262c02ae7b363380d445a279ddb9bcfdfd",
+      "url": "https://www.sec.gov/Archives/edgar/data/93410/000009341022000019/0000093410-22-000019-index-headers.html",
+      "ticker": "CVX",
+      "document_id": "0000093410-22-000019",
+      "source_header_block_count": 2,
+      "header_field_formats": [
+        "colon_fields",
+        "tag_fields"
+      ]
+    },
+    {
+      "path": "headers/0000093410/0000093410-23-000009.html",
+      "sha256": "3485f248be15d54b0f46501472fe51071cebc8867bcc8e89971360fb74576f4a",
+      "url": "https://www.sec.gov/Archives/edgar/data/93410/000009341023000009/0000093410-23-000009-index-headers.html",
+      "ticker": "CVX",
+      "document_id": "0000093410-23-000009",
+      "source_header_block_count": 2,
+      "header_field_formats": [
+        "colon_fields",
+        "tag_fields"
+      ]
+    },
+    {
+      "path": "headers/0000093410/0000093410-24-000013.html",
+      "sha256": "0f2e97fc9fd09c13d8d91f79ca01c91b0c7ffc08a0312396dc15b13ea2aac563",
+      "url": "https://www.sec.gov/Archives/edgar/data/93410/000009341024000013/0000093410-24-000013-index-headers.html",
+      "ticker": "CVX",
+      "document_id": "0000093410-24-000013",
+      "source_header_block_count": 2,
+      "header_field_formats": [
+        "colon_fields",
+        "tag_fields"
+      ]
+    },
+    {
+      "path": "headers/0000093410/0000093410-25-000009.html",
+      "sha256": "3ce9bb15f6273728aa3b269f335a40480fb87da58f9b946c7a809f2f53fb898c",
+      "url": "https://www.sec.gov/Archives/edgar/data/93410/000009341025000009/0000093410-25-000009-index-headers.html",
+      "ticker": "CVX",
+      "document_id": "0000093410-25-000009",
+      "source_header_block_count": 2,
+      "header_field_formats": [
+        "colon_fields",
+        "tag_fields"
+      ]
+    },
+    {
+      "path": "headers/0000093410/0000093410-26-000078.html",
+      "sha256": "8c3e5149957b1653437277358bb51e68d49c761277b534acde5bf1f9e8446846",
+      "url": "https://www.sec.gov/Archives/edgar/data/93410/000009341026000078/0000093410-26-000078-index-headers.html",
+      "ticker": "CVX",
+      "document_id": "0000093410-26-000078",
+      "source_header_block_count": 2,
+      "header_field_formats": [
+        "colon_fields",
+        "tag_fields"
+      ]
+    },
+    {
+      "path": "headers/0000315189/0001047469-15-009300.html",
+      "sha256": "c255c20f62a6e7791b56ec323e162d8325b6b7c923c2d5ca35a64f2a529f44ec",
+      "url": "https://www.sec.gov/Archives/edgar/data/315189/000104746915009300/0001047469-15-009300-index-headers.html",
+      "ticker": "DE",
+      "document_id": "0001047469-15-009300",
+      "source_header_block_count": 2,
+      "header_field_formats": [
+        "colon_fields",
+        "tag_fields"
+      ]
+    },
+    {
+      "path": "headers/0000315189/0001047469-16-017244.html",
+      "sha256": "02d38833cc793eff7a1700584480b719567b6b77145fb3b39f553fdc2e3a7c51",
+      "url": "https://www.sec.gov/Archives/edgar/data/315189/000104746916017244/0001047469-16-017244-index-headers.html",
+      "ticker": "DE",
+      "document_id": "0001047469-16-017244",
+      "source_header_block_count": 2,
+      "header_field_formats": [
+        "colon_fields",
+        "tag_fields"
+      ]
+    },
+    {
+      "path": "headers/0000315189/0001047469-17-007719.html",
+      "sha256": "f58253f518720d3606cbf5eec2e757bf76890cadc148c84f7cd303e790dbb7a3",
+      "url": "https://www.sec.gov/Archives/edgar/data/315189/000104746917007719/0001047469-17-007719-index-headers.html",
+      "ticker": "DE",
+      "document_id": "0001047469-17-007719",
+      "source_header_block_count": 2,
+      "header_field_formats": [
+        "colon_fields",
+        "tag_fields"
+      ]
+    },
+    {
+      "path": "headers/0000315189/0001047469-18-007694.html",
+      "sha256": "02d2e995b69c55cea3ee74d316cd8d951e8c97f27bcc3229b6400c41ef5afec3",
+      "url": "https://www.sec.gov/Archives/edgar/data/315189/000104746918007694/0001047469-18-007694-index-headers.html",
+      "ticker": "DE",
+      "document_id": "0001047469-18-007694",
+      "source_header_block_count": 2,
+      "header_field_formats": [
+        "colon_fields",
+        "tag_fields"
+      ]
+    },
+    {
+      "path": "headers/0000315189/0001558370-19-011614.html",
+      "sha256": "d80e525ce991f52922f181ca7d972454719bedbf30bf95c1a38e04f3dfacd4a4",
+      "url": "https://www.sec.gov/Archives/edgar/data/315189/000155837019011614/0001558370-19-011614-index-headers.html",
+      "ticker": "DE",
+      "document_id": "0001558370-19-011614",
+      "source_header_block_count": 2,
+      "header_field_formats": [
+        "colon_fields",
+        "tag_fields"
+      ]
+    },
+    {
+      "path": "headers/0000315189/0001558370-20-014436.html",
+      "sha256": "31038216d91909d81c6c11c35f32f89b43324d73e7466669bb751ce52e1bef6b",
+      "url": "https://www.sec.gov/Archives/edgar/data/315189/000155837020014436/0001558370-20-014436-index-headers.html",
+      "ticker": "DE",
+      "document_id": "0001558370-20-014436",
+      "source_header_block_count": 2,
+      "header_field_formats": [
+        "colon_fields",
+        "tag_fields"
+      ]
+    },
+    {
+      "path": "headers/0000315189/0001558370-21-016864.html",
+      "sha256": "c39ec7fdfc21576ae54f5011ec99615d20ea9c0b087f7e39226f2cc60f6e1fc3",
+      "url": "https://www.sec.gov/Archives/edgar/data/315189/000155837021016864/0001558370-21-016864-index-headers.html",
+      "ticker": "DE",
+      "document_id": "0001558370-21-016864",
+      "source_header_block_count": 2,
+      "header_field_formats": [
+        "colon_fields",
+        "tag_fields"
+      ]
+    },
+    {
+      "path": "headers/0000315189/0001558370-22-018703.html",
+      "sha256": "a9a87a4155ba51e13db433d577ea3f404fed3c2ce88ec4f425298440830dce27",
+      "url": "https://www.sec.gov/Archives/edgar/data/315189/000155837022018703/0001558370-22-018703-index-headers.html",
+      "ticker": "DE",
+      "document_id": "0001558370-22-018703",
+      "source_header_block_count": 2,
+      "header_field_formats": [
+        "colon_fields",
+        "tag_fields"
+      ]
+    },
+    {
+      "path": "headers/0000315189/0001558370-23-019812.html",
+      "sha256": "9cb3ac1db3d5c0a69f2c70cfe3aab4a4029686913ae2fda10fadc8130eb747a4",
+      "url": "https://www.sec.gov/Archives/edgar/data/315189/000155837023019812/0001558370-23-019812-index-headers.html",
+      "ticker": "DE",
+      "document_id": "0001558370-23-019812",
+      "source_header_block_count": 2,
+      "header_field_formats": [
+        "colon_fields",
+        "tag_fields"
+      ]
+    },
+    {
+      "path": "headers/0000315189/0001558370-24-016169.html",
+      "sha256": "69c70d40b3ed8104999a2ba8b15de7bb10ea1af0a735ed6cbdfa8360948ae42a",
+      "url": "https://www.sec.gov/Archives/edgar/data/315189/000155837024016169/0001558370-24-016169-index-headers.html",
+      "ticker": "DE",
+      "document_id": "0001558370-24-016169",
+      "source_header_block_count": 2,
+      "header_field_formats": [
+        "colon_fields",
+        "tag_fields"
+      ]
+    },
+    {
+      "path": "headers/0000315189/0001104659-25-122321.html",
+      "sha256": "63e869a7a8b1f49af2f4f21a5a88c9a6b7939ac0f3761a089d178cd05da9a448",
+      "url": "https://www.sec.gov/Archives/edgar/data/315189/000110465925122321/0001104659-25-122321-index-headers.html",
+      "ticker": "DE",
+      "document_id": "0001104659-25-122321",
+      "source_header_block_count": 2,
+      "header_field_formats": [
+        "colon_fields",
+        "tag_fields"
+      ]
+    }
+  ],
+  "approved_availability_records": 0
+}

@@ -48,3 +48,15 @@ Keep the folder and run:
 Resume requires the same audited inventory. It verifies recorded file hashes before reuse and does not redownload successful headers. A completed valid collection is left unchanged. Changed bytes, different inputs or unreceipted completed files stop the run for inspection. Failure history is retained. Do not delete data or evade a provider restriction to force progress.
 
 The header collector has synthetic network/failure tests; its bulk live SEC integration is the user's next check. It preserves all earlier corpuses, model locks and financial outputs. Header completion does not admit any expanded Risk Factors text or approve any evaluation period.
+
+## Dual-format parser repair
+
+The first live BAC 2015 header exposed a format assumption: the HTML response contains a hidden SGML-style header in a comment and a visible, escaped labeled header. The original parser chose the first SEC-HEADER block but expected only labeled fields. The repaired parser supports tagged and labeled fields, parses every header copy, and requires matching identities, dates, clocks and filer CIK sets. Conflicting or incomplete copies fail rather than being silently discarded. Raw bytes and timing-review statuses are preserved.
+
+After pulling the repair, resume the existing failed collection:
+
+```powershell
+.\.venv\Scripts\python.exe -m secstab.history_headers --resume
+```
+
+This reuses the already-recorded first response and retains the original failure history. Do not delete headers_v1 or change the inventory to get past the parser. The regression suite covers tag-only fields, the actual hidden-tag/visible-label layout, conflicting clocks, conflicting CIKs and parser-failure recovery without redownloading successful source bytes.
