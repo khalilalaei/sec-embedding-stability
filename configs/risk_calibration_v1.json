@@ -1,0 +1,45 @@
+{
+  "lookback": 252,
+  "annualization_sessions": 252,
+  "primary_text_weight": 0.25,
+  "primary_runs": [
+    "pilot_tfidf",
+    "pilot_e5_192",
+    "pilot_e5_320",
+    "pilot_bge_192",
+    "pilot_bge_320",
+    "pilot_qwen_192_gpu",
+    "pilot_qwen_320_gpu"
+  ],
+  "diagnostic_runs": [
+    "pilot_e5_192_gpu"
+  ],
+  "candidate_month_ends": [
+    "2026-07-31",
+    "2026-08-31",
+    "2026-09-30",
+    "2026-10-31"
+  ],
+  "test_days": 21,
+  "timing_rule": "close of first XNYS session strictly after SEC acceptance local date; explicit AI-assisted assumption, not approved execution eligibility",
+  "scope": "exploratory retrospective training-only shrinkage calibration; extension designed after inspecting raw-blend losses",
+  "calibration": "alpha=clip(sum_{i<j}(K_ij*R_B_ij)/sum_{i<j}(K_ij^2),0,1); alpha=0 for zero denominator; R_B is trailing Ledoit-Wolf correlation",
+  "calibrated_kernel": "(1-alpha)I+alpha K; alpha fit separately per decision and representation using trailing returns only",
+  "portfolio": "equal weights in fixed corpus/security order",
+  "losses": "squared error of equal-weight daily portfolio variance against centered next-21-session sample covariance, ddof=1",
+  "secondary_losses": [
+    "mean squared covariance-entry error over all n*n entries",
+    "mean squared covariance-entry error over off-diagonal entries"
+  ],
+  "aggregate": "equal mean of window losses; improvement=1-model_mean_loss/price_only_mean_loss; no tuning, selection or significance tests",
+  "controls": [
+    "price-only Ledoit-Wolf",
+    "fixed 25% diagonal-target shrinkage",
+    "fixed 25% past-price constant-correlation target",
+    "separately calibrated score-level kernel per representation",
+    "original fixed 25% raw-cosine blend per representation"
+  ],
+  "constant_correlation": "rho=mean off-diagonal trailing R_B, clipped to [-1/(n-1),1] for floating-point bounds; target=(1-rho)I+rho11T",
+  "constraints": "fixed lambda=0.25; no future-label selection of alpha, model or blend weight; no model ranking or significance tests",
+  "chronology_limit": "November embeddings and unknown training cutoffs; source identities and eligibility assumptions remain AI-assisted. Prior November snapshot included these price dates. The three risk-loss windows and raw/control results were already inspected before this extension."
+}
