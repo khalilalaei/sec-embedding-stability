@@ -20,3 +20,5 @@ audit_check.json
 data/market/
 market-pilot*.zip
 market_audit_local*.json
+data/history/
+historical-inventory*.zip

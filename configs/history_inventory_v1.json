@@ -1,0 +1,12 @@
+{
+  "scope": "metadata inventory for expanded retrospective research; no text admission, historical security approval or financial evaluation",
+  "universe_path": "configs/universe.json",
+  "filing_start_inclusive": "2015-01-01",
+  "filing_end_inclusive": "2026-11-02",
+  "form": "10-K",
+  "amendment_policy": "exclude 10-K/A; preserve original annual filing inventory",
+  "selection_clock": "SEC filingDate calendar label, not fiscal year or approved availability",
+  "existing_development_period": "2024-2026 observations already inspected; do not relabel as untouched test data",
+  "historical_identity_scope": "fixed requested CIKs with current ticker labels; not historical index membership or permanent security links",
+  "timestamp_policy": "preserve acceptanceDateTime API value only; verify against source filing/header before deriving approved availability"
+}

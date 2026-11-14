@@ -1,0 +1,67 @@
+{
+  "scope": "offline parser compatibility only; prior uploaded main recent pages, no new network/archive collection or historical completeness claim",
+  "companies": 12,
+  "main_recent_10k_records": 80,
+  "source_pages": [
+    {
+      "ticker": "MSFT",
+      "main_recent_records_parsed": 6,
+      "source_sha256": "5c93fe7c62627741a3bd1ff48b9ce38e68be07f03c0b452624316f68ba69b068"
+    },
+    {
+      "ticker": "ORCL",
+      "main_recent_records_parsed": 11,
+      "source_sha256": "2e2a986b6dd1316f45ae32b81f6ea12f7d51361091a78ef30348d487a7d3ebf1"
+    },
+    {
+      "ticker": "JPM",
+      "main_recent_records_parsed": 1,
+      "source_sha256": "6655a69b93f9d251cfab8190e10b9e964787a7b5f49e87fc85ba941e5aa9ce2b"
+    },
+    {
+      "ticker": "BAC",
+      "main_recent_records_parsed": 1,
+      "source_sha256": "9288fc292ea0151013f3ede57857d80f03634677e158813ead4d9becb06a7310"
+    },
+    {
+      "ticker": "XOM",
+      "main_recent_records_parsed": 7,
+      "source_sha256": "79aacad669ef044bf654934b659b9fda89514e0ba5514838dbfb787d53e48773"
+    },
+    {
+      "ticker": "CVX",
+      "main_recent_records_parsed": 7,
+      "source_sha256": "4985cf88d0b64e5e8dc2a60638ddc35942633015887922c68c17ac7a1988ef5f"
+    },
+    {
+      "ticker": "JNJ",
+      "main_recent_records_parsed": 8,
+      "source_sha256": "826d25d6bf11a6a11f2a95444fd68456e913555e16a1cd416f714c2b8d32c935"
+    },
+    {
+      "ticker": "MRK",
+      "main_recent_records_parsed": 8,
+      "source_sha256": "1b896ec9e09fd3f939f48d01c63e9c9593387d1ab1f488513bc04fa81c1f691f"
+    },
+    {
+      "ticker": "CAT",
+      "main_recent_records_parsed": 7,
+      "source_sha256": "1970b89594ad6d47bb6aeee0ace265606752a950eb2663523c43470cdbe17f04"
+    },
+    {
+      "ticker": "DE",
+      "main_recent_records_parsed": 11,
+      "source_sha256": "4347a2d0d9c6a028b492cb9e5679eb61ac8beae6b4ef252d133ffe6401bde62a"
+    },
+    {
+      "ticker": "WMT",
+      "main_recent_records_parsed": 3,
+      "source_sha256": "a51e0de254d1c0c038aa92bc5d9da9d936d4ec1adf2d58013a404d1cc470d626"
+    },
+    {
+      "ticker": "TGT",
+      "main_recent_records_parsed": 10,
+      "source_sha256": "3d133aa9e678fcf843c4ed95e51dd6c5f298df3a21cc6b6e2b84429a8b506975"
+    }
+  ]
+}
