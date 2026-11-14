@@ -80,3 +80,5 @@ Large provider observations were retained under the frozen no-deletion rule. A p
 Requires the existing market extra, frozen local yahoo_pilot_v2 and corpus. No download, GPU, embedding inference or WRDS access is needed. The output directory runs/risk_accuracy_v1 must not already exist. Aggregate reference results are in results/risk_accuracy_2026-11-14/. The receipt records the protocol commit and exact computation/data/config hashes. The optional report extra supports scripts/render_risk_accuracy.py.
 
 The next research question is whether calibrated dependence targets and company-specific text add value beyond score-level, price and industry/factor controls on a larger independently evaluated sample. Those extensions have not run; the present null/adverse results remain part of the record.
+
+A [focused score-level comparison](score_level_comparison_2026-11-14.md) quantifies full-kernel versus control differences from these unchanged outputs.

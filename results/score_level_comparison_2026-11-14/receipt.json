@@ -1,0 +1,11 @@
+{
+  "scope": "contrast of frozen results only; no new financial experiment",
+  "metric": "1 - mean_full_kernel_loss / mean_score_level_control_loss; negative means higher full-kernel error",
+  "source_sha256": {
+    "aggregate_losses.csv": "9391ce5c46161049c9d98dcccf6062521f5d5d226e6abc90a693c088bc260e6b",
+    "window_losses.csv": "43383f26c07e013b6809588ebbd46844442197d6ebfdabca42a5ec9cb5775b59",
+    "summary.json": "664c30e851e5060059920e85a7f8aefed57392e461c13b385011754e7ce7d222"
+  },
+  "script_sha256": "c98107bae464ecdda82b9d5b932c47979bbfbe1d9073006af98f77d5487a3d17",
+  "no_significance_test": true
+}
