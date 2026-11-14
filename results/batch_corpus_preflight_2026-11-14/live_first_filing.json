@@ -1,0 +1,31 @@
+{
+  "scope": "one new historical source download and conservative extraction candidate; not corpus admission or financial evaluation",
+  "manifest_sha256": "fffe168c810712f85eaa29d00bdc7187de2197985fb27fd2d13f178da4e161a5",
+  "source": {
+    "path": "raw/0000070858/0000070858-15-000008/filing.html",
+    "sha256": "50d2e1d590eff299f8f73f98432ec106261856b5636c4c5831931e7c44fabad2",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/70858/000007085815000008/bac-12312014x10k.htm",
+    "origin": "SEC_primary_document_download",
+    "saved_at": "2026-11-14T14:06:31.528833+00:00"
+  },
+  "outcome": {
+    "document_id": "0000070858-15-000008",
+    "ticker": "BAC",
+    "status": "extracted_pending_review",
+    "source_sha256": "50d2e1d590eff299f8f73f98432ec106261856b5636c4c5831931e7c44fabad2",
+    "words": 13968,
+    "characters": 94119,
+    "text": {
+      "path": "text/0000070858/0000070858-15-000008/item1a.txt",
+      "sha256": "707e306bf87d2ef713fd2b3c2946b0e2c6e234ed47c276865315ce1a9a1c21a1"
+    },
+    "source_map": {
+      "path": "maps/0000070858/0000070858-15-000008/source_map.json",
+      "sha256": "f6add9f3b7593275e760ff4184af1974350dbe9ef7e1d9fc33f1b7e9570f1f1b"
+    },
+    "review_scope": "conservative machine-selected candidate; not admitted or independently human audited"
+  },
+  "start_heading": "Item 1A. Risk Factors",
+  "following_heading": "Item 1B. Unresolved Staff Comments",
+  "code_sha256": "c36334fdae94301ba5ac3c5a0559e7777ef2d9fc598cdd2c14d4da73c8c163af"
+}
