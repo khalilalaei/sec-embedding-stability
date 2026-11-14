@@ -53,3 +53,19 @@ The downloader's synthetic numerical tests do not demonstrate live network acces
 - CRSP historical active/inactive coverage: https://www.crsp.org/research/crsp-us-stock-databases-2025-layout/
 
 The yfinance project directs users to Yahoo's terms for data-use rights and describes the API as intended for personal use. This collector does not redistribute provider data. Confirm institutional/publication rights before sharing a dataset; code and aggregate experimental reports can be kept separate from licensed/raw observations.
+
+## Metadata compatibility repair — 2026-11-13
+
+The first live collection exposed a serialization bug: recent yfinance returns a lazy HistoryMetadata object implementing Mapping rather than a built-in dict. The initial default=str JSON conversion flattened that object into text, causing the identity check to fail. The repaired code recursively preserves mappings, numerical scalars and timestamps, validates the resulting dictionary, and deliberately omits the lazy tradingPeriods field because it can trigger an unrelated intraday request. This omission is recorded in the collection manifest. Symbol/currency/type/timezone checks remain mandatory.
+
+The history request now uses config.debug.hide_exceptions=False where available and restores its previous value afterward, including on failure. Older versions use the legacy raise_errors=True path. This removes the deprecated flag on current yfinance without hiding fetch errors.
+
+Keep the failed yahoo_pilot_v1 folder as evidence. After git pull, retry with a new directory:
+
+```powershell
+.\.venv\Scripts\python.exe -m secstab.yahoo_pilot --output data/market/yahoo_pilot_v2
+```
+
+Tests include a non-dict lazy Mapping, prevention of an intraday-key fetch, strict metadata parsing, modern/legacy error policies, configuration restoration on errors, and a complete mocked 12-security collection plus existing-output preservation. Live network behavior still requires verification on the user's next run.
+
+Upstream implementation checked: https://github.com/ranaroussi/yfinance/blob/main/yfinance/scrapers/history.py

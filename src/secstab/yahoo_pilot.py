@@ -4,6 +4,7 @@ No network call occurs on import. Preserve provider-parsed tables/metadata,
 explicit adjustment settings and hashes; never overwrite a collection directory.
 """
 import argparse
+from collections.abc import Mapping
 from datetime import datetime, timezone
 import hashlib
 import importlib.metadata
@@ -16,7 +17,7 @@ from .financial import validate_returns,align_returns
 
 HISTORY_OPTIONS={'interval':'1d','auto_adjust':False,'back_adjust':False,
                  'actions':True,'repair':False,'keepna':True,'rounding':False,
-                 'timeout':30,'raise_errors':True}
+                 'timeout':30}
 
 
 def sha(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
@@ -27,7 +28,43 @@ def write(path,obj):
     Path(path).write_text(json.dumps(obj,indent=2,allow_nan=False)+'\n',encoding='utf-8')
 
 
+def metadata_snapshot(metadata):
+    """Convert mappings without stringifying them or fetching lazy intraday keys."""
+    if isinstance(metadata,str):
+        try:metadata=json.loads(metadata)
+        except json.JSONDecodeError as error:
+            raise ValueError('Metadata was non-JSON text rather than a dictionary-like object') from error
+    if not isinstance(metadata,Mapping):raise ValueError('Expected dictionary-like provider metadata')
+
+    def convert(value):
+        if isinstance(value,Mapping):
+            # Iterating items() on HistoryMetadata eagerly loads tradingPeriods.
+            return {str(key):convert(value[key]) for key in value if key!='tradingPeriods'}
+        if isinstance(value,(list,tuple)):return [convert(x) for x in value]
+        if isinstance(value,np.ndarray):return convert(value.tolist())
+        if isinstance(value,np.generic):return convert(value.item())
+        if value is None or value is pd.NaT:return None
+        if isinstance(value,(str,bool,int)):return value
+        if isinstance(value,float):return value if np.isfinite(value) else None
+        if hasattr(value,'isoformat'):return value.isoformat()
+        raise ValueError('Unsupported provider metadata value type: '+type(value).__name__)
+    return convert(metadata)
+
+
+def request_history(client,yf_module,start,end):
+    """Use current exception config when present, with an older-version fallback."""
+    debug=getattr(getattr(yf_module,'config',None),'debug',None)
+    options=dict(HISTORY_OPTIONS)
+    if debug is not None and hasattr(debug,'hide_exceptions'):
+        previous=debug.hide_exceptions
+        debug.hide_exceptions=False
+        try:return client.history(start=start,end=end,**options)
+        finally:debug.hide_exceptions=previous
+    return client.history(start=start,end=end,raise_errors=True,**options)
+
+
 def provider_identity(metadata,ticker):
+    if not isinstance(metadata,Mapping):raise ValueError('Expected dictionary-like provider metadata: '+ticker)
     if str(metadata.get('symbol','')).upper()!=ticker.upper():raise ValueError('Provider symbol mismatch: '+ticker)
     if metadata.get('currency')!='USD':raise ValueError('Expected explicit USD metadata: '+ticker)
     if metadata.get('instrumentType')!='EQUITY':raise ValueError('Expected equity metadata: '+ticker)
@@ -99,6 +136,8 @@ def collect(args):
     manifest={'status':'started','scope':'exploratory selected-company Yahoo adjusted-price return proxy; not CRSP',
         'started_at':datetime.now(timezone.utc).isoformat(),'start_inclusive':args.start,'end_exclusive':args.end,
         'corpus_sha256':sha(args.corpus),'request_options':HISTORY_OPTIONS,
+        'error_policy':'config.debug.hide_exceptions=False when available (restored after request), otherwise legacy raise_errors=True',
+        'metadata_policy':'Convert Mapping to JSON objects; omit lazy tradingPeriods (intraday metadata not used for daily collection)',
         'packages':{p:importlib.metadata.version(p) for p in ['yfinance','exchange-calendars','pandas','numpy']},
         'calendar':'XNYS via exchange_calendars; explicit complete-session check',
         'return_formula':'AdjClose[t]/AdjClose[t-1]-1; no additional dividend/split adjustment',
@@ -115,13 +154,13 @@ def collect(args):
         for r in records:
             ticker=r['ticker'];print('Downloading',ticker,flush=True)
             client=yf.Ticker(ticker)
-            table=client.history(start=args.start,end=args.end,**HISTORY_OPTIONS)
+            table=request_history(client,yf,args.start,args.end)
             path=output/'provider_tables'/f'{ticker}_history.csv'
             table.to_csv(path,index=True,float_format='%.17g')
             manifest['source_files'][path.relative_to(output).as_posix()]=sha(path)
             meta=client.get_history_metadata(repair=False)
-            # Preserve a JSON-compatible snapshot of the library's metadata representation.
-            meta=json.loads(json.dumps(meta,default=str),parse_constant=lambda _:None)
+            # Do not use default=str: newer HistoryMetadata is a Mapping, not dict.
+            meta=metadata_snapshot(meta)
             path=output/'provider_tables'/f'{ticker}_metadata.json';write(path,meta)
             manifest['source_files'][path.relative_to(output).as_posix()]=sha(path)
             provider_identity(meta,ticker)

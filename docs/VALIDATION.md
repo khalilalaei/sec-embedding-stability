@@ -33,3 +33,7 @@ Complete-grid release: 26 offline tests passed. The upgraded auditor also reprod
 ## Alternative price-data preparation — 2026-11-13
 
 45 offline tests pass, including seven synthetic Yahoo-proxy tests for split-adjusted returns, avoiding dividend double-counting, required adjusted-close fields, missing/nonpositive prices, exact calendar coverage, currency/symbol validation and ordered multi-security assembly. No live Yahoo request was made in the test runtime, and no real alternative-provider financial outcome was evaluated. Partial failure and no-overwrite behavior are implemented; live network/provider schema behavior is the user's next integration check. See docs/YAHOO_PILOT.md.
+
+## Yahoo lazy-metadata repair — 2026-11-13
+
+50 tests pass. The observed live AttributeError arose when the collector serialized yfinance's lazy Mapping as a string. The repair handles mappings recursively while skipping lazy intraday tradingPeriods, rejects malformed metadata explicitly, uses the current exception-policy configuration with restoration, and preserves an older-version fallback. Five new regression tests include an end-to-end mocked 12-security collection and no-overwrite check. Symbol/currency/type/timezone validation is retained. The live retry remains to be verified on the user's computer, using a new versioned collection directory.
