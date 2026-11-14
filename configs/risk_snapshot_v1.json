@@ -1,0 +1,24 @@
+{
+  "scope": "retrospective mechanical risk sensitivity; no prediction or historical implementability claim",
+  "asof_date": "2026-11-02",
+  "lookback": 252,
+  "annualization_sessions": 252,
+  "primary_text_weight": 0.25,
+  "supplementary_text_weights": [0.0, 0.1, 0.25, 0.5, 1.0],
+  "portfolio": "equal weights, fixed across representations",
+  "kernel": "original document cosine Gram matrix; uncalibrated dependence target",
+  "baseline": "centered Ledoit-Wolf covariance",
+  "primary_runs": ["pilot_tfidf", "pilot_e5_192", "pilot_e5_320", "pilot_bge_192", "pilot_bge_320", "pilot_qwen_192_gpu", "pilot_qwen_320_gpu"],
+  "diagnostic_runs": ["pilot_e5_192_gpu"],
+  "contrasts": [
+    ["pilot_tfidf", "pilot_e5_192"],
+    ["pilot_e5_192", "pilot_e5_320"],
+    ["pilot_bge_192", "pilot_bge_320"],
+    ["pilot_qwen_192_gpu", "pilot_qwen_320_gpu"],
+    ["pilot_e5_192", "pilot_bge_192"],
+    ["pilot_e5_192_gpu", "pilot_qwen_192_gpu"],
+    ["pilot_bge_192", "pilot_qwen_192_gpu"],
+    ["pilot_e5_192", "pilot_e5_192_gpu"]
+  ],
+  "timing": "Price snapshot ends before embedding inference; explicitly retrospective. Check SEC acceptance predates snapshot close; do not assign approved trading eligibility."
+}

@@ -1,0 +1,29 @@
+{
+  "scope": "retrospective mechanical risk sensitivity; no prediction or historical implementability claim",
+  "asof_date": "2026-11-02",
+  "trailing_first_date": "2025-10-31",
+  "trailing_last_date": "2026-11-02",
+  "trailing_observations": 252,
+  "securities": 12,
+  "weights": [
+    0.08333333333333333,
+    0.08333333333333333,
+    0.08333333333333333,
+    0.08333333333333333,
+    0.08333333333333333,
+    0.08333333333333333,
+    0.08333333333333333,
+    0.08333333333333333,
+    0.08333333333333333,
+    0.08333333333333333,
+    0.08333333333333333,
+    0.08333333333333333
+  ],
+  "annualization_sessions": 252,
+  "primary_text_weight": 0.25,
+  "baseline_daily_portfolio_variance": 4.8588233383240023e-05,
+  "baseline_annualized_portfolio_sd": 0.11065367057886732,
+  "primary_variance_range_relative_to_price_baseline": 1.4782793963047414,
+  "neural_variance_range_relative_to_price_baseline": 0.2588210799459015,
+  "no_outcome_evaluation": true
+}

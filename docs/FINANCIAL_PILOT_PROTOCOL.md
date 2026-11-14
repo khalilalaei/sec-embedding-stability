@@ -1,6 +1,6 @@
 # Financial pilot protocol draft — 2026-11-03
 
-Status: numerical foundations and input-format checks implemented; real return import, historical linking, financial evaluation and portfolio optimization **not run**. WRDS account requested; source-specific CRSP query/export instructions will be finalized after the user's actual entitlements and dataset format are known. This draft is a research design, not a validated forecasting method.
+Status (2026-11-14): numerical foundations, an audited Yahoo proxy import and a retrospective mechanical covariance/risk sensitivity snapshot are implemented and run. Historical outcome evaluation, permanent security linking and portfolio optimization **not run**. WRDS account requested; source-specific CRSP query/export instructions will be finalized after the user's actual entitlements and dataset format are known. This draft is a research design, not a validated forecasting method.
 
 ## Alternative-data amendment — 2026-11-13
 
@@ -47,7 +47,7 @@ Do not infer CRSP field meanings or combine delisting fields until the actual se
 
 ## Implemented now
 
-`src/secstab/financial.py` provides return-format validation, explicit-calendar/security ordering, disjoint past/future windows, reviewed timezone-aware document-eligibility checks, centered price covariance, PSD kernel validation, dependence-only blending, fixed-weight portfolio variance and covariance MSE. These are numerical building blocks, not an end-to-end financial experiment.
+`src/secstab/financial.py` provides return-format validation, explicit-calendar/security ordering, disjoint past/future windows, reviewed timezone-aware document-eligibility checks, centered price covariance, PSD kernel validation, dependence-only blending, fixed-weight portfolio variance and covariance MSE. These are numerical building blocks. The separate mechanical snapshot runner now integrates them with the audited proxy panel; future-outcome evaluation is not implemented by this module.
 
 Run software tests without WRDS or a GPU:
 
@@ -61,4 +61,8 @@ After real data is mapped into the canonical schema, check its format:
 .\.venv\Scripts\python.exe -m secstab.financial --check-returns data/market/returns.csv
 ```
 
-A passing format check does not approve the return definition, security links, trading calendar, document/model timing or financial claims. No real financial results are reported by this milestone.
+A passing format check does not approve the return definition, security links, trading calendar, document/model timing or financial claims. The original foundations milestone reported no financial results; the subsequent mechanical snapshot reports only estimated-risk sensitivity, as described below.
+
+## Mechanical snapshot scope amendment — 2026-11-14
+
+The first integration experiment is a retrospective descriptive snapshot at the frozen price-collection endpoint, 2026-11-02, rather than a historical trade or forecast formation date. It uses the prior specified 252-return window, equal weights, raw cosine dependence target and primary text weight 0.25; the complete config is configs/risk_snapshot_v1.json. The saved embeddings were generated after the price snapshot, which is stated explicitly in the receipt/report. The runner checks that source acceptance predates the snapshot close but does not mark trading eligibility or security links independently approved. No subsequent return/covariance labels are used. This narrower scope does not waive the chronology, linking or calibration requirements above for future outcome evaluation. See reports/risk_snapshot_2026-11-14.md.

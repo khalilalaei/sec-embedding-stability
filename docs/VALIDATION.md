@@ -41,3 +41,7 @@ Complete-grid release: 26 offline tests passed. The upgraded auditor also reprod
 ## Uploaded Yahoo collection audit — 2026-11-14
 
 53 offline tests pass. Three additional synthetic audit cases cover a valid 12-security panel, changed source bytes, rehashed incorrect returns and a rehashed omitted calendar date. The actual frozen upload also passed its artifact hashes, corpus lineage, exact session coverage, OHLC/action sanity checks and adjusted-price return reconstruction. See reports/market_audit_2026-11-14.md for the receipt, issuer-successor exception and limitations. This milestone does not run covariance/portfolio outcome evaluation or approve forecast eligibility.
+
+## Mechanical risk snapshot — 2026-11-14
+
+58 offline tests pass. Five new synthetic risk checks cover zero-weight equivalence to the price baseline, fixed marginal variances, immunity to changes strictly after the snapshot, joint security/kernel permutation invariance, an independently derived all-ones versus identity target contrast, and invalid inputs. The frozen real-data integration produced 40 setting/grid rows, eight contrasts, baseline/primary covariance matrices and receipts, without reading future outcome labels or re-embedding text. Every primary covariance passed PSD checks. Estimated-risk sensitivity is reported separately from untested future accuracy.
