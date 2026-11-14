@@ -1,0 +1,43 @@
+{
+  "lookback": 252,
+  "annualization_sessions": 252,
+  "primary_text_weight": 0.25,
+  "supplementary_text_weights": [
+    0.0,
+    0.1,
+    0.25,
+    0.5,
+    1.0
+  ],
+  "primary_runs": [
+    "pilot_tfidf",
+    "pilot_e5_192",
+    "pilot_e5_320",
+    "pilot_bge_192",
+    "pilot_bge_320",
+    "pilot_qwen_192_gpu",
+    "pilot_qwen_320_gpu"
+  ],
+  "diagnostic_runs": [
+    "pilot_e5_192_gpu"
+  ],
+  "scope": "exploratory retrospective subsequent-window risk accuracy; not an untouched holdout or historically implementable forecast",
+  "candidate_month_ends": [
+    "2026-07-31",
+    "2026-08-31",
+    "2026-09-30",
+    "2026-10-31"
+  ],
+  "test_days": 21,
+  "incomplete_window_policy": "log and exclude mechanically; never shorten horizon",
+  "timing_rule": "close of first XNYS session strictly after SEC acceptance local date; explicit AI-assisted assumption, not approved execution eligibility",
+  "primary_loss": "squared error of equal-weight daily portfolio variance against centered next-21-session sample covariance, ddof=1",
+  "secondary_losses": [
+    "mean squared covariance-entry error over all n*n entries",
+    "mean squared covariance-entry error over off-diagonal entries"
+  ],
+  "aggregate": "equal mean of window losses; improvement=1-model_mean_loss/price_only_mean_loss; no tuning, selection or significance tests",
+  "realized_proxy": "centered sample covariance, ddof=1, next 21 daily Yahoo adjusted-price proxy returns",
+  "level_control": "at primary weight only, replace K by (1-c)I+c11T where c is its mean off-diagonal cosine; equal score level, no company-specific structure",
+  "chronology_limit": "November embeddings and unknown training cutoffs; source identities and eligibility assumptions remain AI-assisted. Prior November snapshot included these price dates."
+}
