@@ -1,0 +1,22 @@
+{
+  "status": "header_hashes_identity_and_record_replay_passed_timing_approval_pending",
+  "headers_manifest_sha256": "2bda8c4e875352013451c138d41c2d44bccf3b3e7d8a0f6df2a3a884edb2b0f5",
+  "inventory_manifest_sha256": "6917e8de7c9a965ee57cb7e3cc6faae3d04b03fcd939be7d38695df61cef487f",
+  "inventory_sha256": "36c3767245b22fcd2b3358fbef2317d9e7695a5b2690b9fd89c23a5c9db15f04",
+  "source_hashes_checked": 143,
+  "output_hashes_checked": 2,
+  "records_reproduced": 143,
+  "block_counts": {
+    "2": 143
+  },
+  "clock_comparison_policy": "Diagnostic only: interpret raw header clock as America/New_York; does not establish public dissemination, ingestion or execution time",
+  "api_clock_matches_under_ET_interpretation": 143,
+  "api_clock_differences": [],
+  "failure_history_entries": 1,
+  "resume_attempts": 1,
+  "expanded_sections_admitted": 0,
+  "expanded_embeddings_run": 0,
+  "approved_availability_records": 0,
+  "audit_code_sha256": "2514e4b42c1d60209254b432524e0e4e0a2e179d1bde575b77e8e89399009ab1",
+  "parser_code_sha256": "28ee4892f5b2a8e4fdd64773df36bda618e8c0737963b889f6cbe17c9deaffda"
+}

@@ -60,3 +60,7 @@ After pulling the repair, resume the existing failed collection:
 ```
 
 This reuses the already-recorded first response and retains the original failure history. Do not delete headers_v1 or change the inventory to get past the parser. The regression suite covers tag-only fields, the actual hidden-tag/visible-label layout, conflicting clocks, conflicting CIKs and parser-failure recovery without redownloading successful source bytes.
+
+## Uploaded full collection audit
+
+All 143 uploaded header source hashes, two output hashes and parsed records now reproduce. All responses contain two agreeing header copies. API values agree with source clocks when the latter are interpreted as Eastern time; that is an explicit diagnostic interpretation, not approved public availability. See reports/history_headers_audit_2026-11-14.md and scripts/audit_history_headers.py. Expanded section extraction/embedding is still pending.
