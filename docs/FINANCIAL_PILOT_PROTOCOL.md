@@ -1,6 +1,6 @@
 # Financial pilot protocol draft — 2026-11-03
 
-Status (2026-11-14): numerical foundations, an audited Yahoo proxy import and a retrospective mechanical covariance/risk sensitivity snapshot are implemented and run. Historical outcome evaluation, permanent security linking and portfolio optimization **not run**. WRDS account requested; source-specific CRSP query/export instructions will be finalized after the user's actual entitlements and dataset format are known. This draft is a research design, not a validated forecasting method.
+Status (2026-11-14): numerical foundations, an audited Yahoo proxy import and a retrospective mechanical covariance/risk sensitivity snapshot are implemented and run. A separate assumption-based retrospective subsequent-risk loss diagnostic has also run. Approved historical security linking, prospective validation and portfolio optimization **not run**. WRDS account requested; source-specific CRSP query/export instructions will be finalized after the user's actual entitlements and dataset format are known. This draft is a research design, not a validated forecasting method.
 
 ## Alternative-data amendment — 2026-11-13
 
@@ -66,3 +66,7 @@ A passing format check does not approve the return definition, security links, t
 ## Mechanical snapshot scope amendment — 2026-11-14
 
 The first integration experiment is a retrospective descriptive snapshot at the frozen price-collection endpoint, 2026-11-02, rather than a historical trade or forecast formation date. It uses the prior specified 252-return window, equal weights, raw cosine dependence target and primary text weight 0.25; the complete config is configs/risk_snapshot_v1.json. The saved embeddings were generated after the price snapshot, which is stated explicitly in the receipt/report. The runner checks that source acceptance predates the snapshot close but does not mark trading eligibility or security links independently approved. No subsequent return/covariance labels are used. This narrower scope does not waive the chronology, linking or calibration requirements above for future outcome evaluation. See reports/risk_snapshot_2026-11-14.md.
+
+## Retrospective accuracy scope amendment — 2026-11-14
+
+The user authorized the subsequent-window accuracy test. An explicit assumption-based branch is specified in [RISK_ACCURACY_PROTOCOL.md](RISK_ACCURACY_PROTOCOL.md), committed with its config before window-specific loss evaluation. It uses three complete monthly 252/21-session blocks, the original 25% primary text blend and fixed supplementary grid, plus a score-level control. It does not mark pending security links or timing records passed. Strict approved-execution eligibility remains required for implementability claims; the diagnostic instead saves openly labeled assumed timestamps. The unknown model cutoffs and postdated embeddings prevent historical forecast claims. The prior snapshot already used returns from this period, so it is not an untouched holdout. See [full results](../reports/risk_accuracy_2026-11-14.md), including the adverse/null findings and excluded incomplete window.

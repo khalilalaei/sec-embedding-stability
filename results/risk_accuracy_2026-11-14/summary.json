@@ -1,0 +1,22 @@
+{
+  "scope": "exploratory retrospective subsequent-window risk accuracy; not an untouched holdout or historically implementable forecast",
+  "windows": 3,
+  "evaluation_return_dates": 63,
+  "excluded_candidates": [
+    {
+      "candidate_month_end": "2026-10-31",
+      "decision_date": "2026-10-30",
+      "decision_close": "2026-10-30T20:00:00+00:00",
+      "reason": "incomplete_fixed_window",
+      "available_trailing_returns": 710,
+      "available_subsequent_returns": 1
+    }
+  ],
+  "primary_text_weight": 0.25,
+  "price_only_mean_portfolio_variance_squared_error": 1.2050723231218185e-10,
+  "price_only_mean_covariance_entry_mse": 1.3325320699698292e-08,
+  "primary_representations": 7,
+  "primary_representations_with_lower_portfolio_error": 0,
+  "primary_representations_with_lower_covariance_error": 1,
+  "inference": "descriptive only; no significance, model selection or independent holdout claim"
+}

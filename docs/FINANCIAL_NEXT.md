@@ -1,6 +1,6 @@
 # Financial phase — roadmap
 
-The first stability pilot is complete. Numerical financial foundations and schemas are now implemented; see [financial pilot protocol draft](FINANCIAL_PILOT_PROTOCOL.md). The Yahoo market audit and first retrospective mechanical covariance/risk snapshot have run; see [results and scope](../reports/risk_snapshot_2026-11-14.md). Permanent historical links, future-outcome evaluation and portfolio optimization remain unrun. The remaining sections are broader design proposals; the first draft preserves baseline marginal variances when adding text.
+The first stability pilot is complete. Numerical financial foundations and schemas are now implemented; see [financial pilot protocol draft](FINANCIAL_PILOT_PROTOCOL.md). The Yahoo market audit and first retrospective mechanical covariance/risk snapshot have run; see [results and scope](../reports/risk_snapshot_2026-11-14.md). The first [three-window subsequent-risk loss diagnostic](../reports/risk_accuracy_2026-11-14.md) has also run under explicit retrospective timing assumptions. Permanent historical links, prospective testing and portfolio optimization remain unrun. The remaining sections are broader design proposals; the first draft preserves baseline marginal variances when adding text.
 
 ## 1. Data and timing gate
 
